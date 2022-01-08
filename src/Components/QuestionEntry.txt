@@ -1,0 +1,328 @@
+import React, { Component } from 'react';
+import Modal from './Modal';
+import './modal.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Accordion } from 'react-bootstrap';
+import { InputGroup } from 'react-bootstrap';
+import { FormControl } from 'react-bootstrap';
+
+class QuestionEntry extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      query: 'query',
+	  code: '',
+      keyword: '',
+      options: [
+	  { text: 'a', correct: false, selected: false, wasselected: false  }, 
+	  { text: 'b', correct: false, selected: false, wasselected: false  }, 
+	  { text: 'c', correct: false, selected: false, wasselected: false }, 
+	  { text: 'd', correct: false, selected: false, wasselected: false  }],
+      answer: 'answer',
+      link: 'link',
+      level: '5',
+      marked: false,
+	  wasmarked: false,
+      time: '0',
+	  image: '',
+      certification: 'PRACTITIONER',
+      syllabus: require('../syllabus.json'),
+
+    };
+  }
+  
+  toggleCheckbox(index) {
+	  this.state.options[index].correct = !this.state.options[index].correct;
+	  this.setState(this.state);
+  }
+
+  toggleOption(i, oi, si, di) {
+    try {
+		  // alert();
+
+		  if (typeof (di) !== 'undefined') {
+			  this.state.syllabus[i].objectives[oi].subtopics[si].details[di].selected = !this.state.syllabus[i].objectives[oi].subtopics[si].details[di].selected;
+			  this.setState(this.state);
+			  return;
+		  }
+
+		  if (typeof (si) !== 'undefined') {
+			  this.state.syllabus[i].objectives[oi].subtopics[si].selected = !this.state.syllabus[i].objectives[oi].subtopics[si].selected;
+			  this.setState(this.state);
+			  return;
+		  }
+
+		  if (typeof (oi) !== 'undefined') {
+			  this.state.syllabus[i].objectives[oi].selected = !this.state.syllabus[i].objectives[oi].selected;
+			  //console.log(`${i} ${oi}`);
+			  this.setState(this.state);
+		  }
+
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  save() {
+	 console.log('In save');
+	 //console.log(`${this.state.query}`);
+	 //console.log(`${JSON.stringify(this.state)}`);
+
+	    console.log('COMPONENT DID MOUNT!');
+    console.log('About to fetch');
+    fetch('http://localhost:8080/question', {
+      method: 'POST',
+      body: JSON.stringify(this.state),
+
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        //this.setState({ questions: data });
+		  console.log('We got the data');
+		  console.log(data);
+      })
+      .catch(console.log);
+  }
+
+  optionChangedHandler = (event, index) => {
+	  console.log('IN handler');
+    // this.state.query = event.target.value;
+    // this.setState({query: event.target.value});
+    //console.log(this.state.options[index].text);
+    this.state.options[index].text = event.target.value;
+    //console.log(this.state.options[index].text);
+    this.setState({ options: this.state.options });
+    // options[0].text = event.target.value;
+    // this.state.options = event.target.value;
+
+    // this.setState({options:
+  }
+
+  render() {
+    return (
+
+      <div className="container">
+        <br />
+
+        <div className="card">
+          <div className="card-header" id="questionNumber">
+            Question
+          </div>
+
+          <div className="card-body">
+
+            <div className="row">
+              <div className="col-8">
+
+                <div className="row">
+                  <div className="col-12">
+
+                    <textarea
+                      className="form-control" id="exampleFormControlTextarea1" rows="3"
+                      name="query"
+                      value={this.state.query}
+                      onChange={(event) => this.setState({ query: event.target.value })}
+                    /> 
+<br />
+                  </div>
+
+                  <div className="col-1">
+
+                    <small>Img:</small>
+
+                  </div>
+                  <div className="col-11">
+
+                    <input type="text" className="form-control " name="image" value={this.state.image}  onChange={(event) => this.setState({ image: event.target.value })}
+					/>
+                    <br />
+                  </div>
+
+                  <div className="col-1">
+
+                    <input
+                      className="form-check-input  option-radio " type="checkbox" name="optionRadios" 
+                      checked={this.state.options[0].correct}
+                      onChange={() => this.toggleCheckbox(0)}
+                    />
+
+                  </div>
+                  <div className="col-11">
+
+                    <input type="text" className="form-control " name="optiona" value={this.state.options[0].text} onChange={(event) => this.optionChangedHandler(event, 0)} />
+                    <br />
+
+                  </div>
+
+                  <div className="col-1">
+                    <input
+                      className="form-check-input  option-radio " type="checkbox" name="optionRadios" 
+                      checked={this.state.options[1].correct}
+                      onChange={() => this.toggleCheckbox(1)}
+                    />
+                  </div>
+                  <div className="col-11">
+                    <input type="text" className="form-control" name="optionb" value={this.state.options[1].text} onChange={(event) => this.optionChangedHandler(event, 1)} />
+                    <br />
+                  </div>
+
+                  <div className="col-1">
+                    <input
+                      className="form-check-input  option-radio " type="checkbox" name="optionRadios" 
+                      checked={this.state.options[2].correct}
+                      onChange={() => this.toggleCheckbox(2)}
+                    />
+                  </div>
+                  <div className="col-11">
+                    <input type="text" className="form-control" name="optionc" value={this.state.options[2].text} onChange={(event) => this.optionChangedHandler(event, 2)} />
+                    <br />
+                  </div>
+
+                  <div className="col-1">
+                    <input
+                      className="form-check-input  option-radio " type="checkbox" name="optionRadios" 
+                      checked={this.state.options[3].correct}
+                      onChange={() => this.toggleCheckbox(3)}
+                    />
+                  </div>
+                  <div className="col-11">
+                    <input type="text" className="form-control" name="optiond" value={this.state.options[3].text} onChange={(event) => this.optionChangedHandler(event, 3)} />
+                    <br />
+                  </div>
+
+                  <div className="col-1">
+
+                    <small>Link:</small>
+
+                  </div>
+                  <div className="col-6">
+
+                    <input type="text" className="form-control " name="link" value={this.state.link} onChange={(event) => this.optionChangedHandler(event, 0)} />
+                    <br />
+                  </div>
+
+                  <div className="col-1">
+
+                    <small>Level:</small>
+
+                  </div>
+                  <div className="col-4">
+
+                    <input type="text" className="form-control " name="level" value={this.state.level} onChange={(event) => this.setState({ level: event.target.value })}
+					/>
+                    <br />
+                  </div>
+
+                  <div className="col-12">
+
+                    <textarea
+                      className="form-control" id="exampleFormControlTextarea1" rows="5"
+                      name="answer"
+                      value={this.state.answer}
+                      onChange={(event) => this.setState({ answer: event.target.value })}
+                    />
+<br />
+                  </div>
+
+                </div>
+
+                <div>
+				<button className="btn btn-primary" type="submit" onClick={() => this.save()}>Button</button>
+                </div>
+				<br/>
+				<textarea
+                      className="form-control" id="exampleFormControlTextarea1" rows="7"
+                      name="code"
+                      value={this.state.code}
+                      onChange={(event) => this.setState({ code: event.target.value })}
+                    /> 
+<br />
+
+              </div>
+              <div className="col-4">
+
+			   
+			  
+			  
+                <Accordion defaultActiveKey="domain">
+                  { 
+	  this.state.syllabus?.map((data, i) => (
+  <Accordion.Item eventKey={"domain-"+i}>
+    <Accordion.Header>{data.domain}</Accordion.Header>
+    <Accordion.Body>
+      {data.objectives?.map((objective, oi) => (
+        <div>
+
+          <InputGroup className="mb-3">
+            <InputGroup.Checkbox aria-label={objective.shortdesc} onChange={() => this.toggleOption(i, oi)} checked={objective.selected} />
+            <InputGroup.Text>{objective.shortdesc}</InputGroup.Text>
+            <FormControl aria-label={objective.shortdesc} />
+          </InputGroup>
+
+          {objective.subtopics?.map((subtopic, si) => (
+            <div>
+
+              <InputGroup className="mb-3">
+                <InputGroup.Text>&nbsp;</InputGroup.Text>
+                <InputGroup.Checkbox aria-label={subtopic.shortdesc} onChange={() => this.toggleOption(i, oi, si)} checked={subtopic.selected} />
+                <InputGroup.Text>
+                  {subtopic.shortdesc}
+                </InputGroup.Text>
+                <FormControl aria-label={subtopic.shortdesc} />
+              </InputGroup>
+
+              {subtopic.details && subtopic.details.length ? (
+
+<div>
+                  {subtopic.details?.map((detail, di) => (
+
+                <InputGroup className="mb-3">
+              <InputGroup.Text>&nbsp;</InputGroup.Text><InputGroup.Text>&nbsp;</InputGroup.Text>
+              <InputGroup.Checkbox aria-label={detail.shortdesc} onChange={() => this.toggleOption(i, oi, si, di)} checked={detail.selected} />
+              <InputGroup.Text>{detail.shortdesc}</InputGroup.Text>
+              <FormControl aria-label={detail.shortdesc} />
+            </InputGroup>
+
+									  ))}
+
+</div>
+              ) : ''}
+
+            </div>
+
+          ))}
+
+        </div>
+
+      ))}
+
+    </Accordion.Body>
+
+  </Accordion.Item>
+
+	  )
+	)
+  }
+
+                </Accordion>
+
+				
+				
+				
+				
+				
+				
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    );
+  }
+}
+
+export default QuestionEntry;

@@ -1,0 +1,466 @@
+[
+	{
+		"domain": "Cloud Concepts",
+		"id": "1.x.x.x",
+		"objectives": [
+			{
+ 
+				"id": "1.1.x.x", "selected": false, "desc": "Define the AWS Cloud and its value proposition",
+				"shortdesc": "Cloud value proposition",
+				"subtopics": [
+					{
+					"id": "1.1.1.x", "selected": false, "desc": "Define the benefits of the AWS cloud",
+					"shortdesc": "AWS Benefits",
+					"details": [
+						{"id": "1.1.1.1", "selected": false, "desc": "Security", "shortdesc": "Security" },
+						{"id": "1.1.1.2", "selected": false, "desc": "Reliability", "shortdesc": "Reliability" },
+						{"id": "1.1.1.3", "selected": false, "desc": "High Availability", "shortdesc": "Availability" },
+						{"id": "1.1.1.4", "selected": false, "desc": "Elasticity", "shortdesc": "Elasticity" },
+						{"id": "1.1.1.5", "selected": false, "desc": "Agility", "shortdesc": "Agility" },
+						{"id": "1.1.1.6", "selected": false, "desc": "Pay-as-you go pricing", "shortdesc": "Pricing" },
+						{"id": "1.1.1.7", "selected": false, "desc": "Scalability", "shortdesc": "Scalability" },
+						{"id": "1.1.1.8", "selected": false, "desc": "Global Reach", "shortdesc": "Reach" },
+						{"id": "1.1.1.9", "selected": false, "desc": "Economy of scale", "shortdesc": "Scale" }
+					]
+					},
+					{
+					"id": "1.1.2.x", "selected": false, "desc": "Explain how the AWS cloud allows users to focus on business value",
+					"shortdesc": "Business value focus",
+					"details": [
+						{
+						"id": "1.1.2.1", "selected": false, "desc": "Shifting technical resources to revenue-generating activities as opposed to managing infrastructure",
+						"shortdesc": "Infra to revenue gen shift"
+						}
+					]
+					}
+				]
+			},
+			{
+
+			
+				"id": "1.2.x.x.", "selected": false, "desc": "Identify aspects of AWS Cloud economics",
+				"shortdesc": "Cloud economics",
+				"subtopics": [
+					{"id": "1.2.1.x", "selected": false, "desc": "Define items that would be part of a Total Cost of Ownership proposal",
+					"shortdesc": "TCO Proposal",
+					"details": [
+						{"id": "1.2.1.1", "selected": false, "desc": "Understand the role of operational expenses (OpEx) ", 
+						"shortdesc": "OpEx"},
+						{"id": "1.2.1.2", "selected": false, "desc": "Understand the role of capital expenses (CapEx)", 
+						"shortdesc": "CapEx"},
+						{"id": "1.2.1.3", "selected": false, "desc": "Understand labor costs associated with on-premises operations", "shortdesc": "on-prem labor cost"},
+						{"id": "1.2.1.4", "selected": false, "desc": "Understand the impact of software licensing costs when moving to the cloud", 
+						"shortdesc": "software licensing costs"}
+					]
+					},
+					{"id": "1.2.2.x", "selected": false, "desc": "Identify which operations will reduce costs by moving to the cloud",
+					"shortdesc": "Cost reduction in cloud",
+					"details": [
+						{"id": "1.2.2.1", "selected": false, "desc": "Right-sized infrastructure",
+						"shortdesc": "Right-sized infra"},
+						{"id": "1.2.2.2", "selected": false, "desc": "Benefits of automation", 
+						"shortdesc": "Automation"},
+						{"id": "1.2.2.3", "selected": false, "desc": "Reduce compliance scope (for example, reporting)", 
+						"shortdesc": "Compliance scope"},
+						{"id": "1.2.2.4", "selected": false, "desc": "Managed services (for example, RDS, ECS, EKS, DynamoDB)", 
+						"shortdesc": "Managed services"}
+					]
+					}
+				]
+			},
+			{
+
+				"id": "1.3.x.x", "selected": false, "desc": "Explain the different cloud architecture design principles",
+				"shortdesc": "",
+				"subtopics": [
+					{"id": "1.3.1", "selected": false, "desc": "Explain the design principles",
+					"shortdesc": "",
+					"details": [
+						{"id": "1.3.1.1", "selected": false, "desc": "Design for failure", "shortdesc": ""},
+						{"id": "1.3.1.2", "selected": false, "desc": "Decouple components versus monolithic architecture", "shortdesc": ""},
+						{"id": "1.3.1.3", "selected": false, "desc": "Implement elasticity in the cloud versus on-premises", "shortdesc": ""},
+						{"id": "1.3.1.4", "selected": false, "desc": "Think parallel", "shortdesc": ""}
+					]
+					}
+				]
+			}
+			
+		]
+	},
+
+
+	{
+		"domain": "Security and Compliance",
+		"id": "2",
+		"objectives": [
+		{
+
+				"id": "2.1.x.x", "selected": false, "desc": "Define the AWS shared responsibility model",
+				"shortdesc": "Shared resp. model SRM",
+				"subtopics": [
+					{"id": "2.1.1.x", "selected": false, "desc": "Recognize the elements of the Shared Responsibility Model", "shortdesc": "Elements of SRM"},
+					{"id": "2.1.2.x", "selected": false, "desc": "Describe the customer's responsibly on AWS",
+					"shortdesc": "Customer responsibility",
+					"details": [
+						{"id": "2.1.2.1", "selected": false, "desc": "Describe how the customer’s responsibilities may shift depending on the service used(for example with RDS, Lambda, or EC2)", "shortdesc": "Shifting responsibilities"}
+					]
+					},
+					{"id": "2.1.3.x", "selected": false, "desc": "Describe AWS responsibilities", "shortdesc": "AWS responsibilities"}
+				]
+			},
+			{
+
+				"id": "2.2.x.x", "selected": false, "desc": "Define AWS Cloud security and compliance concepts",
+				"shortdesc": "Security & Compliance",
+				"subtopics": [
+					{"id": "2.2.1.x", "selected": false, "desc": "Identify where to find AWS compliance information", "shortdesc": "Find compliance info",
+					"details": [
+						{"id": "2.2.1.1", "selected": false, "desc": "Locations of lists of recognized available compliance controls ie HIPPA SOCs", "shortdesc": "Compliance controls"},
+{"id": "2.2.1.2", "selected": false, "desc": "Recognize that compliance requirements vary among AWS services", "shortdesc": "Compliance requirements"}
+					]},
+					{"id": "2.2.2.x", "selected": false, "desc": "At a high level, describe how customers achieve compliance on AWS",
+					"shortdesc": "Compliance achievement",
+					"details": [
+						{"id": "2.2.2.1", "selected": false, "desc": "Identify different encryption options on AWS (for example, In transit, At rest)", "shortdesc": "Encryption options"}
+					]
+					},
+					{"id": "2.2.3.x", "selected": false, "desc": "Describe who enables encryption on AWS for a given service", "shortdesc": "Who encrypts?"},
+					{"id": "2.2.4.x", "selected": false, "desc": "Recognize there are services that will aid in auditing and reporting",
+					"shortdesc": "Reporting recognition",
+					"details": [
+						{"id": "2.2.4.1", "selected": false, "desc": "Recognize that logs exist for auditing and monitoring (do not have to understand the logs)", "shortdesc": "Logs & monitoring"},
+						{"id": "2.2.4.2", "selected": false, "desc": "Define Amazon CloudWatch, AWS Config, and AWS CloudTrail", "shortdesc": "Watch, Config, Trail"}
+					]
+					},
+					{"id": "2.2.5.x", "selected": false, "desc": "Explain the concept of least privileged access", "shortdesc": "Least priv. access"}
+				]
+			},
+
+			{
+
+				"id": "2.3.x.x", "selected": false, "desc": "Identify AWS access management capabilities",
+				"shortdesc": "Access management",
+				"subtopics": [
+
+					{"id": "2.3.2.x", "selected": false, "desc": "Understand the purpose of User and Identity Management","shortdesc": "Understand access",
+					"details": [
+						{"id": "2.3.2.1", "selected": false, "desc": "Access keys and password policies (rotation, complexity)", "shortdesc": "Keys & passwords"},
+						{"id": "2.3.2.2", "selected": false, "desc": "Multi-Factor Authentication (MFA)", "shortdesc": "MFA"},
+						{"id": "2.3.2.3", "selected": false, "desc": "AWS Identity and Access Management (IAM) Groups, Users, Roles, Policies", "shortdesc": "Groups, roles policies"},
+						{"id": "2.3.2.4", "selected": false, "desc": "Tasks that require use of root accounts Protection of root accounts", "shortdesc": "Root access"}
+					]
+					}
+				]
+			},
+						{
+
+			
+				"id": "2.4.x.x.", "selected": false, "desc": "Identify resources for security support",
+				"shortdesc": "Security resources",
+				"subtopics": [
+					{"id": "2.4.1.x", "selected": false, "desc": "Recognize there are different network security capabilities",
+					"shortdesc": "Secure networks",
+					"details": [
+						{"id": "2.4.1.1", "selected": false, "desc": "Native AWS services (for example, security groups, Network ACLs, AWS WAF)", 
+						"shortdesc": "S. Groups, ACLs, WAF"},
+						{"id": "2.4.1.2", "selected": false, "desc": "3rd party security products from the AWS Marketplace", 
+						"shortdesc": "3rd party security"}
+					]
+					},
+					{"id": "2.4.2.x", "selected": false, "desc": "Recognize there is documentation and where to find it (for example, best practices, whitepapers, official documents)",
+					"shortdesc": "Security docs",
+					"details": [
+						{"id": "2.4.2.1", "selected": false, "desc": "AWS Knowledge Center, Security Center, security forum, and security blogs",
+						"shortdesc": "AWS Security Info"},
+						{"id": "2.4.2.2", "selected": false, "desc": "Partner Systems Integrators", 
+						"shortdesc": "Partner Info"},
+						{"id": "2.4.2.3", "selected": false, "desc": "Reduce compliance scope (for example, reporting)", 
+						"shortdesc": "Compliance scope"},
+						{"id": "2.4.2.4", "selected": false, "desc": "Managed services (for example, RDS, ECS, EKS, DynamoDB)", 
+						"shortdesc": "Managed services"}
+					]
+					},
+					{"id": "2.4.5.x", "selected": false, "desc": "Know that security checks are a component of AWS Trusted Advisor", "shortdesc": "Trusted Advisor checks"}
+				]
+			}
+		]
+	},
+	
+	{
+		"domain": "Technology",
+		"id": "3.x.x.x",
+		"objectives": [
+			{
+ 
+				"id": "3.1.x.x", "selected": false, "desc": "Define methods of deploying and operating in the AWS Cloud ",
+				"shortdesc": "Deploy and Operate",
+				"subtopics": [
+					{
+					"id": "3.1.1.x", "selected": false, "desc": "Identify at a high level different ways of provisioning and operating in the AWS cloud",
+					"shortdesc": "Provision and operate",
+					"details": [
+						{"id": "3.1.1.1", "selected": false, "desc": "Programmatic access, APIs, SDKs, AWS Management Console, CLI, Infrastructure as Code", "shortdesc": "Access /w API, SDK, AMC, CLI" }
+					]
+					},
+					{
+					"id": "3.1.2.x", "selected": false, "desc": "Identify different types of cloud deployment models",
+					"shortdesc": "Deployment models",
+					"details": [
+						{
+						"id": "3.1.2.1", "selected": false, "desc": "All in with cloud/cloud native",
+						"shortdesc": "All in"
+						},
+												{
+						"id": "3.1.2.2", "selected": false, "desc": "Hybrid",
+						"shortdesc": "Hybrid"
+						},
+												{
+						"id": "3.1.2.3", "selected": false, "desc": "On-premises",
+						"shortdesc": "On-premises"
+						}
+					]
+					},
+					{
+					"id": "3.1.3.x", "selected": false, "desc": "Identify connectivity options",
+					"shortdesc": "Connectivity options",
+					"details": [
+						{
+						"id": "3.1.3.1", "selected": false, "desc": "VPN",
+						"shortdesc": "VPN"
+						},
+												{
+						"id": "3.1.3.2", "selected": false, "desc": "AWS Direct Connect",
+						"shortdesc": "AWS Direct Connect"
+						},
+												{
+						"id": "3.1.3.3", "selected": false, "desc": "Public internet",
+						"shortdesc": "Public internet"
+						}
+					]
+					}
+				]
+			},
+			{
+ 
+				"id": "3.2.x.x", "selected": false, "desc": "Define the AWS global infrastructure",
+				"shortdesc": "Global Infra",
+				"subtopics": [
+					{"id": "3.2.1.x", "selected": false, "desc": "Describe the relationships among Regions, Availability Zones, and Edge Locations", "shortdesc": "Regions Zones & Edge"},
+					{
+					"id": "3.2.2.x", "selected": false, "desc": "Describe how to achieve high availability through the use of multiple Availability Zones",
+					"shortdesc": "HA /w multiple zones",
+					"details": [
+						{"id": "3.2.2.1", "selected": false, "desc": "Recall that high availability is achieved by using multiple Availability Zones", "shortdesc": "HA Zones" },
+						{"id": "3.2.2.2", "selected": false, "desc": "Recognize that Availability Zones do not share single points of failure", "shortdesc": "Zone failure points" }
+					]
+					},
+					{
+					"id": "3.2.2.x", "selected": false, "desc": "Describe when to consider the use of multiple AWS Regions",
+					"shortdesc": "Multiple regions",
+					"details": [
+						{
+						"id": "3.2.2.1", "selected": false, "desc": "Disaster recovery/business continuity",
+						"shortdesc": "Disaster recovery"
+						},
+												{
+						"id": "3.2.2.2", "selected": false, "desc": "Low latency for end-users",
+						"shortdesc": "Low latency"
+						},
+												{
+						"id": "3.2.2.3", "selected": false, "desc": "Data sovereignty",
+						"shortdesc": "Data sovereignty"
+						}
+					]
+					},
+					{
+					"id": "3.2.3.x", "selected": false, "desc": "Describe at a high level the benefits of Edge Locations",
+					"shortdesc": "Edge benefits",
+					"details": [
+						{
+						"id": "3.2.3.1", "selected": false, "desc": "Amazon CloudFront",
+						"shortdesc": "Amazon CloudFront"
+						},
+												{
+						"id": "3.2.3.2", "selected": false, "desc": "AWS Global Accelerator",
+						"shortdesc": "AWS Global Accelerator"
+						}
+					]
+					}
+				]
+			},
+			
+			
+			{
+ 
+				"id": "3.3.x.x", "selected": false, "desc": "Identify the core AWS services",
+				"shortdesc": "Core AWS",
+				"subtopics": [
+					{"id": "3.3.1.x", "selected": false, "desc": "Describe the categories of services on AWS (compute, storage, network, database)", "shortdesc": "Service categories"},
+					{
+					"id": "3.3.2.x", "selected": false, "desc": "Identify AWS compute services",
+					"shortdesc": "Compute services",
+					"details": [
+						{"id": "3.3.2.1", "selected": false, "desc": "Recognize there are different compute families", "shortdesc": "Compute families" },
+						{"id": "3.3.2.2", "selected": false, "desc": "Recognize the different services that provide compute (for example, AWS Lambda compared to Amazon Elastic Container Service (Amazon ECS), or Amazon EC2, etc.)", "shortdesc": "Compute services" },
+						{"id": "3.3.2.3", "selected": false, "desc": "Recognize that elasticity is achieved through Auto Scaling", "shortdesc": "Elasticity /w auto scale" },
+						{"id": "3.3.2.4", "selected": false, "desc": "Identify the purpose of load balancers", "shortdesc": "Load balancers" }
+					]
+					},
+					{
+					"id": "3.3.2.x", "selected": false, "desc": "Identify different AWS storage services",
+					"shortdesc": "Storage",
+					"details": [
+						{
+						"id": "3.3.2.1", "selected": false, "desc": "Describe Amazon S3",
+						"shortdesc": "S3"
+						},
+												{
+						"id": "3.3.2.2", "selected": false, "desc": "Describe Amazon Elastic Block Store (Amazon EBS)",
+						"shortdesc": "EBC"
+						},
+						{
+						"id": "3.3.2.3", "selected": false, "desc": "Describe Amazon S3 Glacier",
+						"shortdesc": "S3 Glacier"
+						}
+						,
+						{
+						"id": "3.3.2.4", "selected": false, "desc": "Describe AWS Snowball",
+						"shortdesc": "AWS Snowball"
+						},
+						{
+						"id": "3.3.2.5", "selected": false, "desc": "Describe Amazon Elastic File System (Amazon EFS)",
+						"shortdesc": "EFS"
+						}
+						,
+						{
+						"id": "3.3.2.6", "selected": false, "desc": "Describe AWS Storage Gateway",
+						"shortdesc": "Storage Gateway"
+						}
+					]
+					},
+					{
+					"id": "3.3.3.x", "selected": false, "desc": "Describe at a high level the benefits of Edge Locations",
+					"shortdesc": "Edge benefits",
+					"details": [
+						{
+						"id": "3.3.3.1", "selected": false, "desc": "Amazon CloudFront",
+						"shortdesc": "Amazon CloudFront"
+						},
+												{
+						"id": "3.3.3.2", "selected": false, "desc": "AWS Global Accelerator",
+						"shortdesc": "AWS Global Accelerator"
+						}
+					]
+					},
+										{
+					"id": "3.3.4.x", "selected": false, "desc": "Identify AWS networking services",
+					"shortdesc": "Networking services",
+					"details": [
+						{"id": "3.3.4.1", "selected": false, "desc": "Identify VPC", "shortdesc": "Identify VPC" },
+						{"id": "3.3.4.2", "selected": false, "desc": "Identify security groups", "shortdesc": "Security groups" },
+						{"id": "3.3.4.3", "selected": false, "desc": "Identify the purpose of Amazon Route 53", "shortdesc": "Route 53" },
+						{"id": "3.3.4.4", "selected": false, "desc": "Identify VPN, AWS Direct Connect", "shortdesc": "Direct Connect" }
+					]
+					},
+															{
+					"id": "3.3.5.x", "selected": false, "desc": "Identify different AWS database services",
+					"shortdesc": "Database services",
+					"details": [
+						{"id": "3.3.4.1", "selected": false, "desc": "Install databases on Amazon EC2 compared to AWS managed databases", "shortdesc": "EC2 vs managed" },
+						{"id": "3.3.4.2", "selected": false, "desc": "Identify Amazon RDS", "shortdesc": "Amazon RDS" },
+						{"id": "3.3.4.3", "selected": false, "desc": "Identify Amazon DynamoDB", "shortdesc": "DynamoDB" },
+						{"id": "3.3.4.4", "selected": false, "desc": "Identify Amazon Redshift", "shortdesc": "Redshift" }
+					]
+					}
+				]
+			},
+			
+			{
+ 
+				"id": "3.4.x.x", "selected": false, "desc": "Identify resources for technology support",
+				"shortdesc": "Technology support",
+				"subtopics": [
+					{"id": "3.4.1.x", "selected": false, "desc": "Recognize there is documentation (best practices, whitepapers, AWS Knowledge Center, forums, blogs)", "shortdesc": "Documentation"},
+					{
+					"id": "3.4.2.x", "selected": false, "desc": "Identify the various levels and scope of AWS support",
+					"shortdesc": "Support levels",
+					"details": [
+						{"id": "3.4.2.1", "selected": false, "desc": "AWS Abuse", "shortdesc": "AWS Abuse" },
+						{"id": "3.4.2.2", "selected": false, "desc": "AWS support cases", "shortdesc": "Support cases" },
+						{"id": "3.4.2.3", "selected": false, "desc": "Premium support", "shortdesc": "Premium support" },
+						{"id": "3.4.2.4", "selected": false, "desc": "Technical Account Managers", "shortdesc": "Account Managers" }
+					]
+					},
+					{"id": "3.4.3.x", "selected": false, "desc": "Recognize there is a partner network (marketplace, third-party) including Independent Software Vendors and System Integrators", "shortdesc": "Partner network"},
+					{"id": "3.4.4.x", "selected": false, "desc": "Identify sources of AWS technical assistance and knowledge including professional services,solution architects, training and certification, and the Amazon Partner Network", "shortdesc": "Assistance & Knowledge"},
+					{"id": "3.4.5.x", "selected": false, "desc": "Identify the benefits of using AWS Trusted Advisor", "shortdesc": "Trusted Advisor"}
+				]
+			}
+			
+		]
+	},
+	
+	{
+		"domain": "Billing and Pricing",
+		"id": "4.x.x.x",
+		"objectives": [
+		{
+
+				"id": "4.1.x.x", "selected": false, "desc": "Compare and contrast the various pricing models for AWS (for example, On-Demand Instances, Reserved Instances, and Spot Instance pricing)",
+				"shortdesc": "Pricing models",
+				"subtopics": [
+					{"id": "4.1.1.x", "selected": false, "desc": "Identify scenarios/best fit for On-Demand Instance pricing", "shortdesc": "On-Demand"},
+					{"id": "4.1.2.x", "selected": false, "desc": "Identify scenarios/best fit for Reserved-Instance pricing",
+					"shortdesc": "Reserved-Instance",
+					"details": [
+						{"id": "4.1.2.1", "selected": false, "desc": "Describe Reserved-Instances flexibility", "shortdesc": "RI Flexibility"},
+						{"id": "4.1.2.1", "selected": false, "desc": "Describe Reserved-Instances behavior in AWS Organizations", "shortdesc": "RI Behavior"}
+					]
+					},
+					{"id": "4.1.3.x", "selected": false, "desc": "Identify scenarios/best fit for Spot Instance pricing", "shortdesc": "Spot pricing"},
+					{"id": "4.1.4.x", "selected": false, "desc": "Identify scenarios/best fit for Dedicated Instance pricing", "shortdesc": "Dedicated pricing"}
+				]
+			},
+			{
+
+			
+				"id": "4.2.x.x.", "selected": false, "desc": "Recognize the various account structures in relation to AWS billing and pricing",
+				"shortdesc": "Account structures",
+				"subtopics": [
+{"id": "4.2.1.x", "selected": false, "desc": "Recognize that consolidated billing is a feature of AWS Organizations", "shortdesc": "Consolidated Bills"},
+{"id": "4.2.1.x", "selected": false, "desc": "Identify how multiple accounts aid in allocating costs across departments", "shortdesc": "Multiple accounts"}
+				]
+			},
+			{
+
+				"id": "4.3.x.x", "selected": false, "desc": "Identify resources available for billing support",
+				"shortdesc": "Billing Support",
+				"subtopics": [
+					{"id": "4.3.1.x", "selected": false, "desc": "Identify ways to get billing support and information",
+					"shortdesc": "Billing info",
+					"details": [
+						{"id": "4.3.1.1", "selected": false, "desc": "Cost Explorer, AWS Cost and Usage Report, Amazon QuickSight, third-party partners, and AWS Marketplace tools", "shortdesc": "Cost explorers"},
+						{"id": "4.3.1.2", "selected": false, "desc": "Open a billing support case", "shortdesc": "Support Case"},
+						{"id": "4.3.1.3", "selected": false, "desc": "The role of the Concierge for AWS Enterprise Support Plan customers", "shortdesc": "Concierge"}
+					]
+					},
+					
+					{"id": "4.3.2.x", "selected": false, "desc": "Identify ways to get billing support and information",
+					"shortdesc": "Billing info",
+					"details": [
+						{"id": "4.3.2.1", "selected": false, "desc": "AWS Simple Monthly Calculator", "shortdesc": "Monthly Calculator"},
+						{"id": "4.3.2.2", "selected": false, "desc": "AWS Services product pages", "shortdesc": "Product pages"},
+						{"id": "4.3.2.3", "selected": false, "desc": "AWS Pricing API", "shortdesc": "Pricing API"}
+					]
+					},
+					
+					{"id": "4.3.3.x", "selected": false, "desc": "Recognize that alarms/alerts exist", "shortdesc": "Alarms & Alerts"},
+					
+					{"id": "4.3.4.x", "selected": false, "desc": "Identify how tags are used in cost allocation", "shortdesc": "Tags and costs"}
+					
+				]
+			}
+			
+		]
+	}
+]

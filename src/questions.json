@@ -1,0 +1,853 @@
+[
+    {"id":99, "query":"Loading",  "answer":"answer", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Loading.", "correct":false, "selected":false}, 
+           {"text":"Loading..", "correct":false, "selected":false},
+           {"text":"Loading...", "correct":false, "selected":false},
+           {"text":"Loading....", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0","3.0"
+     ]},
+   
+   {"id":1, "query":"Which of the following describes the most ideal type of activity to automate with UiPath?", "answer":"test-answer.md",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Multistep process with many decision points with structured data", "correct":false, "selected":false}, 
+           {"text":"Perform Analysis on data and provide", "correct":true, "selected":false},
+           {"text":"Varied tasks that rely heavily on user input", "correct":false, "selected":false},
+           {"text":"Rule-based process with structured data", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "1.1",
+        "2.2"
+     ]},
+     
+          
+     
+     
+   {"id":2, "query":"A client receives a spreadsheet containing orders. The orders must be input into an internal web-based order system.  Which is the best activity to use?", "answer":"test-answer.md",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Sequence", "correct":true, "selected":false}, 
+           {"text":"Flowchart", "correct":false, "selected":false},
+           {"text":"Learning Machine", "correct":false, "selected":false},
+           {"text":"Transactional Process", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "1.1",
+        "2.2"
+     ]},
+   {"id":3, "query":"Which Activity requires the least amount of parameters?", 
+           "marked":0,"timespent":0,"options":[
+           {"text":"SMTP", "correct":false, "selected":false}, 
+           {"text":"Outlook", "correct":true, "selected":false},
+           {"text":"POP3", "correct":false, "selected":false},
+           {"text":"Mail", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "1.1",
+        "2.2"
+     ]},			
+   {"id":4, "query":"What happens if you try to save a table using Excel Write Range activity to a file that does not exist?", "answer":"test-answer.md",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Throws a “File not found” error", "correct":false, "selected":false}, 
+           {"text":"Workflow will wait until the file appears and times out if it doesn’t", "correct":false, "selected":false},
+           {"text":"Activity will not run and continue the sequence", "correct":false, "selected":false},
+           {"text":"Creates the file and saves the table", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "1.1",
+        "2.2"
+     ]},	
+   {"id":5, "query":"When using an Excel Application Scope activity, which activity should be used to sort a table directly in an .xlsx file?",  "answer":"test-answer.md",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Sequence", "correct":false, "selected":false}, 
+           {"text":"Flowchart", "correct":false, "selected":false},
+           {"text":"Learning Machine", "correct":false, "selected":false},
+           {"text":"Transactional Process", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "1.1",
+        "2.2"
+     ]},	
+         {"id":6, "query":"6When using an Excel Application Scope activity, which activity should be used to sort a table directly in an .xlsx file?",  "answer":"test-answer.md",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Sequence", "correct":false, "selected":false}, 
+           {"text":"Flowchart", "correct":false, "selected":false},
+           {"text":"Learning Machine", "correct":false, "selected":false},
+           {"text":"Transactional Process", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "1.1",
+        "2.2"
+     ]},
+         {"id":7, "query":"7 When using an Excel Application Scope activity, which activity should be used to sort a table directly in an .xlsx file?",  "answer":"test-answer.md",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Sequence", "correct":false, "selected":false}, 
+           {"text":"Flowchart", "correct":false, "selected":false},
+           {"text":"Learning Machine", "correct":false, "selected":false},
+           {"text":"Transactional Process", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "1.1",
+        "2.2"
+     ]},
+         {"id":8, "query":" 8 When using an Excel Application Scope activity, which activity should be used to sort a table directly in an .xlsx file?",  "answer":"test-answer.md",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Sequence", "correct":false, "selected":false}, 
+           {"text":"Flowchart", "correct":false, "selected":false},
+           {"text":"Learning Machine", "correct":false, "selected":false},
+           {"text":"Transactional Process", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "1.1",
+        "2.2"
+     ]},
+         {"id":9, "query":"9 When using an Excel Application Scope activity, which activity should be used to sort a table directly in an .xlsx file?",  "answer":"test-answer.md",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Sequence", "correct":false, "selected":false}, 
+           {"text":"Flowchart", "correct":false, "selected":false},
+           {"text":"Learning Machine", "correct":false, "selected":false},
+           {"text":"Transactional Process", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.1", "3.2","3.3"
+     ]},
+         {"id":10, "query":"10 When using an Excel Application Scope activity, which activity should be used to sort a table directly in an .xlsx file?",  "answer":"test-answer.md",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Sequence", "correct":false, "selected":false}, 
+           {"text":"Flowchart", "correct":false, "selected":false},
+           {"text":"Learning Machine", "correct":false, "selected":false},
+           {"text":"Transactional Process", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.1", "3.2","3.3"
+     ]},
+
+     {"id":11, "query":"Which of the following is a valid UiPath variable name?",  "answer":"/2020/10/10/variable-naming-conventions.html", "difficulty": "7",
+           "marked":0,"timespent":0,"options":[
+           {"text":"$1000000", "correct":false, "selected":false}, 
+           {"text":"1000000$", "correct":false, "selected":false},
+           {"text":"1milliondollars", "correct":false, "selected":false},
+           {"text":"One1MillionDollars", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.1", "3.2","3.3"
+     ]},
+               {"id":12, "query":"The variable UIPATH_ASSOCIATE_EXAM is said to follow what naming convention?",  "answer":"/2020/10/10/screaming-snake-case.html", "difficulty": "3",
+           "marked":0,"timespent":0,"options":[
+           {"text":"camel case", "correct":false, "selected":false}, 
+           {"text":"snake case", "correct":false, "selected":false},
+           {"text":"screaming snake case", "correct":true, "selected":false},
+           {"text":"kebab case", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.1", "3.2","3.3"
+     ]},
+               {"id":13, "query":"Which of the following variables is named using kebab case?",  "answer":"/2020/10/10/kebab-case-convention.html", "difficulty": "3",
+           "marked":0,"timespent":0,"options":[
+           {"text":"WhatIsKebabCase", "correct":false, "selected":false}, 
+           {"text":"what-is-kebab-case", "correct":true, "selected":false},
+           {"text":"whatIsKebabCase", "correct":false, "selected":false},
+           {"text":"what_is_kebab_case", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.1", "3.2","3.3"
+     ]},
+     
+      {"id":14, "query":"Which of the following is an example of the Pascal case naming convention?",  "answer":"/2020/10/10/pascal-case-naming-convention.html", "difficulty": "2",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Pascal-Case", "correct":false, "selected":false}, 
+           {"text":"pascalCase", "correct":false, "selected":false},
+           {"text":"PascalCase", "correct":true, "selected":false},
+           {"text":"Pascal_case", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.1"
+     ]},	
+
+     {"id":15, "query":"Which of the following four is an example of a camel case naming convention?",  "answer":"/2020/10/10/camelcase-naming-convention.html", "difficulty": "4",
+           "marked":0,"timespent":0,"options":[
+           {"text":"uipathNamingConventions", "correct":true, "selected":false}, 
+           {"text":"UiPath-Naming-Conventions", "correct":false, "selected":false},
+           {"text":"UIPATH_NAMING_CONVENTIONS", "correct":false, "selected":false},
+           {"text":"UiPathNamingConventions", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.1", "3.2","3.3"
+     ]},	  
+     
+     
+     
+     {"id":16, "query":"Which of the following violates the UiPath variable naming convention?",  "answer":"/2020/10/10/variable-names.html", "difficulty": "7",
+           "marked":0,"timespent":0,"options":[
+           {"text":"H1Tag", "correct":true, "selected":false}, 
+           {"text":"HWonTag", "correct":false, "selected":false},
+           {"text":"hWonTag", "correct":false, "selected":false},
+           {"text":"1hTag", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.1", "3.2","3.3"
+     ]},	  
+
+     
+     {"id":17, "query":"You must pass exam data as an argument, but the data will be used both inside and oustide of the current workflow project. What should the variable be named?",  "answer":"/2020/11/11/input-output-argument-names.html", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"inOutExam", "correct":false, "selected":false}, 
+           {"text":"in_out_exam", "correct":false, "selected":false},
+           {"text":"io-Exam", "correct":false, "selected":false},
+           {"text":"io_Exam", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0","3.0"
+     ]},
+     
+      {"id":18, "query":"The data being passed in as an argument can only be used within the current project. What should the variable be named so as not to trigger the UiPath Studio analyzer?",  "answer":"/2020/10/11/in-argument-naming-convention.html", "difficulty": "7",
+           "marked":0,"timespent":0,"options":[
+           {"text":"in-field", "correct":false, "selected":false}, 
+           {"text":"inField", "correct":false, "selected":false},
+           {"text":"in_field", "correct":true, "selected":false},
+           {"text":"InField", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.1", "3.2","3.4"
+     ]},	  
+     
+     
+      {"id":19, "query":"Which of the following is true about case sensitive variable names in UiPath",  "answer":"/2020/10/10/variables-case-sensitive-uipath.html", "difficulty": "7",
+           "marked":0,"timespent":0,"options":[
+           {"text":"UiPath method names are case sensitive", "correct":false, "selected":false}, 
+           {"text":"UiPath variable names are case sensitive", "correct":false, "selected":false},
+           {"text":"UiPath method names are not case sensitive", "correct":true, "selected":false},
+           {"text":"UiPath variable names are not case sensitive", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.1", "3.2", "3.0"
+     ]},	  
+     
+     
+      {"id":20, "query":"A field that describes a name must be passed outside of a given project. What should it be named?",  "answer":"/2020/10/10/uipath-argument-naming-convention.html", "difficulty": "7",
+           "marked":0,"timespent":0,"options":[
+           {"text":"out_name", "correct":true, "selected":false}, 
+           {"text":"pass_name", "correct":false, "selected":false},
+           {"text":"name", "correct":false, "selected":false},
+           {"text":"getName", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.1", "3.2", "3.0"
+     ]},	  
+     
+      {"id":21, "query":"A UiPath transition activity is associated with which type of project?",  "/2020/10/11/state-machine.html":"answer", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Sequence", "correct":false, "selected":false}, 
+           {"text":"Flow Chart", "correct":false, "selected":false},
+           {"text":"State Machine", "correct":true, "selected":false},
+           {"text":"Process Chart", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "5.0", "5.1"
+     ]},
+     
+      {"id":22, "query":"A complex activity to be automated has many subroutines to be executed depending on the result of evaluating various logical conditions. What is the best approach to architecting this RPA activity?",  "answer":"/2020/10/11/sequence-flowchart-combined.html", "difficulty": "6",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Use a single workflow project", "correct":false, "selected":false}, 
+           {"text":"Use multiple workflows projects", "correct":false, "selected":false},
+           {"text":"Use a single sequence project which references multiple workflow projects", "correct":false, "selected":false},
+           {"text":"Use a single workflow project that references mutliple sequence projects", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "5.0", "5.1"
+     ]},
+     
+      {"id":23, "query":"Which type of project is best for linear activities involving multiple activities such as OCR and PDF data extraction?",  "answer":"/2020/10/11/linear-sequence-projects.html", "difficulty": "6",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Sequence", "correct":true, "selected":false}, 
+           {"text":"Flow Chart", "correct":false, "selected":false},
+           {"text":"State Machine", "correct":false, "selected":false},
+           {"text":"Global Exception Handler", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "5.0", "5.1"
+     ]},
+     
+
+     
+      {"id":24, "query":"A task to be automated has multiple decision points with unique UiPath activities to be performed based on the outcome of various conditions. What type of project should be used in this situation?",  "answer":"/2020/10/11/flowchart-project-definition.html", "difficulty": "6",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Sequence", "correct":false, "selected":false}, 
+           {"text":"Flow Chart", "correct":true, "selected":false},
+           {"text":"State Machine", "correct":false, "selected":false},
+           {"text":"This task cannot be automated", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.1", "3.2","3.0"
+     ]},
+     
+     
+      {"id":25, "query":"Which type of project is most likely to be used and reused in other projects?",  "answer":"/2020/10/10/sequence-projects.html", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Sequence", "correct":true, "selected":false}, 
+           {"text":"Flow Chart", "correct":false, "selected":false},
+           {"text":"State Machine", "correct":false, "selected":false},
+           {"text":"Global Exception Handler", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "5.0", "5.1"
+     ]},
+     
+
+     
+     {"id":26, "query":"A expense report submission process, in which the first step requires the user to log into the reporting system, must attach scanned image receipts and PDF files as part of the expense. This activity lends itself best to which of the following implementations:",  "answer":"/2020/11/11/unattended-robots-when-to-use.html", "difficulty": "6",
+           "marked":0,"timespent":0,"options":[
+           {"text":"A process that uses a single unattended robot", "correct":false, "selected":false}, 
+           {"text":"A process that uses a single attended robot", "correct":true, "selected":false},
+           {"text":"A process that uses both a single attended robot and a single unattended robot", "correct":false, "selected":false},
+           {"text":"This process does not lend itself to automation", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.2"
+     ]},
+     
+            {"id":27, "query":"In contrast with attended robots, unattended robots are best used with:",  "answer":"/2020/11/11/unattended-robots-use-case.html", "difficulty": "6",
+           "marked":0,"timespent":0,"options":[
+           {"text":"simple, one-off tasks", "correct":false, "selected":false}, 
+           {"text":"complex, one-off tasks", "correct":false, "selected":false},
+           {"text":"simple, repetative tasks", "correct":false, "selected":false},
+           {"text":"complex, repetative tasks", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.2"
+     ]},
+     
+            {"id":28, "query":"Which of the following statements are true?",  "answer":"/2020/11/11/uipath-robot-security-isoloation.html", "difficulty": "6",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Attended automations cannot guarantee security isolation between the robot and the user", "correct":true, "selected":false}, 
+           {"text":"Unattended automations cannot guarantee security isolation between the robot and the user", "correct":false, "selected":false},
+           {"text":"Attended automations always require a human present", "correct":true, "selected":false},
+           {"text":"Unattended automations always require a human present", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.2"
+     ]},
+     
+            {"id":29, "query":"A robot that is tied to a specific machine and not allowed to run on any machines other than the one it is tied to in UiPath Orchestrator is known as:",  "answer":"/2020/11/11/standard-robots-unattended-uipath.html", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"An unattended robot", "correct":false, "selected":false}, 
+           {"text":"A standard robot", "correct":true, "selected":false},
+           {"text":"A sticky robot", "correct":false, "selected":false},
+           {"text":"A floating robot", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.2"
+     ]},
+     
+     {"id":30, "query":"A robot that can be used by mutiple users and run on multiple workstations without being tied to a specific machine is known as a(n):",  "answer":"/2020/11/11/floating-robots-unattended.html", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"attended robot", "correct":false, "selected":false}, 
+           {"text":"unattended robot", "correct":false, "selected":false},
+           {"text":"floating robot", "correct":true, "selected":false},
+           {"text":"standard robot", "correct":false, "selected":false}
+           ],
+     "objectives":[
+          "1.0", "1.2"
+     ]},
+     
+     {"id":31, "query":"Attended robots are best used with:",  "answer":"/2020/11/11/attend-robot-use-cases.html", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"small, continuous automations", "correct":false, "selected":false}, 
+           {"text":"small, fragmented automations", "correct":true, "selected":false},
+           {"text":"large, fragmented automations", "correct":false, "selected":false},
+           {"text":"large, continuous automations", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.2"
+     ]},
+     
+     
+     {"id":32, "query":"Which of the following statements are true about UiPath Studio Community Edition (CE)?",  "answer":"/2020/11/11/uipath-studio-updates.html", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"UiPath Studio CE is limited to a single attended robot but an unlimited number of unattended robots", "correct":false, "selected":false}, 
+           {"text":"UiPath Studio CE is limited to a single unattended robot but an unlimited number of attended robots", "correct":false, "selected":false},
+           {"text":"UiPath Studio CE cannot be installed in a top security environment with in Internet access", "correct":true, "selected":false},
+           {"text":"UiPath Studio CE updates cannot be turned off", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.4"
+     ]},
+
+
+     {"id":33, "query":"The UiPath Enterprise Server:",  "answer":"/2020/11/11/uipath-enterprise-server-saas.html", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Is accessed through the cloud", "correct":false, "selected":false}, 
+           {"text":"Is installed on a computer by the client", "correct":true, "selected":false},
+           {"text":"Is not compatible with UiPath Studio Community Edition", "correct":false, "selected":false},
+           {"text":"Is not compatible with UiPath Studio Enterprise trial editions", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.4"
+     ]},
+
+
+
+     {"id":34, "query":"What is the standard duration of a UiPath Studio Community Edition trial?",  "answer":"/2020/11/11/uipath-studio-trail-license.html", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"30 days", "correct":false, "selected":false}, 
+           {"text":"60 days", "correct":false, "selected":false},
+           {"text":"90 days", "correct":false, "selected":false},
+           {"text":"Unlimited", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.4"
+     ]},
+
+
+     {"id":35, "query":"Which of the following is true about programs written in UiPath Stuido Community Edition?",  "answer":"/2020/11/11/uipath-studio-programs.html", "difficulty": "6",
+           "marked":0,"timespent":0,"options":[
+           {"text":"They cannot use libraries created by UiPath Stuido Enterprise Edition", "correct":false, "selected":false}, 
+           {"text":"Programs created in UiPath Stuido Community Edition expire if the 60 day trial is not extended", "correct":false, "selected":false},
+           {"text":"Programs created in UiPath Studio Community Edition cannot pass arguments between projects", "correct":false, "selected":false},
+           {"text":"Programs creating in UiPath Studio Community Edition are no different than programs created in the Enterprise Edition", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.4"
+     ]},
+
+     {"id":36, "query":"Which of the following is true about UiPath Studio?",  "answer":"/2020/11/11/uipath-studio-enterprise-vs-community.html", "difficulty": "7",
+           "marked":0,"timespent":0,"options":[
+           {"text":"The Community Edition always updates if a new stable release is available", "correct":true, "selected":false}, 
+           {"text":"The Community Edition always updates if a new preview release is available", "correct":true, "selected":false},
+           {"text":"The Enterprise Edition always updates if a new stable release is available", "correct":false, "selected":false},
+           {"text":"The Enterprise Edition always updates if a new preview release is available", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.4"
+     ]},
+
+     {"id":37, "query":"What is the standard duration of a UiPath Studio Enterprise Edition trial?",  "answer":"/2020/11/11/UiPath-Enterprise-trial.html", "difficulty": "4",
+           "marked":0,"timespent":0,"options":[
+           {"text":"30 days", "correct":false, "selected":false}, 
+           {"text":"60 days", "correct":true, "selected":false},
+           {"text":"90 days", "correct":false, "selected":false},
+           {"text":"Unlimited", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.4"
+     ]},
+
+     {"id":38, "query":"Which of the following is true about UiPath Stuido Community Edition (CE)?",  "answer":"/2020/11/11/Studio-Community-Orchestrator.html", "difficulty": "7",
+           "marked":0,"timespent":0,"options":[
+           {"text":"UiPath Studio CE can only connect to UiPath Orchestrator CE", "correct":true, "selected":false}, 
+           {"text":"UiPath Studio CE can connect to both UiPath Orchestrator CE and Enterprise", "correct":false, "selected":false},
+           {"text":"UiPath Studio CE does not have access to AI Computer Vision", "correct":false, "selected":false},
+           {"text":"UiPath Studio CE does have access to AI Computer Vision", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "1.0", "1.4"
+     ]},
+
+     {"id":39, "query":"What is the name of the tool provided by UiPath Studio to compare file versions stored in a Git or GitHub repo?",  "answer":"/2020/11/11/debug-compare-files-studio.html", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Workflow Diff", "correct":false, "selected":false}, 
+           {"text":"Diff Compare", "correct":false, "selected":false},
+           {"text":"Workflow Compare", "correct":false, "selected":false},
+           {"text":"Compare Files", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.3"
+     ]},
+     
+     {"id":40, "query":"Which of the following statements are true about UiPath variable debugging?",  "answer":"/2020/11/11/debug-edit-variable.html", "difficulty": "6",
+           "marked":0,"timespent":0,"options":[
+           {"text":" It is possible to edit String variables at runtime using the debugger", "correct":false, "selected":false}, 
+           {"text":"It is possible to edit String and int values at runtime using the debugger", "correct":false, "selected":false},
+           {"text":"It is possible to edit any variable at runtime using the debugger", "correct":true, "selected":false},
+           {"text":"It is not possible to edit variables at runtime after the program has started", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":41, "query":"What three DVCS tools are configurable during the UiPath Studio installation procedure?",  "answer":"/2020/11/11/debug-git-tfs-svn.html", "difficulty": "4",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Mercurial SCM", "correct":false, "selected":false}, 
+           {"text":"Apache Subversion", "correct":true, "selected":false},
+           {"text":"Microsoft Team Foundation Server", "correct":true, "selected":false},
+           {"text":"Git", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.3"
+     ]},
+
+     {"id":42, "query":"Which UiPath Studio screen only appears while you are actively debugging a program?",  "answer":"/2020/11/11/debug-locals-panel.html", "difficulty": "6",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Log panel", "correct":false, "selected":false}, 
+           {"text":"Locals panel", "correct":true, "selected":false},
+           {"text":"Breakpoints panel", "correct":false, "selected":false},
+           {"text":"Output panel", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+     
+     {"id":43, "query":"Which of the following is true about the UiPath debugger's retry button?",  "answer":"/2020/11/11/debug-retry-uipath.html", "difficulty": "7",
+           "marked":0,"timespent":0,"options":[
+           {"text":"It will restart your application from the first line prior to an exception being thrown", "correct":false, "selected":false}, 
+           {"text":"It will restart your application from the beginning of the activity that threw an exception", "correct":true, "selected":false},
+           {"text":"It will restart your application from the first activity of the project", "correct":true, "selected":false},
+           {"text":"It will restart your application from the start of the beginning of the activity prior to the one that threw an exception", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":44, "query":"Where does UiPath Studio store its log files by default?",  "answer":"/2020/11/11/debug-log-file-location.html", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"%UiPathInstallRoot%\\logs", "correct":false, "selected":false}, 
+           {"text":"%UserHome%\\UiPath\\logs", "correct":false, "selected":false},
+           {"text":"%UiPathInstallRoot%\\bin\\logs", "correct":false, "selected":false},
+           {"text":"%localappdata%\\UiPath\\logs", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":45, "query":"An error has occurred and you need to know which version of the UiPath.Excel.Activities library is installed. Where would you find this information?",  "answer":"/2020/11/11/debug-manage-packaged-version", "difficulty": "7",
+           "marked":0,"timespent":0,"options":[
+           {"text":"In the Help --> About option from UiPath Studio's main menu", "correct":false, "selected":false}, 
+           {"text":"From the installation log files", "correct":false, "selected":false},
+           {"text":"Right click on any Excel activity and select Properties", "correct":false, "selected":false},
+           {"text":"Locate the library in the Manage Packages window", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.2"
+     ]},
+     
+     {"id":46, "query":"What is the name of the tool provided by UiPath Studio to compare file versions stored in a Git or GitHub repo?",  "answer":"/2020/11/11/debug-compare-files-studio.html", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Workflow Diff", "correct":true, "selected":false}, 
+           {"text":"Diff Compare", "correct":false, "selected":false},
+           {"text":"Workflow Compare", "correct":false, "selected":false},
+           {"text":"Compare Files", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.3"
+     ]},
+
+     {"id":47, "query":"What is the name of the UiPath debugger panel that allows you to view how the values of variables change as the program executes?",  "answer":"/2020/11/11/2020-11-11-debug-panels.html", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Watch", "correct":true, "selected":false}, 
+           {"text":"Inspect", "correct":false, "selected":false},
+           {"text":"Debug", "correct":false, "selected":false},
+           {"text":"Output", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":48, "query":"Which of the following is true about the UiPath debugger's restart button?",  "answer":"/2020/11/11/debug-restart-button.html", "difficulty": "7",
+           "marked":0,"timespent":0,"options":[
+           {"text":"It will restart your application from the first line prior to an exception being thrown", "correct":false, "selected":false}, 
+           {"text":"It will restart your application from the beginning of the activity that threw an exception", "correct":false, "selected":false},
+           {"text":"It will restart your application from the first activity of the project", "correct":true, "selected":true},
+           {"text":"It will restart your application from the start of the beginning of the activity prior to the one that threw an exception", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":49, "query":"Which of the following is designed to allow developers to debug their applications one activity at a time?",  "answer":"/2020/11/11/debug-step-into-over-out.html", "difficulty": "6",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Step Over", "correct":false, "selected":false}, 
+           {"text":"Step Into", "correct":true, "selected":false},
+           {"text":"Step Out", "correct":false, "selected":false},
+           {"text":"Focus", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":50, "query":"Which of the following are true about the UiPath Studio debugger functions? ",  "answer":"/2020/11/11/debugger-not-working-uipath.html", "difficulty": "6",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Only one Global Exception Handler can be set per automation project.", "correct":true, "selected":false}, 
+           {"text":"The debugger will not operate if there are errors in the project", "correct":true, "selected":false},
+           {"text":"Debug activities are displayed as Trace logs in the Output panel", "correct":true, "selected":false},
+           {"text":"The debugger will not operate if there are exceptions in the project", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":51, "query":"Docker is written in:",  "answer":"https://www.reddit.com/r/docker/comments/1w2aco/why_is_docker_written_in_go/", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Java", "correct":false, "selected":false}, 
+           {"text":"C", "correct":false, "selected":false},
+           {"text":"C++", "correct":false, "selected":false},
+           {"text":"Go", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":52, "query":"A Linux container is often described as a compliment and improvement over what technology?",  "answer":"https://www.redhat.com/en/topics/containers/containers-vs-vms", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"cloud computing", "correct":false, "selected":false}, 
+           {"text":"devops", "correct":false, "selected":false},
+           {"text":"virtual machines", "correct":true, "selected":false},
+           {"text":"microservices", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":53, "query":"The history of containerization is intimately tied to which OS?",  "answer":"https://blog.aquasec.com/a-brief-history-of-containers-from-1970s-chroot-to-docker-2016", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Windows", "correct":false, "selected":false}, 
+           {"text":"Linux", "correct":true, "selected":false},
+           {"text":"MacOS", "correct":false, "selected":false},
+           {"text":"Android", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":54, "query":"Which tool can be used to manage local and remote containers running on various flavors of Linux?",  "answer":"https://www.macadamian.com/learn/docker-machine-basic-examples/", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Docker Compose", "correct":false, "selected":false}, 
+           {"text":"Docker Machine", "correct":true, "selected":false},
+           {"text":"Dockerfile", "correct":false, "selected":false},
+           {"text":"Docker engine", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":55, "query":"Two key goals of containerization are?",  "answer":"https://jvns.ca/blog/2016/10/10/what-even-is-a-container/", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Application execution and failure isolation through namespaces", "correct":true, "selected":false}, 
+           {"text":"Application execution and failure isolation through control groups", "correct":false, "selected":false},
+           {"text":"CPU and memory metering through namespaces", "correct":false, "selected":false},
+           {"text":"CPU and memory metering through control groups", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":56, "query":"The core interface between computer hardware and the application processes that run on it is known as? (Wrong answers only)",  "answer":"https://www.redhat.com/en/topics/linux/what-is-the-linux-kernel", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"General", "correct":true, "selected":true}, 
+           {"text":"Admiral", "correct":true, "selected":true},
+           {"text":"Lieutenant", "correct":true, "selected":true},
+           {"text":"Kernel", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":57, "query":"A docker container keeps which of the following completely isolated from the underlying Linux OS?",  "answer":"https://www.oreilly.com/library/view/container-security/9781492056690/ch04.html", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"enrivonrment variables", "correct":false, "selected":false}, 
+           {"text":"users and groups", "correct":false, "selected":false},
+           {"text":"process trees", "correct":false, "selected":false},
+           {"text":"All of the above", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},
+
+     {"id":58, "query":"Which of the following are drabacks to traditional virtualization?",  "answer":"https://www.redhat.com/en/topics/containers/containers-vs-vmswha", "difficulty": "8",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Signficant limitation on the choice of OS used in the VM", "correct":false, "selected":false}, 
+           {"text":"VMs run a complete OS image", "correct":true, "selected":false},
+           {"text":"Reduced deployment density", "correct":true, "selected":false},
+           {"text":"High operational overhead", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "2.0", "2.1"
+     ]},	  
+
+     {"id":59, "query":"If you attempt to build a Docker image based on a container that has not been previously downloaded to your machine:",  "answer":"https://hub.docker.com/u/cameronmcnz", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Docker will return a 408: image not found message", "correct":false, "selected":false}, 
+           {"text":"Docker will pull the image from GitHub", "correct":false, "selected":false},
+           {"text":"Docker will pull the image from DockerHub", "correct":true, "selected":false},
+           {"text":"Docker will return a 404: file not found message", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":60, "query":"Which of the following are container alternatives to Docker?",  "answer":"https://www.aquasec.com/cloud-native-academy/docker-container/docker-alternatives/", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Kubernetes", "correct":false, "selected":false}, 
+           {"text":"CoreOS' rkt", "correct":true, "selected":false},
+           {"text":"Canonical's LXD", "correct":true, "selected":false},
+           {"text":"Windows Containers (WSC)", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":61, "query":"Which of the following are correct?",  "answer":"answer", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"A docker image is akin to a virtual machine image", "correct":true, "selected":false}, 
+           {"text":"A docker image is akin to an EC2 instance", "correct":false, "selected":false},
+           {"text":"A docker container is akin to a virtual machine image", "correct":false, "selected":false},
+           {"text":"A docker container is akin to an EC2 instance", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":62, "query":"Which of the following are correct?",  "answer":"answer", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Docker images can be built", "correct":false, "selected":false}, 
+           {"text":"Docker containers can be built", "correct":false, "selected":false},
+           {"text":"Docker images can be started and stopped", "correct":false, "selected":false},
+           {"text":"Docker containers can be started and stopped", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":63, "query":"Docker images are:",  "answer":"https://www.dictionary.com/browse/phantasmagoric", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"idempotent", "correct":false, "selected":false}, 
+           {"text":"immutable", "correct":false, "selected":false},
+           {"text":"phantasmagoric", "correct":false, "selected":false},
+           {"text":"ephemeral", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":64, "query":"Docker containers:",  "answer":"https://docs.docker.com/storage/volumes/", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Cannot access the host file system", "correct":false, "selected":false}, 
+           {"text":"Can only access network file systems to persist data", "correct":false, "selected":false},
+           {"text":"Can store data internally but the data is lost on shutdown", "correct":false, "selected":false},
+           {"text":"Can use volumes to access files on the host system", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":65, "query":"Information on how to build a Docker image is stored in a:",  "answer":"answer", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Dockerfile", "correct":true, "selected":false}, 
+           {"text":"Jenkinsfile", "correct":false, "selected":false},
+           {"text":"docker-compose yaml file", "correct":false, "selected":false},
+           {"text":"dockerimage", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":66, "query":"Which of the following two commands will successfully build a Docker image:",  "answer":"answer", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"docker compose -t rps-image:v1.0", "correct":false, "selected":false}, 
+           {"text":"docker build -t rps-image:v1.0", "correct":false, "selected":false},
+           {"text":"docker build -t rps-image:v1.0 .", "correct":true, "selected":false},
+           {"text":"docker build -t rps-image:v1.1 -f my-docker-image-file.txt", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":67, "query":"Docker locks down all internal ports to the outside world unless they are opened up as a:",  "answer":"https://github.com/learn-devops-fast/rock-paper-scissors/wiki/Fun-with-Docker", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"runtime", "correct":false, "selected":false}, 
+           {"text":"proxy", "correct":false, "selected":false},
+           {"text":"process", "correct":false, "selected":false},
+           {"text":"service", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":68, "query":"Which is not a core tenant of the 12-factor app?",  "answer":"https://www.youtube.com/watch?v=_83MEuLoz9Y", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"A single codebase for service", "correct":false, "selected":false}, 
+           {"text":"Externalization of configuration in the environment", "correct":false, "selected":false},
+           {"text":"Export services via port bindings", "correct":false, "selected":false},
+           {"text":"Don't throw salt in your eyes", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":69, "query":"How do you run an Ubuntu docker container in interative mode?",  "answer":"answer", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"docker run --hostname basic_host ubuntu /bin/bash", "correct":false, "selected":false}, 
+           {"text":"docker run -i", "correct":true, "selected":false},
+           {"text":"docker run -interactive --hostname basic_host ubuntu /bin/bash", "correct":true, "selected":false},
+           {"text":"docker run -t --hostname basic_host ubuntu /bin/bash", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":70, "query":"Which of the following commands will remove a docker container?",  "answer":"", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"Dockerfile remove *containerid*", "correct":false, "selected":false}, 
+           {"text":"Dockerfile rmi *containerid*", "correct":false, "selected":false},
+           {"text":"docker rmi *containerid*", "correct":false, "selected":false},
+           {"text":"docker rm *containerid*", "correct":true, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":71, "query":"Which of the following is true?",  "answer":"https://stackoverflow.com/questions/34782678/difference-between-running-and-starting-a-docker-container", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"You run a container id", "correct":false, "selected":false}, 
+           {"text":"You run an image id", "correct":true, "selected":false},
+           {"text":"You start a container id", "correct":true, "selected":false},
+           {"text":"You run an image id", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":30, "query":"query",  "answer":"answer", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"aaaaa", "correct":false, "selected":false}, 
+           {"text":"aaaaa", "correct":false, "selected":false},
+           {"text":"aaaaa", "correct":false, "selected":false},
+           {"text":"aaaaa", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":30, "query":"query",  "answer":"answer", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"aaaaa", "correct":false, "selected":false}, 
+           {"text":"aaaaa", "correct":false, "selected":false},
+           {"text":"aaaaa", "correct":false, "selected":false},
+           {"text":"aaaaa", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":30, "query":"query",  "answer":"answer", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"aaaaa", "correct":false, "selected":false}, 
+           {"text":"aaaaa", "correct":false, "selected":false},
+           {"text":"aaaaa", "correct":false, "selected":false},
+           {"text":"aaaaa", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]},
+
+     {"id":30, "query":"query",  "answer":"answer", "difficulty": "5",
+           "marked":0,"timespent":0,"options":[
+           {"text":"aaaaa", "correct":false, "selected":false}, 
+           {"text":"aaaaa", "correct":false, "selected":false},
+           {"text":"aaaaa", "correct":false, "selected":false},
+           {"text":"aaaaa", "correct":false, "selected":false}
+           ],
+     "objectives":[
+        "3.0", "3.0"
+     ]}  
+]
