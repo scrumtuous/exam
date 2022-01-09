@@ -7,14 +7,17 @@ class ExamHistoryPanel extends Component{
 	constructor(props) {
         super(props);
 		this.state = { hasError: false };
-		let history = JSON.parse(localStorage.getItem('examHistory'));
-		
-		
+		//let history = JSON.parse(localStorage.getItem('examHistory'));
     }
 	
 	
 	clearLocalStorage() {
 		localStorage.clear('examHistory');
+		this.getExamHistory();
+	}
+	
+	getExamHistory() {
+		console.log("In EHP getExamHistory");
       try{
          let object = localStorage.getItem('examHistory');
          let examHistory = "";
@@ -25,15 +28,29 @@ class ExamHistoryPanel extends Component{
             localStorage.setItem('examHistory', JSON.stringify(examHistory));
          } else {
             examHistory = JSON.parse(object);
+			
          }
          return examHistory;
       }catch(e){
          console.log(e);
       }
+		
 	}
 	
+	
     render(){
+	console.log("In ExamHistoryPanel render");
+	let history = this.getExamHistory();
 		
+	if (history == null ) {
+		return <span>No Exam History</span>;
+	}
+	
+	if (history.exams == null ) {
+		return <span>No Exams</span>;
+	}
+	
+	
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return <h1>Something went wrong.</h1>;
@@ -73,7 +90,7 @@ class ExamHistoryPanel extends Component{
 				  {
 				
 
-					JSON.parse(localStorage.getItem('examHistory')).exams.map((exam, i) => {
+					this.getExamHistory().exams.map((exam, i) => {
 					  console.log("Outsideeee"+i);
 
 					  let buttons = exam.questions.map((value, index) => { 
