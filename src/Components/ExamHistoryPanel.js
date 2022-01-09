@@ -6,6 +6,7 @@ class ExamHistoryPanel extends Component{
 	
 	constructor(props) {
         super(props);
+		this.state = { hasError: false };
 		let history = JSON.parse(localStorage.getItem('examHistory'));
 		
 		
@@ -32,6 +33,11 @@ class ExamHistoryPanel extends Component{
 	}
 	
     render(){
+		
+    if (this.state.hasError) {
+      // You can render any custom fallback UI
+      return <h1>Something went wrong.</h1>;
+    }
         return (
 
 			<div class="card  mt-3 mb-3 ">
@@ -76,9 +82,9 @@ class ExamHistoryPanel extends Component{
 					  }
 					  )
 					   console.log("Here are the buttons: " + buttons);
-buttons.unshift(<br/> );
-buttons.unshift(exam.name );
-buttons.push(<hr/>);
+						buttons.unshift(<br/> );
+						buttons.unshift(exam.name );
+						buttons.push(<hr/>);
 					  return buttons;
 					}
 					)	  
@@ -92,6 +98,14 @@ buttons.push(<hr/>);
 
         )
     }
+	
+  componentDidCatch(error, info) {
+    // Display fallback UI
+    this.setState({ hasError: true });
+    // You can also log the error to an error reporting service
+    console.log(error);
+	console.log(info);
+  }
 
 getButton(question) {
 
