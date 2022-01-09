@@ -4,6 +4,7 @@ import ExamHistory from './ExamHistory';
 import JumperButton from './JumperButton';
 import QuestionsPanel from './QuestionsPanel';
 import QuestionJumperPanel from './QuestionJumperPanel'
+import ExamHistoryPanel from './ExamHistoryPanel'
 import React from 'react';
 import * as Realm from "realm-web";
 
@@ -40,7 +41,7 @@ class Exam extends React.Component {
 	  console.log("Hello World");
 
     super(props);
-    console.log("Attempts at message in Exam: " + this.props.message);
+    
 
     this.saveQuestionState = this.saveQuestionState.bind(this);
 	this.gradeTheExam = this.gradeTheExam.bind(this);
@@ -80,7 +81,10 @@ class Exam extends React.Component {
 		console.log(questions);
 	
 	//{ _id : { $in : [56,57,58,59,66,76,65,67] } }
-		const question = await questions.find({ quid : { $in : [56,57,58,59,66,76,65,67] } } );
+	console.log("About to find questions in: " + this.props.message);
+	var message = "{ \"quid\" : { \"$in\" : [56,57,58,59,66,76,65,67] } }";
+	message = this.props.message;
+		const question = await questions.find(JSON.parse(message));
 		console.log(question);
 		this.setState({questions: question});
 		this.setCurrentQuestion(0);
@@ -269,6 +273,19 @@ class Exam extends React.Component {
 			graded={this.state.graded} 
 			
 			/>
+			
+
+			<ExamHistoryPanel 
+			setCurrentQuestion={this.setCurrentQuestion} 
+			toggleMarked={this.toggleMarked}
+			currentQuestionNumber = {this.state.currentQuestionNumber} 
+			questions={this.state.questions}
+			cheating={this.state.cheating}
+			graded={this.state.graded} 
+			
+			/>
+			
+			<ExamHistory/>
 
 
 			

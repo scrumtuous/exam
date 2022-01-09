@@ -6,10 +6,10 @@ class ExamHistory extends Component{
 	
     render(){
         return (
-
-<div class="card mt-2">
    <div class="card-header" id="localStorageTitle">
       Local Storage
+
+<div class="card mt-2">
    </div>
    <div class="card-body">
       <h3 class="card-title" id="localStorageCardTitle">What's in Storage?</h3>

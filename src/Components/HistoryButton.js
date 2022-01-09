@@ -22,49 +22,12 @@ class JumperButton extends Component{
     }
 	
 	getClass(){
-		//var question = this.props.
-		var result = 'btn btn-light btn-sm';
-		try {
 
-		if (this.props.questions[this.props.indexNumber].viewed) {
-			result = 'btn btn-secondary btn-sm';
-			//console.log("The question has been viweed");
-		}
-		} catch (error) {
-  console.error(error);
-  // expected output: ReferenceError: nonExistentFunction is not defined
-  // Note - error messages will vary depending on browser
-}
-	    if ([this.props.indexNumber] == this.props.currentQuestionNumber) {
-			result = 'btn btn-primary btn-sm';
-			//console.log("Current Questions");
-
-		}
-		 
-		 
-
-		let correctCount = 0;
-        let i = 0;
-		let correct = true;
-		for (i = 0; i < this.props.question.options.length; i++) {
-           if ( (this.props.question.options[i].correct) != (this.props.question.options[i].selected) ) {
-			 correct = false;
-		   }
-		}
-		//console.log("Cheating value in jumper: " + this.props.cheating );
-		if (this.props.cheating || this.props.graded ) {
-			if (!correct) {
-				result = 'btn btn-danger btn-sm';
-			}
-			if (correct){
-				result = 'btn btn-success btn-sm';
-			}
-		}
 		
 
 
 		
-		return result;
+		return 'btn btn-success btn-sm';
 	}
 	
 	
