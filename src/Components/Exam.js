@@ -20,7 +20,7 @@ class Exam extends React.Component {
 	componentDidMount()
 	{
 		
-		
+		this.getExamQuestions();
 		
 
 
@@ -49,36 +49,37 @@ class Exam extends React.Component {
 	this.showGrade = false;
 	this.elapsedTime=0;
 	this.toggleCheat = this.toggleCheat.bind(this);
-
+	const d = new Date();
 	
 
 	//.log("Questions commented out");
     this.state = {
+		name: this.props.name,
       graded: false,
 	  username: "kaisersose",
-	  date: "",
-	  elapsedtime: "",
+	  start: d.getTime(),
+      finish: 0,
 	  questions: require('../questions.json').slice(0, 1),
 	  currentQuestionNumber: 0,
 	  cheating: false,
     };
 	
 	
-	this.getExamQuestions();
+	//this.getExamQuestions();
 	
 	
 
   }
   
   async getExamQuestions() {
-	  	console.log("COMPONENT DID MOUNT!");
-		console.log("About to fetch");
-		const user = await app.logIn(Realm.Credentials.anonymous());
-		
-		const mongodb = app.currentUser.mongoClient("mongodb-atlas");
-		const questions = mongodb.db("ceasars-club").collection("practitioner");
-		console.log("Hello");
-		console.log(questions);
+	console.log("COMPONENT DID MOUNT!");
+	console.log("About to fetch");
+	const user = await app.logIn(Realm.Credentials.anonymous());
+	
+	const mongodb = app.currentUser.mongoClient("mongodb-atlas");
+	const questions = mongodb.db("ceasars-club").collection("practitioner");
+	console.log("Hello");
+	console.log(questions);
 	
 	//{ _id : { $in : [56,57,58,59,66,76,65,67] } }
 	console.log("About to find questions in: " + this.props.message);
@@ -88,6 +89,8 @@ class Exam extends React.Component {
 		console.log(question);
 		this.setState({questions: question});
 		this.setCurrentQuestion(0);
+		
+
 	  
   }
 
@@ -133,14 +136,23 @@ class Exam extends React.Component {
 	}
 
 	gradeTheExam() {
-		
+		const d = new Date();
 		let correctCount = this.getCorrectCount();
 		let examHistory = this.getExamHistory();
-		examHistory.exams.push(this.state.questions);
-		localStorage.setItem('examHistory', JSON.stringify(examHistory));
+
+		//examHistory.exams.push(this.state.questions);
+		//examHistory.exams.push('questions', this.state.questions);
+		
 		this.setState({graded: true}, () =>{});
+		
 	    this.showGrade = true;
 		this.setState({cheating: true}, () =>{});
+		this.setState({finish: d.getTime()}, () => {
+					examHistory.exams.push(this.state); 
+					localStorage.setItem('examHistory', JSON.stringify(examHistory));
+		});
+		
+		
 	}
 	
 	getExamHistory() {
@@ -285,7 +297,7 @@ class Exam extends React.Component {
 			
 			/>
 			
-			<ExamHistory/>
+
 
 
 			

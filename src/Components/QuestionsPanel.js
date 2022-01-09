@@ -74,14 +74,14 @@ class QuestionsPanel extends Component{
    
    getCheatButton() {
 	   if(!this.props.disabled){
-	   	  return <a id="cheat" class=" enabled btn btn-warning " onClick={() => this.props.toggleCheat()}>{(this.props.cheating ? 'Uncheat' : 'Cheat')}</a>;
+	   	  return <a id="cheat" className=" enabled btn btn-warning " onClick={() => this.props.toggleCheat()}>{(this.props.cheating ? 'Uncheat' : 'Cheat')}</a>;
 	   }
    }
    
    getFinishButton() {
 	   
 	   if(!this.props.disabled){
-	   	  return <a id="finish" class={this.setFinishButtonState()} onClick={() => this.props.gradeTheExam()}>Finish</a>;
+	   	  return <a id="finish" className={this.setFinishButtonState()} onClick={() => this.props.gradeTheExam()}>Finish</a>;
 	   }
 	   
 	   						
@@ -91,22 +91,22 @@ class QuestionsPanel extends Component{
         return (
 
 
-			<div class="card  mt-3">
-			   <div class="card-header d-flex justify-content-between" id="questionNumber">
+			<div className="card  mt-3">
+			   <div className="card-header d-flex justify-content-between" id="questionNumber">
 				  Question {this.props.currentQuestionNumber + 1}
 					  {this.getCheatButton()}
 				  
 				  
 			   </div>
-			   <div class="card-body">
+			   <div className="card-body">
 			   
 				  <Question saveQuestionState = {this.props.saveQuestionState} question={ this.getCurrentQuestion()} disabled={this.props.disabled} cheating={this.props.cheating}/>
 				  
-				  <div class="card-text mt-3   d-flex justify-content-between ">
+				  <div className="card-text mt-3   d-flex justify-content-between ">
 					 
 <span>
-						<a id="previous" class={this.setPreviousButtonState()} onClick={() => this.previousQuestion()}>&lt;&lt; Back</a>&nbsp;
-						<a id="next" class={this.setNextButtonState()} onClick={() => this.nextQuestion()}>Next &gt;&gt;</a> &nbsp;
+						<a id="previous" className={this.setPreviousButtonState()} onClick={() => this.previousQuestion()}>&lt;&lt; Back</a>&nbsp;
+						<a id="next" className={this.setNextButtonState()} onClick={() => this.nextQuestion()}>Next &gt;&gt;</a> &nbsp;
 </span>
 <span>
 						

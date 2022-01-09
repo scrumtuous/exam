@@ -2,14 +2,34 @@ import React, { Component } from 'react';
 import Question from './Question';
 import HistoryButton from './JumperButton';
 
-class QuestionJumperPanel extends Component{
+class ExamHistoryPanel extends Component{
 	
 	constructor(props) {
         super(props);
 		let history = JSON.parse(localStorage.getItem('examHistory'));
-		console.log("here is the history: " +history.exams[0]);
-		//console.log(object.exams[0]);
+		
+		
     }
+	
+	
+	clearLocalStorage() {
+		localStorage.clear('examHistory');
+      try{
+         let object = localStorage.getItem('examHistory');
+         let examHistory = "";
+         if (object == null) {
+            examHistory = {name:"Exam History"};
+            let exams = [];
+            examHistory.exams = exams;
+            localStorage.setItem('examHistory', JSON.stringify(examHistory));
+         } else {
+            examHistory = JSON.parse(object);
+         }
+         return examHistory;
+      }catch(e){
+         console.log(e);
+      }
+	}
 	
     render(){
         return (
@@ -17,7 +37,13 @@ class QuestionJumperPanel extends Component{
 			<div class="card  mt-3 mb-3 ">
 			   <div class="card-header d-flex justify-content-between align-items-center" id="questionJumperTitle" onClick={() => this.toggleWindow()}>
 
-  Exam History
+  <span>Exam History &nbsp;
+  
+  <a id="clearls" class="" type="submit"
+         onClick={() => this.clearLocalStorage()}
+      >Clear History</a></span>
+  
+  
 <svg id="history-caret" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16">
 <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
 </svg>
@@ -44,13 +70,14 @@ class QuestionJumperPanel extends Component{
 					JSON.parse(localStorage.getItem('examHistory')).exams.map((exam, i) => {
 					  console.log("Outsideeee"+i);
 
-					  let buttons = exam.map((value, index) => { 
+					  let buttons = exam.questions.map((value, index) => { 
 							console.log("Inside"+index + " " + value.query);
-							return 				<span><button class={this.getClass(value)}>q.{value.quid}
-												</button>&nbsp;</span>
+							return 	 <span>{this.getButton(value)}</span>
 					  }
 					  )
 					   console.log("Here are the buttons: " + buttons);
+buttons.unshift(<br/> );
+buttons.unshift(exam.name );
 buttons.push(<hr/>);
 					  return buttons;
 					}
@@ -65,6 +92,45 @@ buttons.push(<hr/>);
 
         )
     }
+
+getButton(question) {
+
+var result = 'btn btn-warning btn-sm';
+		let correctCount = 0;
+        let i = 0;
+		let correct = true;
+		for (i = 0; i < question.options.length; i++) {
+           if ( (question.options[i].correct) != (question.options[i].selected) ) {
+			 correct = false;
+		   }
+		}
+		//console.log("Cheating value in jumper: " + this.props.cheating );
+
+		if (!correct) {
+			result = <span>
+<button class='btn btn-info'>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+</button>
+&nbsp;
+
+</span>;
+		}
+		if (correct){
+			result = <span>
+<button class='btn btn-primary'>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
+</svg>
+</button>&nbsp;</span>;
+		}
+
+		return result;
+
+}
 
 	getClass(question){
 		console.log("In getClass with question: " + question.query);
@@ -83,12 +149,12 @@ buttons.push(<hr/>);
 		}
 		//console.log("Cheating value in jumper: " + this.props.cheating );
 
-			if (!correct) {
-				result = 'btn btn-danger btn-sm';
-			}
-			if (correct){
-				result = 'btn btn-info btn-sm';
-			}
+		if (!correct) {
+			result = 'btn btn-danger btn-sm';
+		}
+		if (correct){
+			result = 'btn btn-info btn-sm';
+		}
 
 		return result;
 	}
@@ -114,5 +180,5 @@ var y = document.getElementById("history-caret");
 
 
 
-export default QuestionJumperPanel;
+export default ExamHistoryPanel;
 

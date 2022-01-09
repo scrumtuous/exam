@@ -36,7 +36,7 @@ class App extends React.Component {
 
 
   render() {
-    return <div className="App"  message={el.getAttribute('data-param')}><Exam message={el.getAttribute('data-param')}/>{this.props.message}</div>
+    return <div className="App"  message={el.getAttribute('data-param')} name={el.getAttribute('data-name')}><Exam message={el.getAttribute('data-param')} name={el.getAttribute('data-name')}/>{this.props.message}</div>
   }
 }
 
