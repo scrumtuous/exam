@@ -17,7 +17,7 @@ class ExamHistoryPanel extends Component{
 	}
 	
 	getExamHistory() {
-		console.log("In EHP getExamHistory");
+		//console.log("In EHP getExamHistory");
       try{
          let object = localStorage.getItem('examHistory');
          let examHistory = "";
@@ -39,7 +39,7 @@ class ExamHistoryPanel extends Component{
 	
 	
     render(){
-	console.log("In ExamHistoryPanel render");
+	//console.log("In ExamHistoryPanel render");
 	let history = this.getExamHistory();
 		
 	if (history == null ) {
@@ -91,14 +91,14 @@ class ExamHistoryPanel extends Component{
 				
 
 					this.getExamHistory().exams.map((exam, i) => {
-					  console.log("Outsideeee"+i);
+					  //console.log("Outsideeee"+i);
 
 					  let buttons = exam.questions.map((value, index) => { 
-							console.log("Inside"+index + " " + value.query);
+							//console.log("Inside"+index + " " + value.query);
 							return 	 <span>{this.getButton(value)}</span>
 					  }
 					  )
-					   console.log("Here are the buttons: " + buttons);
+					   //console.log("Here are the buttons: " + buttons);
 						buttons.unshift(<br/> );
 						buttons.unshift(exam.name );
 						buttons.push(<hr/>);
@@ -120,8 +120,8 @@ class ExamHistoryPanel extends Component{
     // Display fallback UI
     this.setState({ hasError: true });
     // You can also log the error to an error reporting service
-    console.log(error);
-	console.log(info);
+    //console.log(error);
+	//console.log(info);
   }
 
 getButton(question) {
@@ -164,7 +164,7 @@ var result = 'btn btn-warning btn-sm';
 }
 
 	getClass(question){
-		console.log("In getClass with question: " + question.query);
+		//console.log("In getClass with question: " + question.query);
 		var result = 'btn btn-warning btn-sm';
 
 		 

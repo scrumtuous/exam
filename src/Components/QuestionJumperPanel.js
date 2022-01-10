@@ -8,7 +8,39 @@ class QuestionJumperPanel extends Component{
         super(props);
     }
 	
+	getCurrentQuestion() {
+		
+
+		try {
+			if (this.props.questions==null) {
+				console.log("Questions are null.");
+				return null;
+			} else {
+				return this.props.questions[this.props.currentQuestionNumber];
+			}
+		} catch (error) {
+		  console.error("Error trying to return current question" + error);
+		  return null;
+		}
+		
+		
+		
+	};
+	
     render(){
+		if (this.getCurrentQuestion() == null ) {
+			return <div class="card  mt-3">
+  <div class="card-header d-flex justify-content-between" id="questionNumber">Loading...<a id="cheat" class=" enabled btn btn-warning ">Cheat</a></div>
+  <div class="card-body">
+    <div class="card-body">
+	Loading...
+    </div>
+
+  </div>
+</div>
+		}
+		
+		
         return (
 
 			<div class="card  mt-3 mb-3 ">

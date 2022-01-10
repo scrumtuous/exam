@@ -19,8 +19,9 @@ class Exam extends React.Component {
 
 	componentDidMount()
 	{
-		
-		this.getExamQuestions();
+		if (this.state.questions==null) {
+			this.getExamQuestions();
+		}
 		
 
 
@@ -51,29 +52,51 @@ class Exam extends React.Component {
 	this.toggleCheat = this.toggleCheat.bind(this);
 	const d = new Date();
 	
+	let currentExam = JSON.parse(localStorage.getItem('currentExam'));
+	
+	if (currentExam!=null) {
+		console.log("We found a currentExam!!! The questions are:");
+		console.log(currentExam.questions);
+		this.state = {
+		  name: this.props.name,
+		  graded: false,
+		  username: "kaisersose",
+		  start: d.getTime(),
+		  finish: 0,
+		  questions: currentExam.questions,
+		  currentQuestionNumber: 0,
+		  cheating: false,
+		};
+		
+	} else {
+		
+		//.log("Questions commented out");
+	  this.state = {
+		  name: this.props.name,
+		  graded: false,
+		  username: "kaisersose",
+		  start: d.getTime(),
+		  finish: 0,
+		  //questions: require('../questions.json').slice(0, 1),
+		  currentQuestionNumber: 0,
+		  cheating: false,
+		};
+		//this.getExamQuestions();
+		
+	}
+	
 
-	//.log("Questions commented out");
-    this.state = {
-		name: this.props.name,
-      graded: false,
-	  username: "kaisersose",
-	  start: d.getTime(),
-      finish: 0,
-	  questions: require('../questions.json').slice(0, 1),
-	  currentQuestionNumber: 0,
-	  cheating: false,
-    };
+
 	
 	
-	//this.getExamQuestions();
+	
 	
 	
 
   }
   
   async getExamQuestions() {
-	console.log("COMPONENT DID MOUNT!");
-	console.log("About to fetch");
+	console.log("in getExamQuestions()");
 	const user = await app.logIn(Realm.Credentials.anonymous());
 	
 	const mongodb = app.currentUser.mongoClient("mongodb-atlas");
@@ -98,7 +121,7 @@ class Exam extends React.Component {
 		this.setState({currentQuestionNumber: position});
 		this.state.questions[position].viewed=true;
 		this.saveQuestionState(this.state.questions[position]);
-		//alert(this.state.questions[position].viewed);
+		localStorage.setItem('currentExam', JSON.stringify(this.state));
 	}
 	
 	  
@@ -151,6 +174,7 @@ class Exam extends React.Component {
 					examHistory.exams.push(this.state); 
 					localStorage.setItem('examHistory', JSON.stringify(examHistory));
 		});
+		localStorage.removeItem("currentExam");
 		
 		
 	}
