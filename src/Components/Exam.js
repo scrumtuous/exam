@@ -54,7 +54,15 @@ class Exam extends React.Component {
 	
 	let currentExam = JSON.parse(localStorage.getItem('currentExam'));
 	
-	if (currentExam!=null) {
+		let cheatFlag = false;
+		console.log('This is the page prop: ' + this.props.page);
+		if (this.props.page=='answer'){
+
+			cheatFlag = true;
+		} 
+		
+	
+	if (currentExam!=null && this.props.page!='answer' ) {
 		console.log("We found a currentExam!!! The questions are:");
 		console.log(currentExam.questions);
 		this.state = {
@@ -69,6 +77,7 @@ class Exam extends React.Component {
 		};
 		
 	} else {
+
 		
 		//.log("Questions commented out");
 	  this.state = {
@@ -79,7 +88,7 @@ class Exam extends React.Component {
 		  finish: 0,
 		  //questions: require('../questions.json').slice(0, 1),
 		  currentQuestionNumber: 0,
-		  cheating: false,
+		  cheating: cheatFlag,
 		};
 		//this.getExamQuestions();
 		
@@ -276,6 +285,35 @@ class Exam extends React.Component {
   }
 
   render() { 
+  
+  let jumperPanel = null;
+  let historyPanel = null;
+  {
+	  jumperPanel = 					<QuestionJumperPanel 
+			setCurrentQuestion={this.setCurrentQuestion} 
+			toggleMarked={this.toggleMarked}
+			currentQuestionNumber = {this.state.currentQuestionNumber} 
+			questions={this.state.questions}
+			cheating={this.state.cheating}
+			graded={this.state.graded} 
+			
+			/>
+  } 
+  
+  if (this.props.page!='answer'){
+	  historyPanel = 								<ExamHistoryPanel 
+			setCurrentQuestion={this.setCurrentQuestion} 
+			toggleMarked={this.toggleMarked}
+			currentQuestionNumber = {this.state.currentQuestionNumber} 
+			questions={this.state.questions}
+			cheating={this.state.cheating}
+			graded={this.state.graded} 
+			
+			/>
+			
+  } 
+  
+  
     return (
 	
 
@@ -285,7 +323,7 @@ class Exam extends React.Component {
 			{this.showResults()}
 
 
-
+			
 
 			<QuestionsPanel questions={this.state.questions} 
 							currentQuestionNumber = {this.state.currentQuestionNumber} 
@@ -296,31 +334,23 @@ class Exam extends React.Component {
 							saveQuestionState={this.saveQuestionState}  
 							setCurrentQuestion={this.setCurrentQuestion} 
 							gradeTheExam = {this.gradeTheExam} 
+							page = {this.props.page}
 
   
 />
 
-			<QuestionJumperPanel 
-			setCurrentQuestion={this.setCurrentQuestion} 
-			toggleMarked={this.toggleMarked}
-			currentQuestionNumber = {this.state.currentQuestionNumber} 
-			questions={this.state.questions}
-			cheating={this.state.cheating}
-			graded={this.state.graded} 
-			
-			/>
+
+
+
+
+
+
+			{jumperPanel}
 			
 
-			<ExamHistoryPanel 
-			setCurrentQuestion={this.setCurrentQuestion} 
-			toggleMarked={this.toggleMarked}
-			currentQuestionNumber = {this.state.currentQuestionNumber} 
-			questions={this.state.questions}
-			cheating={this.state.cheating}
-			graded={this.state.graded} 
-			
-			/>
-			
+			{historyPanel}
+		
+
 
 
 

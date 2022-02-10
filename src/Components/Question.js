@@ -100,7 +100,6 @@ class Question extends Component{
 					)
 				}
 				
-				{(this.props.cheating ? this.getAnswer() : '')}
 			 
 			</div>
            

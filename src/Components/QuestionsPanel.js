@@ -11,7 +11,7 @@ class QuestionsPanel extends Component{
         let i = 0;
 		for (i = 0; i < question.options.length; i++) {
 			
-           if ( (question.options[i].correct) != (question.options[i].selected) ) {
+           if ( (question.options[i].correct) !== (question.options[i].selected) ) {
 			 return false;
 		   }
 		}
@@ -89,7 +89,7 @@ class QuestionsPanel extends Component{
    
    getCheatButton() {
 	   if(!this.props.disabled){
-	   	  return <a id="cheat" className=" enabled btn btn-warning " onClick={() => this.props.toggleCheat()}>{(this.props.cheating ? 'Uncheat' : 'Cheat')}</a>;
+	   	  return <a id="cheat" className={(this.props.cheating ? 'enabled btn btn-warning' : 'enabled btn btn-warning')}  onClick={() => this.props.toggleCheat()}>{(this.props.cheating ? 'Be Honest' : 'Cheat')}</a>;
 	   }
    }
    
@@ -104,6 +104,12 @@ class QuestionsPanel extends Component{
    
     render(){
 		
+		let answerPanel = null;
+
+		
+		
+		
+		
 		if (this.getCurrentQuestion() == null ) {
 			return <div class="card  mt-3">
   <div class="card-header d-flex justify-content-between" id="questionNumber">Loading...<a id="cheat" class=" enabled btn btn-warning ">Cheat</a></div>
@@ -114,12 +120,35 @@ class QuestionsPanel extends Component{
 
   </div>
 </div>
+		} else {
+			
+		console.log("The current question: " + JSON.stringify(this.getCurrentQuestion()));
+		let question = this.getCurrentQuestion();
+		console.log(question.query);
+		if (this.props.cheating===true) {
+		
+		answerPanel = 
+		
+			<div className="card  mt-3">
+			   <div className="card-header d-flex justify-content-between" id="questionNumber">
+				  Answer
+			   </div>
+			   <div className="card-body">
+			   				  
+				  <div className="card-text    d-flex justify-content-between ">
+					<span dangerouslySetInnerHTML={{__html: question.answer}}></span>					  
+				  </div>
+			   </div>
+			</div>
+		
+		}
+			
 		}
 		
 		
         return (
 
-
+<span>
 			<div className="card  mt-3">
 			   <div className="card-header d-flex justify-content-between" id="questionNumber">
 				  Question {this.props.currentQuestionNumber + 1}
@@ -147,6 +176,13 @@ class QuestionsPanel extends Component{
 				  </div>
 			   </div>
 			</div>
+			
+
+
+			{answerPanel}		
+			
+</span>			
+			
 
         )
     }

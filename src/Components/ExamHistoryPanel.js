@@ -39,7 +39,11 @@ class ExamHistoryPanel extends Component{
 	
 	
     render(){
-	//console.log("In ExamHistoryPanel render");
+	console.log("In ExamHistoryPanel render");
+	
+	console.log(this.getExamHistory());
+	console.log(this.getExamHistory().exams);
+	
 	let history = this.getExamHistory();
 		
 	if (history == null ) {
@@ -49,12 +53,34 @@ class ExamHistoryPanel extends Component{
 	if (history.exams == null ) {
 		return <span>No Exams</span>;
 	}
+	if (history.exams.length == 0 ) {
+		return <span></span>;
+	}
 	
 	
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return <h1>Something went wrong.</h1>;
     }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
         return (
 
 			<div class="card  mt-3 mb-3 ">
@@ -70,10 +96,6 @@ class ExamHistoryPanel extends Component{
 <svg id="history-caret" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16">
 <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
 </svg>
-
-
-			  
-
 
 
 			   </div>
@@ -106,8 +128,7 @@ class ExamHistoryPanel extends Component{
 					}
 					)	  
 								  
-								  
-					
+
 				  }
 				  </div>
 			   </div>
