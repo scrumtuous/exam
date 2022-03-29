@@ -8,7 +8,7 @@
     "book/introduction.asc",
     "book/toc.asc",
     "book/01-introduction/1-introduction.asc",
-    "book/02-git-basics/1-git-basics.asc",
+    "book/02-cloud-concepts/1-git-basics.asc",
     "book/03-git-branching/1-git-branching.asc",
     "book/04-git-server/1-git-server.asc",
     "book/05-distributed-git/1-distributed-git.asc",
