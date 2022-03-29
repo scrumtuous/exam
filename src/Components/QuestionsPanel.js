@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import Question from './Question';
 
+
+const spanStyle = {
+  width: '100%'
+}; 
+
+
 class QuestionsPanel extends Component{
+	
+
 	
 	constructor(props) {
         super(props);
     } 
+	
+	
+
 	
 	isQuestionAnsweredCorrectly(question) {
         let i = 0;
@@ -130,7 +141,7 @@ class QuestionsPanel extends Component{
 		answerPanel = 
 		
 			<div className="card  mt-3">
-			   <div className="card-header d-flex justify-content-between" id="questionNumber">
+			   <div className="card-header d-flex justify-content-between"  id="questionNumber">
 				  Answer
 			   </div>
 			   <div className="card-body">
@@ -143,12 +154,12 @@ class QuestionsPanel extends Component{
 		
 		}
 			
-		}
+		} 
 		
 		
         return (
 
-<span>
+<span style={spanStyle}>  
 			<div className="card  mt-3">
 			   <div className="card-header d-flex justify-content-between" id="questionNumber">
 				  Question {this.props.currentQuestionNumber + 1}
