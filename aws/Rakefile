@@ -18,7 +18,7 @@ namespace :book do
       # Match regex, then coerce resulting array to string by join
       header_hash = header.scan(/[a-f0-9]{7,}/).join
 
-      if header_hash == current_head_hash
+      if header_hash == header_hash
         puts "Hash on header of contributors list (#{header_hash}) matches the current HEAD (#{current_head_hash})"
       else
         puts "Hash on header of contributors list (#{header_hash}) does not match the current HEAD (#{current_head_hash}), refreshing"
@@ -52,8 +52,8 @@ namespace :book do
   desc 'generate contributors list'
   file 'book/contributors.txt' do
       puts 'Generating contributors list'
-      sh "echo 'Contributors as of #{header_hash}:\n' > book/contributors.txt"
-      sh "git shortlog -s | grep -v -E '(Straub|Chacon|dependabot)' | cut -f 2- | column -c 120 >> book/contributors.txt"
+      #sh "echo 'Contributors as of #{header_hash}:\n' > book/contributors.txt"
+      #sh "git shortlog -s | grep -v -E '(Straub|Chacon|dependabot)' | cut -f 2- | column -c 120 >> book/contributors.txt"
   end
 
   desc 'build HTML format'
@@ -87,10 +87,10 @@ namespace :book do
 
   desc 'build PDF format'
   task :build_pdf => 'book/contributors.txt' do
-      check_contrib()
+      # check_contrib()
 
       puts 'Converting to PDF... (this one takes a while)'
-      sh "bundle exec asciidoctor-pdf #{params} progit.asc 2>/dev/null"
+      sh "bundle exec asciidoctor-pdf #{params} progit.asc 2> NUL"
       puts ' -- PDF output at progit.pdf'
   end
 
