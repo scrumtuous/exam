@@ -1,6 +1,6 @@
 {
   "name": "exam",
-  "homepage": "http://www.scrumtuous.com/exam",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

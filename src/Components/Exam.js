@@ -12,6 +12,9 @@ const REALM_APP_ID = "exam-app-vzpmu"; // e.g. myapp-abcde
 const app = new Realm.App({ id: REALM_APP_ID });
 
 
+// Set LOCAL_QUESTIONS to true by default. Use process.env.REACT_APP_LOCAL_QUESTIONS for override.
+const LOCAL_QUESTIONS = process.env.REACT_APP_LOCAL_QUESTIONS !== 'false';
+
 class Exam extends React.Component {
 	
 
@@ -105,25 +108,44 @@ class Exam extends React.Component {
   }
   
   async getExamQuestions() {
-	console.log("in getExamQuestions()");
-	const user = await app.logIn(Realm.Credentials.anonymous());
-	
-	const mongodb = app.currentUser.mongoClient("mongodb-atlas");
-	const questions = mongodb.db("ceasars-club").collection("practitioner");
-	console.log("Hello");
-	console.log(questions);
-	
-	//{ _id : { $in : [56,57,58,59,66,76,65,67] } }
-	console.log("About to find questions in: " + this.props.message);
-	var message = "{ \"quid\" : { \"$in\" : [56,57,58,59,66,76,65,67] } }";
-	message = this.props.message;
-		const question = await questions.find(JSON.parse(message));
-		console.log(question);
-		this.setState({questions: question});
-		this.setCurrentQuestion(0);
-		
-
-	  
+    console.log("in getExamQuestions()");
+    if (LOCAL_QUESTIONS) {
+      // Use local questions.json
+      import('../questions.json')
+        .then((module) => {
+          const localQuestions = module.default || module;
+          this.setState({ questions: localQuestions.slice(80, 90) });
+          this.setCurrentQuestion(0);
+        })
+        .catch((err) => {
+          console.error("Failed to load local questions.json", err);
+        });
+      return;
+    }
+    try {
+      const user = await app.logIn(Realm.Credentials.anonymous());
+      const mongodb = app.currentUser.mongoClient("mongodb-atlas");
+      const questions = mongodb.db("ceasars-club").collection("practitioner");
+      console.log("Hello");
+      console.log(questions);
+      console.log("About to find questions in: " + this.props.message);
+      let message = this.props.message;
+      const question = await questions.find(JSON.parse(message));
+      console.log(question);
+      this.setState({ questions: question });
+      this.setCurrentQuestion(0);
+    } catch (error) {
+      console.error("Failed to fetch from MongoDB, loading local questions.json instead.", error);
+      import('../questions.json')
+        .then((module) => {
+          const localQuestions = module.default || module;
+          this.setState({ questions: localQuestions.slice(80, 90) });
+          this.setCurrentQuestion(0);
+        })
+        .catch((err) => {
+          console.error("Failed to load local questions.json", err);
+        });
+    }
   }
 
     setCurrentQuestion(position) {
