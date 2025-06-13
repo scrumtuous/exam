@@ -114,7 +114,7 @@ class Exam extends React.Component {
       import('../questions.json')
         .then((module) => {
           const localQuestions = module.default || module;
-          this.setState({ questions: localQuestions.slice(80, 90) });
+          this.setState({ questions: localQuestions.slice(0, 3) });
           this.setCurrentQuestion(0);
         })
         .catch((err) => {
@@ -139,7 +139,7 @@ class Exam extends React.Component {
       import('../questions.json')
         .then((module) => {
           const localQuestions = module.default || module;
-          this.setState({ questions: localQuestions.slice(80, 90) });
+          this.setState({ questions: localQuestions.slice(0, 3) });
           this.setCurrentQuestion(0);
         })
         .catch((err) => {
