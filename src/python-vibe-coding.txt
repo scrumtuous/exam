@@ -1,0 +1,31 @@
+
+
+Here are the three questions:
+What do you call a fish without an eye (Choose 1)
+Blinky
+Fishy McFishface
+Fsh
+J
+
+What do you call a deer with no eyes? (Choose 1)
+Sad Bambi
+Poor dear
+No eye deer
+Doh
+
+Why did the Java methods get a divorce? (Choose 1)
+They were too verbose
+The didn't like the virtual arrangement
+They didn't want to Duke it out
+They had constant arguments
+
+Make sure the application keeps track of the users answer and prints the correct score on the last page.
+
+
+The website looks great, but please pull some inspiration for the header and footer from this HTML:
+
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet"><link rel="manifest" href="/manifest.json"/><title>Get AWS, Scrum, Java and Kubernetes Certified</title><script defer="defer" src="/static/js/main.36f207ae.js"></script><link href="/static/css/main.1b36e23d.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="aws-toast" style="background-color:#28a745;color:#fff;padding:12px 20px;text-align:center;font-weight:700;font-size:1rem;box-shadow:0 4px 6px rgba(0,0,0,.1)">Check out <a href="https://aws.certificationexam.guru" target="_blank" style="color:#fff;text-decoration:underline">certificationexams.guru </a>and get AWS Certified fast! &nbsp; <a href="https://www.twitter.com/cameronmcnz" style="color:#fff"><i class="lni lni-twitter-original"></i></a> &nbsp; <a href="https://www.youtube.com/@cameronmcnz" style="color:#fff"><i class="lni lni-youtube"></i></a>&nbsp; &nbsp; <a href="https://www.linkedin.com/in/cameronwmckenzie/" style="color:#fff"><i class="lni lni-linkedin-original"></i></a></div><div id="root" data-param='{ "quid" : { "$in" : [01, 02, 03, 87, 88, 89] } }' data-name="Fun Exam"></div><div id="aws-toast" style="background-color:#800040;color:#fff;padding:12px 20px;text-align:center;font-weight:700;font-size:1rem;box-shadow:0 4px 6px rgba(0,0,0,.1)">Find me on <a href="https://www.twitter.com/cameronmcnz" style="color:#fff">Twitter</a>. Subscribe on <a href="https://www.youtube.com/@cameronmcnz" style="color:#fff">YouTube</a>. Connect on <a href="https://www.linkedin.com/in/cameronwmckenzie/" style="color:#fff">LinkedIn</a>.</div></body></html>
+
+
+Create a deployment zip file that uses forward slashes that can be uploaded and deployed easily to AWS Beanstalk. I have Java installed on my computer, so create a zip file named deploy.zip in the root folder of the projects that uses forward slashes and can be easily deployed into AWS Beanstalk's Python environment.
+

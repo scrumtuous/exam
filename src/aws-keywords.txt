@@ -1,0 +1,115 @@
+aws bedrock
+	1,251
+	91,925
+	
+amazon bedrock
+	1,032
+	68,890
+	
+	
+aws educate
+	90
+	55,958
+	
+	
+aws management console
+	71
+	48,642
+	
+	
+	
+aws full form
+	45
+	36,056
+	
+	
+aws cognito
+	405
+	14,299
+	
+	
+aws lambda
+	146
+	12,460	
+	
+amazon s3
+	58
+	8,274
+	
+cloudwatch
+	64
+	7,972
+	
+sagemaker
+	71
+	6,681
+	
+aws athena
+	183
+	6,679
+	
+	
+ec2 full form
+	20
+	4,363
+	
+	
+aws cloudwatch
+	51
+	4,081
+	
+	
+aws outposts
+	150
+	3,803
+	
+	
+aws api gateway
+	89
+	3,259	
+	
+aws certification
+	127
+	3,031
+	
+aws quicksight
+	80
+	2,512	
+	
+aws rds
+	30
+	1,419	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

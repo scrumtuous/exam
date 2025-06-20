@@ -55,7 +55,7 @@ class Exam extends React.Component {
 	this.toggleCheat = this.toggleCheat.bind(this);
 	const d = new Date();
 	
-	let currentExam = JSON.parse(localStorage.getItem('currentExam'));
+	let currentExam = JSON.parse(localStorage.getItem(this.props.name));
 	
 		let cheatFlag = false;
 		console.log('This is the page prop: ' + this.props.page);
@@ -110,11 +110,13 @@ class Exam extends React.Component {
   async getExamQuestions() {
     console.log("in getExamQuestions()");
     if (LOCAL_QUESTIONS) {
-      // Use local questions.json
-      import('../questions.json')
+      console.log(this.props.name)
+	  console.log('../' + this.props.name + '.json')
+      import('../' + this.props.name + '.json')
         .then((module) => {
           const localQuestions = module.default || module;
-          this.setState({ questions: localQuestions.slice(0, 3) });
+          //this.setState({ questions: localQuestions.slice(0, 3) });
+		  this.setState({ questions: localQuestions });
           this.setCurrentQuestion(0);
         })
         .catch((err) => {
@@ -139,7 +141,8 @@ class Exam extends React.Component {
       import('../questions.json')
         .then((module) => {
           const localQuestions = module.default || module;
-          this.setState({ questions: localQuestions.slice(0, 3) });
+          //this.setState({ questions: localQuestions.slice(0, 3) });
+		  this.setState({ questions: localQuestions });
           this.setCurrentQuestion(0);
         })
         .catch((err) => {
@@ -152,7 +155,7 @@ class Exam extends React.Component {
 		this.setState({currentQuestionNumber: position});
 		this.state.questions[position].viewed=true;
 		this.saveQuestionState(this.state.questions[position]);
-		localStorage.setItem('currentExam', JSON.stringify(this.state));
+		localStorage.setItem(this.props.name, JSON.stringify(this.state));
 	}
 	
 	  
@@ -205,7 +208,7 @@ class Exam extends React.Component {
 					examHistory.exams.push(this.state); 
 					localStorage.setItem('examHistory', JSON.stringify(examHistory));
 		});
-		localStorage.removeItem("currentExam");
+		localStorage.removeItem(this.props.name);
 		
 		
 	}

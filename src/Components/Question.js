@@ -81,9 +81,9 @@ class Question extends Component{
 
 			<div class="card-body">
 
-			   <h3 class="card-title" id="query"> 
+			   <p class="card-title" id="query"> 
 				  {this.props.question.query} <small>(Choose {this.getNumberOfCorrectOptions()})</small>
-			   </h3>
+			   </p>
 			   
 				{
 					this.props.question.options.map((option, index)=>
