@@ -1,3 +1,5 @@
+I have a JSON file for storing multiple exam questions. I would like you to examine the format because I will then give you some natural text that I want you to process and put into this format. Here is the JSON for you to learn from:
+
 [ {
   "id" : 1,
   "query" : "What do you call a fish without an eye?",

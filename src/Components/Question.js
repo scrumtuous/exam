@@ -81,9 +81,11 @@ class Question extends Component{
 
 			<div class="card-body">
 
-			   <p class="card-title" id="query"> 
-				  {this.props.question.query} <small>(Choose {this.getNumberOfCorrectOptions()})</small>
-			   </p>
+<p className="card-title" id="query" 
+   dangerouslySetInnerHTML={{
+      __html: `${this.props.question.query} <small>(Choose ${this.getNumberOfCorrectOptions()})</small>`
+   }}>
+</p>
 			   
 				{
 					this.props.question.options.map((option, index)=>
