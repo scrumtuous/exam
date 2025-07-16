@@ -1943,5 +1943,1102 @@
       }
     ],
     "objectives": []
+  },
+  
+  {
+    "id": 1,
+    "query": "<p>A research organization is developing a data archival system and needs to store a large volume of raw files, including documents, images, and logs. The solution must support scalable, durable file storage and also allow for integration with other AWS services.</p><p>Which of the following AWS services are suitable for storing files?</p>",
+    "answer": "<p>Correct Answers: Amazon Simple Storage Service (Amazon S3), Amazon Elastic Block Store (Amazon EBS)</p><p>Explanation:</p><p>Amazon S3 is a highly durable, scalable object storage service designed to store and retrieve any amount of data from anywhere. It is ideal for storing static files, backups, logs, media, and more. It integrates well with many AWS services and is often used for web hosting, data lakes, and archiving.</p><p>Amazon EBS provides block-level storage volumes for use with Amazon EC2 instances. It is suitable for storing file systems, databases, or application data that requires frequent updates and low-latency access. While not object-based like S3, EBS can store files when mounted to an EC2 instance as a volume.</p><p>Why the other options are incorrect:<br>- Amazon Athena is an analytics tool, not a storage service.<br>- Amazon CloudWatch is for monitoring, not general-purpose file storage.<br>- AWS Config is a governance tool and does not store user files.</p>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon Athena",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon CloudWatch",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Elastic Block Store (Amazon EBS)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Config",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Simple Storage Service (Amazon S3)",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 2,
+    "query": "<p>A biotechnology research lab is deploying Linux-based analytics workloads that require scalable, shared file storage with the ability to grow into petabytes. Multiple compute instances need concurrent, low-latency access to the same dataset.</p><p>Which AWS storage service is the most appropriate for this requirement?</p>",
+    "answer": "<p>Correct Answer: Amazon Elastic File System (Amazon EFS)</p><p>Explanation:</p><p>Amazon EFS is a fully managed, elastic, shared file storage service built for Linux-based workloads. It provides scalable storage that grows and shrinks automatically as files are added and removed. EFS supports concurrent access from thousands of EC2 instances, making it ideal for analytics, machine learning, and content management use cases.</p><p>Why the other options are incorrect:<br>- Amazon EBS is for single-instance or limited shared access and not suitable for concurrent access.<br>- Amazon S3 does not provide a POSIX-compliant file system and is not designed for shared file access.<br>- Amazon FSx for Lustre is high-performance but more complex than EFS and typically paired with S3.</p>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon Elastic Block Store (Amazon EBS)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Simple Storage Service (Amazon S3)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon FSx for Lustre",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Elastic File System (Amazon EFS)",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 3,
+    "query": "<p>A university's IT department wants to manage configuration and automation tasks for its on-premises servers using AWS tooling. The goal is to apply consistent application deployments across their own Linux and Windows infrastructure by extending AWS capabilities into their data center.</p><p>What is a requirement for using AWS OpsWorks to manage these on-premises servers?</p>",
+    "answer": "<p>Correct Answer: The servers must be running either Linux or Windows OS with connectivity to AWS public endpoints</p><p>Explanation:</p><p>To use AWS OpsWorks for managing on-premises servers, the prerequisite is that those servers run either Linux or Windows and can connect to AWS public endpoints. OpsWorks requires internet access to communicate with AWS services to perform configuration management tasks using Chef or Puppet.</p><p>Why the other options are incorrect:<br>- Only Linux OS is incorrect since Windows is also supported.<br>- AWS private endpoints are not supported for on-premises OpsWorks agents.</p><p>Note:<br>While OpsWorks was once a popular configuration management option, it is now less commonly used in favor of AWS Systems Manager, CloudFormation, or third-party tools like Terraform or Ansible.</p>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "The servers must be running Linux OS with connectivity to AWS public endpoints",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "The servers must be running Windows OS with connectivity to AWS private endpoints",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "The servers must be running either Linux or Windows OS with connectivity to AWS public endpoints",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "The servers must be running Linux OS with connectivity to AWS private endpoints",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 4,
+    "query": "<p>A government agency is conducting a periodic review of its AWS environment to identify opportunities to improve infrastructure security, reduce costs, and increase fault tolerance. It wants to use an AWS-native service that provides best practice recommendations across these areas.</p><p>Which AWS service offers this kind of optimization guidance?</p>",
+    "answer": "<p>Correct Answer: AWS Trusted Advisor</p><p>Explanation:</p><p>AWS Trusted Advisor provides real-time recommendations across five categories: cost optimization, security, fault tolerance, performance, and service limits. It analyzes current AWS usage and suggests improvements for infrastructure security and cost reduction.</p><p>Why the other options are incorrect:<br>- AWS Compute Optimizer focuses on resource sizing for specific services like EC2 and does not cover security or general best practices.<br>- AWS Cost Explorer helps with billing visualization, not optimization recommendations.<br>- AWS Config tracks changes and compliance but does not give actionable optimization suggestions.</p><p>Note: This question emphasizes knowing the specific domains each AWS service addresses.</p>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Compute Optimizer",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Cost Explorer",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Trusted Advisor",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Config",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 5,
+    "query": "<p>A marketing team within a company has a strict monthly AWS budget and wants to avoid any unexpected charges. They need a proactive method to monitor their spending and receive notifications when they approach their budget limit.</p><p>What is the most effective way to address this concern?</p>",
+    "answer": "<p>Correct Answer: Use AWS Budgets to configure email alerts based on budget thresholds</p><p>Explanation:</p><p>AWS Budgets allows users to define monthly budgets and get alerts when actual or forecasted usage exceeds thresholds. This makes it ideal for proactive cost control and is purpose-built for this exact scenario.</p><p>Why the other options are incorrect:<br>- Free Tier alerts apply only to free-tier usage and don\u2019t offer custom budget tracking.<br>- Manually checking billing dashboards is not proactive and relies on human monitoring.<br>- CloudWatch alarms on billing require setup and only work in the US East region, lacking the detail and flexibility of AWS Budgets.</p><p>Note: Choosing the right AWS cost management tool depends on whether the need is proactive alerts, visualization, or forecasting.</p>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Enable Free Tier usage alerts in the Billing Preferences section",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Use AWS Budgets to configure email alerts based on budget thresholds",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Check the Billing and Cost Management dashboard regularly throughout the month",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Set up an Amazon CloudWatch alarm to trigger when monthly AWS charges exceed the limit",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 6,
+    "query": "<p>A financial services firm recently experienced an unexpected shutdown of several key Amazon EC2 instances. The operations team needs to identify which user or system initiated the termination of those instances in order to investigate and prevent future incidents.</p><p>Where should the team look to find this information?</p>",
+    "answer": "<p>Correct Answer: AWS CloudTrail logs</p><p>Explanation:</p><p>AWS CloudTrail logs all API activity in an AWS account, including who initiated actions such as terminating an EC2 instance. This makes it the go-to service for security auditing and operational investigation.</p><p>Why the other options are incorrect:<br>- AWS Trusted Advisor provides recommendations but does not log user actions.<br>- Amazon CloudWatch tracks performance metrics but does not record who took an action.<br>- Amazon EC2 Pricing History relates to cost data and is unrelated to user activity.</p><p>Note: For questions involving 'who did what', CloudTrail is almost always the answer.</p>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Trusted Advisor",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon CloudWatch",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS CloudTrail logs",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon EC2 Pricing History",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 7,
+    "query": "<p>A startup planning to migrate its in-house infrastructure to AWS wants to estimate cloud costs in advance. The founders are highly cost-conscious and need a tool that allows them to model and forecast expenses based on the specific services they expect to use before committing to any deployment.</p><p><strong>Which AWS service should they use to achieve this?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> AWS Pricing Calculator</p><p><strong>Explanation:</strong></p><p>The AWS Pricing Calculator is the correct tool for estimating future AWS costs before any services are launched. It allows users to input detailed configurations for services like EC2, S3, RDS, and others, and then produces a cost estimate based on usage patterns, regions, instance types, storage needs, and more.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>AWS Budgets</strong> is for tracking and alerting once services are in use, not estimating pre-deployment costs.</li><li><strong>AWS Cost Explorer</strong> helps analyze historical costs, not forecast future usage costs.</li><li><strong>AWS Organizations</strong> is used for managing multiple AWS accounts but doesn't offer pricing estimates.</li></ul><p><em>This question highlights the difference between forecasting and monitoring tools.</em></p>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Budgets",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Pricing Calculator",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Cost Explorer",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Organizations",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 9,
+    "query": "<p>A systems administrator has migrated their company\u2019s workloads to the eu-central-1 (Frankfurt) AWS region. They are now setting up an email server on an Amazon EC2 instance located in a private subnet of their VPC. The server will send outbound emails using Amazon Simple Email Service (Amazon SES).</p><p><strong>What is the most effective way to configure this setup?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Configure a VPC endpoint powered by AWS PrivateLink for Amazon SES</p><p><strong>Explanation:</strong></p><p>Using a VPC endpoint with AWS PrivateLink allows instances in private subnets to securely access Amazon SES without requiring a NAT gateway. This enhances security and reduces cost, especially for compliance-sensitive workloads.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li>Using a non-standard SMTP port avoids port 25 throttling but doesn\u2019t ensure SES connectivity.</li><li>Setting the SES SMTP endpoint is required but insufficient on its own without connectivity.</li><li>Using a NAT gateway adds cost and exposes the subnet to the internet unnecessarily.</li></ul><p><em>This question highlights modern best practices using PrivateLink for private access to AWS services.</em></p>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Configure the EC2 instance to use a non-standard SMTP port to bypass Amazon EC2\u2019s port 25 throttling",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Set the Amazon SES SMTP endpoint to email-smtp.eu-central-1.amazonaws.com",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Add a route from the private subnet to a NAT gateway placed in a public subnet",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Configure a VPC endpoint powered by AWS PrivateLink for Amazon SES",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 10,
+    "query": "<p>A tech startup runs a file-sharing application that stores user-uploaded content in Amazon S3. File access patterns vary widely: some files are downloaded daily, others only occasionally, and many are rarely accessed at all. The development team wants to minimize storage costs without having to manually sort files by access frequency.</p><p><strong>Which is the most cost-effective Amazon S3 storage class for this use case?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Amazon S3 Intelligent-Tiering</p><p><strong>Explanation:</strong></p><p>S3 Intelligent-Tiering automatically transitions objects between frequent and infrequent access tiers based on real usage patterns. It\u2019s ideal for unpredictable access and reduces storage costs without manual management.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>One Zone-IA</strong> offers lower durability and is best for non-critical, rarely accessed data.</li><li><strong>Glacier</strong> is for archival use with long retrieval times, not ideal for varying download patterns.</li><li><strong>S3 Standard</strong> offers high availability but is not optimized for cost when storing infrequently accessed files.</li></ul><p><em>This question emphasizes choosing storage classes based on real-world access needs.</em></p>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon S3 Intelligent-Tiering",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 One Zone-Infrequently Accessed",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 Glacier",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 Standard",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 11,
+    "query": "<p>A data analytics team wants to set up a cloud-based data warehouse to run complex queries on large datasets. They are looking for a fully managed AWS service that automates infrastructure provisioning, scaling, and administrative tasks such as backups and patching.</p><p><strong>Which AWS service best meets this need?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Amazon Redshift</p><p><strong>Explanation:</strong></p><p>Amazon Redshift is a fully managed, petabyte-scale data warehouse optimized for complex analytical queries using standard SQL. It handles provisioning, patching, scaling, and backups automatically and is ideal for large-scale data warehousing and analytics workloads.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Amazon ElastiCache</strong> is used for caching, not analytics or data warehousing.</li><li><strong>Amazon Aurora</strong> supports transactional workloads, not analytics at scale.</li><li><strong>Amazon DynamoDB</strong> is a NoSQL service not suitable for complex analytical queries.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon ElastiCache",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Aurora",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Redshift",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon DynamoDB",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 12,
+    "query": "<p>An administrator at a large enterprise is tasked with setting up a scalable process to create new AWS accounts for the research and development team. Each workload needs to be isolated in its own account and organized under a common structure so resources can be grouped, monitored, and governed efficiently.</p><p><strong>What is the most effective way to automate and manage this process?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Use AWS Organizations</p><p><strong>Explanation:</strong></p><p>AWS Organizations allows centralized account creation, grouping via Organizational Units, and governance through Service Control Policies. It is the best tool for managing multi-account environments efficiently and securely.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>AWS IAM</strong> manages permissions within a single account, not across multiple accounts.</li><li><strong>Using the AWS API manually</strong> is not scalable or centralized.</li><li><strong>AWS CloudFormation</strong> does not create new AWS accounts; it provisions resources within one.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Identity and Access Management (IAM",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Use the AWS API via the command line to create each account manually",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Use AWS Organizations",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Use AWS CloudFormation",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 13,
+    "query": "<p>A company runs a cloud-based application composed of dozens of microservices. Recently, the application has been generating frequent runtime errors that are difficult to trace due to the distributed nature of the system. The operations team needs a service that can help visualize and debug the application's end-to-end request flow across microservices.</p><p><strong>Which AWS service is best suited to help with this troubleshooting?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> AWS X-Ray</p><p><strong>Explanation:</strong></p><p>AWS X-Ray provides distributed tracing to help debug and visualize application requests as they travel through different microservices. It identifies bottlenecks and errors in a service-to-service environment, making it ideal for microservices architectures.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>AWS CloudWatch</strong> provides monitoring but not request tracing.</li><li><strong>AWS CloudTrail</strong> tracks API activity but not application-level tracing.</li><li><strong>Amazon OpenSearch</strong> is used for search and log analysis, not real-time request tracing.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS CloudWatch",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS CloudTrail",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon OpenSearch Service",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS X-Ray",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 14,
+    "query": "<p>An administrator is managing an environment where a specific software configuration is successfully running on one Amazon EC2 instance. The goal is to automatically replicate that exact setup and deploy it to hundreds of other EC2 instances efficiently and consistently.</p><p><strong>Which AWS service is best suited for this task?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> AWS OpsWorks</p><p><strong>Explanation:</strong></p><p>AWS OpsWorks uses Chef or Puppet to configure and manage environments across EC2 instances. It ensures consistent deployments and replicates software setups across large-scale environments.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>AWS Auto Scaling</strong> changes the number of instances but not their internal configuration.</li><li><strong>AWS Launch Configuration</strong> defines instance parameters but not detailed configuration automation.</li><li><strong>AWS Elastic Beanstalk</strong> simplifies deployment but abstracts infrastructure configuration and is not ideal for custom EC2 setups.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Auto Scaling",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Launch Configuration",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS OpsWorks",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Elastic Beanstalk",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 15,
+    "query": "<p>A development team is building a high-performance application that frequently reads data from a NoSQL database. To improve responsiveness and reduce read latency, they want to deploy a caching layer optimized for Amazon DynamoDB.</p><p><strong>Which AWS service can be used to enhance read performance in this scenario?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Amazon DynamoDB Accelerator</p><p><strong>Explanation:</strong></p><p>Amazon DynamoDB Accelerator (DAX) is a fully managed, in-memory caching layer designed specifically for DynamoDB. It offers microsecond latency for reads and is fully compatible with existing DynamoDB APIs.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Amazon ElastiCache</strong> requires manual integration and isn\u2019t purpose-built for DynamoDB.</li><li><strong>AWS Global Accelerator</strong> improves network traffic routing but not database latency.</li><li><strong>AWS CodeDeploy</strong> is for application deployment and unrelated to database performance.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon ElastiCache",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Global Accelerator",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon DynamoDB Accelerator",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS CodeDeploy",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 16,
+    "query": "<p>A software engineering team is exploring how to integrate AWS services into their deployment pipelines and automation tools. They\u2019ve learned that AWS provides access to its services through APIs.</p><p><strong>What is the primary benefit of AWS services being accessible via an Application Programming Interface (API)?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> It allows developers to work with AWS resources programmatically</p><p><strong>Explanation:</strong></p><p>APIs allow developers to automate resource provisioning, configuration, and management via tools like the AWS CLI, SDKs, and infrastructure-as-code tools. This programmatic control is essential for modern DevOps practices and continuous delivery pipelines.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Always cost-optimized:</strong> APIs offer control, not guaranteed cost savings.</li><li><strong>On-premises programmable:</strong> APIs target AWS resources, not automatically external infrastructure.</li><li><strong>All application testing:</strong> Application testing must be managed by developers, not AWS APIs.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS resources will always be cost-optimized",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Customer-owned, on-premises infrastructure becomes programmable",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "It allows developers to work with AWS resources programmatically",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "All application testing can be managed by AWS",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 17,
+    "query": "<p>A team is running a serverless application built with AWS Lambda functions. They\u2019ve recently noticed performance degradation and need visibility into how requests are processed and where delays or errors might be occurring within their functions.</p><p><strong>Which AWS service is best suited to detect and analyze performance issues in this scenario?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> AWS X-Ray</p><p><strong>Explanation:</strong></p><p>AWS X-Ray enables tracing and performance diagnostics in serverless applications. It tracks Lambda invocations, measures latency, and visualizes service dependencies, making it ideal for debugging and performance analysis.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>CloudWatch:</strong> Offers metrics and alarms but not request-level tracing.</li><li><strong>CloudTrail:</strong> Tracks API calls but not Lambda function internals.</li><li><strong>Config:</strong> Focuses on compliance and change tracking, not performance debugging.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Config",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon CloudWatch",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS X-Ray",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS CloudTrail",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 18,
+    "query": "<p>A cloud solutions architect urgently needs to perform critical administrative tasks in AWS. However, their Windows-based laptop with GUI access has been left at home, and only non-GUI, Linux-based servers are currently available on-site.</p><p><strong>What is the most secure and effective method to carry out the necessary AWS tasks from the available environment?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Install and run the AWS Command Line Interface (CLI) on the Linux machine to securely access AWS services</p><p><strong>Explanation:</strong></p><p>The AWS CLI provides secure, scriptable access to nearly all AWS services from non-GUI systems. It is ideal for remote, Linux-only environments and adheres to AWS security best practices.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Credential sharing:</strong> Violates security best practices and increases risk.</li><li><strong>SSH into home PC:</strong> Impractical and potentially insecure or unavailable.</li><li><strong>Remote desktop software:</strong> Ineffective from a non-GUI shell-only environment.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Share AWS Management Console credentials with someone at home",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Use SSH to connect from the Linux machine to the Windows computer at home",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Use third-party remote desktop software",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Install and run the AWS Command Line Interface (CLI)",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 19,
+    "query": "<p>A cloud architect is reviewing design principles aligned with the AWS Well-Architected Framework. The team wants to build systems that can automatically adapt to varying levels of user activity without overprovisioning resources or degrading performance during peak usage.</p><p><strong>According to AWS, what is the primary benefit of designing for elasticity?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Create systems that scale to the required capacity based on changes in demand</p><p><strong>Explanation:</strong></p><p>Elastic systems can automatically grow or shrink to match current demand, reducing cost and improving efficiency. This is a core design principle in cloud-native architectures aligned with the AWS Well-Architected Framework.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Auto-selecting services:</strong> AWS does not pick services automatically\u2014you design and choose them.</li><li><strong>Reduce logging:</strong> Logging supports security and monitoring, not elasticity.</li><li><strong>Faster design:</strong> Elasticity is about runtime scaling, not design speed or automated recovery alone.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Enable AWS to automatically select the most cost-effective services",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Create systems that scale to the required capacity based on changes in demand",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Minimize storage requirements by reducing logging and auditing activities",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Accelerate the design process because recovery from failure is automated",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 20,
+    "query": "<p>A DevOps team is exploring ways to reduce the cost of running compute workloads in AWS. They are considering Amazon EC2 Spot Instances to take advantage of unused EC2 capacity at a discounted rate. However, they want to ensure that their workload is well-suited for the nature of Spot pricing and potential interruptions.</p><p><strong>Which scenario is the most appropriate for using Amazon EC2 Spot Instances?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Workloads where the availability of the Amazon EC2 instances can be flexible</p><p><strong>Explanation:</strong></p><p>Spot Instances are suitable for stateless, fault-tolerant, or distributed workloads that can tolerate interruptions. They offer significant cost savings but should only be used where high availability and persistence are not critical requirements.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Scheduled usage:</strong> Better suited for Reserved or Scheduled Instances.</li><li><strong>Termination protection required:</strong> Spot Instances can be terminated at any time by AWS.</li><li><strong>Continuous uptime:</strong> Use On-Demand or Reserved Instances instead for guaranteed availability.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Workloads that are only run in the morning and stopped at night",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Workloads where the availability of the Amazon EC2 instances can be flexible",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Workloads that are critical and require termination protection",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Workloads that need to run continuously for long periods without interruption",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 21,
+    "query": "<p>A financial services company operates a large and complex environment on AWS and is concerned about securing its infrastructure. The security team wants a machine learning-driven solution that can proactively analyze AWS account activity, detect suspicious behavior, and identify abnormal interactions between AWS services\u2014before potential threats escalate.</p><p><strong>Which AWS service is best suited for this use case?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> AWS Detective</p><p><strong>Explanation:</strong></p><p>AWS Detective uses machine learning and graph theory to detect and investigate suspicious activity in AWS environments. It helps identify root causes, visualize relationships, and analyze behaviors across accounts and services.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>CloudWatch Anomaly Detection:</strong> Monitors metrics, not account activity or relationships.</li><li><strong>Macie:</strong> Protects sensitive S3 data but doesn\u2019t analyze behavioral patterns.</li><li><strong>Shield:</strong> Defends against DDoS, not internal behavior analysis.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon CloudWatch Anomaly Detection",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Macie",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Shield",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Detective",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 22,
+    "query": "<p>A project manager at a software company wants to analyze historical AWS usage and predict future cloud costs based on trends. They\u2019re looking for a tool that provides interactive visualizations and forecasts of spending over time.</p><p><strong>Which AWS tool can be used to forecast future AWS costs?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> AWS Cost Explorer</p><p><strong>Explanation:</strong></p><p>AWS Cost Explorer allows visualization of cost and usage data over time and includes built-in forecasting based on historical trends. It's ideal for budgeting and identifying usage patterns that impact spend.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>AWS Trusted Advisor:</strong> Provides best practice recommendations, not cost forecasting tools.</li><li><strong>AWS Organizations:</strong> Used for account management and consolidated billing, not forecasting.</li><li><strong>Amazon Dev Forecast:</strong> This is not a real AWS service\u2014it's fictional.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Trusted Advisor",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Organizations",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Dev Forecast",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Cost Explorer",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 23,
+    "query": "<p>A cloud engineer is designing a Virtual Private Cloud (VPC) and wants to implement an additional layer of optional security at the subnet level to control both inbound and outbound traffic. This layer should support stateless rules and provide more granular control over the flow of network traffic across the VPC.</p><p><strong>Which AWS feature best fits this requirement?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Network ACL</p><p><strong>Explanation:</strong></p><p>Network ACLs provide stateless traffic filtering at the subnet level. They are ideal for broader security rules that apply across resources in a subnet, supplementing the stateful controls provided by security groups at the instance level.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>WAF:</strong> Protects web applications, not VPC network traffic.</li><li><strong>Security Group:</strong> Operates at the instance level and is stateful.</li><li><strong>AWS Shield:</strong> Protects against DDoS attacks but doesn't control subnet-level traffic.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Web Application Firewall",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Security Group",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Shield",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Network ACL",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 24,
+    "query": "<p>A podcast production company maintains an annual archive of its most downloaded episodes. The episodes are accessed frequently for the first 150 days, after which downloads taper off significantly. Users are willing to wait up to 10 hours for access after that point. The company plans to store these audio files for at least 12 years.</p><p><strong>Which Amazon S3 storage class is the most cost-effective for storing the files after 150 days?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Amazon S3 Glacier Deep Archive</p><p><strong>Explanation:</strong></p><p>S3 Glacier Deep Archive offers the lowest cost storage for infrequently accessed data. It's ideal for this long-term, low-access archive, especially since a 10-hour retrieval time is acceptable and the files are retained for over a decade.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>S3 Glacier:</strong> More expensive than Deep Archive and better for faster access needs.</li><li><strong>One Zone-IA:</strong> Less durable due to single AZ storage and not optimized for long-term archival.</li><li><strong>Standard-IA:</strong> Good for infrequent access but costs more and is less suited to multi-year storage with slow retrieval needs.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon S3 Glacier",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 One Zone \u2013 Infrequently Accessed",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 Standard \u2013 Infrequently Accessed",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 Glacier Deep Archive",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 25,
+    "query": "<p>A company is reviewing its cloud security posture and wants to understand its responsibilities under the AWS Shared Responsibility Model. The team is specifically looking to identify which task remains under their control when using AWS infrastructure.</p><p><strong>Which of the following is a customer responsibility in this model?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Patching of the guest operating system on an Amazon EC2 instance</p><p><strong>Explanation:</strong></p><p>Customers are responsible for managing the software and configuration of their EC2 instances, including the guest OS. AWS handles the security of the underlying infrastructure, including the host OS and physical hardware.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Logical access controls for AWS data centers:</strong> Managed by AWS.</li><li><strong>Physical security of AWS facilities:</strong> Entirely AWS's responsibility.</li><li><strong>Host OS patches for S3:</strong> AWS manages infrastructure for fully managed services like S3.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Logical access controls for AWS-owned data centers",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Patching of the guest operating system on an Amazon EC2 instance",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Physical security of AWS facilities",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Patching of the host operating system that supports Amazon S3",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 26,
+    "query": "<p>An enterprise IT team is preparing a business case for moving its on-premises infrastructure to the AWS Cloud. To support their analysis, they need to estimate the Total Cost of Ownership (TCO), which will help compare current costs with expected cloud expenses.</p><p><strong>Which of the following is a factor when calculating TCO for an AWS Cloud migration?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> The number of servers migrated to AWS</p><p><strong>Explanation:</strong></p><p>TCO calculations consider both capital and operational costs of on-prem infrastructure, such as hardware, energy, space, and admin labor. The number of servers is a core metric because it directly reflects reductions in maintenance, power, and physical infrastructure.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Number of users:</strong> Affects IAM strategy but is not a core TCO metric.</li><li><strong>Number of passwords:</strong> Irrelevant to infrastructure costs.</li><li><strong>Number of keys:</strong> Important for security, not cost estimation.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "The number of users migrated to AWS",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "The number of passwords migrated to AWS",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "The number of keys migrated to AWS",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "The number of servers migrated to AWS",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 27,
+    "query": "<p>A startup\u2019s development team is beginning a new long-term project with a client that requires secure, private storage of all source code and development assets. The team wants to choose a reliable, non-deprecated platform for source control that will be actively maintained and supported well into the future.</p><p><strong>Which platform is the most suitable for storing their source code under these requirements?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> GitHub</p><p><strong>Explanation:</strong></p><p>GitHub is the most widely adopted and supported platform for source control. It provides robust collaboration features, strong community backing, and integration with modern CI/CD pipelines. Its continued development ensures long-term support, making it ideal for new projects.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>AWS CodeDeploy:</strong> Automates deployment, but doesn\u2019t store source code.</li><li><strong>AWS Lambda:</strong> Executes code but doesn\u2019t serve as source control.</li><li><strong>AWS CodeStar:</strong> Deprecated and no longer recommended for new projects.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS CodeDeploy",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Lambda",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS CodeStar",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "GitHub",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 28,
+    "query": "<p>An organization runs real-time applications that rely on consistently high throughput, very low latency, and no jitter between its on-premises infrastructure and AWS cloud workloads. These applications support live streaming and latency-sensitive services, making network stability and speed a critical requirement.</p><p><strong>What is the most appropriate solution to ensure reliable, high-performance connectivity?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> AWS Direct Connect</p><p><strong>Explanation:</strong></p><p>AWS Direct Connect establishes a private, dedicated network connection from on-prem to AWS, reducing latency and improving throughput. It\u2019s ideal for real-time and jitter-sensitive workloads.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Kinesis Data Streams/Video Streams:</strong> Ingest data but don\u2019t provide network-level connectivity.</li><li><strong>Amazon EventBridge:</strong> Event bus for service integration, not a network acceleration tool.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon Kinesis Data Streams",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Direct Connect",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon Kinesis Video Streams",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon EventBridge",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 29,
+    "query": "<p>A professional educational institution hosts an exam results portal on a dedicated web server and database cluster. The system remains mostly idle throughout the academic term but experiences extremely high traffic during short periods when exam results are released. The institution wants to reduce costs while maintaining reliability during peak usage.</p><p><strong>What is the most cost-efficient way to improve this architecture?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Configure serverless architecture leveraging AWS Lambda functions</p><p><strong>Explanation:</strong></p><p>AWS Lambda provides event-driven, pay-per-use compute power that auto-scales with demand. It eliminates idle resource costs, making it ideal for burst workloads like exam result releases.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>EC2 Spot Instances:</strong> Not reliable during unpredictable peak usage due to possible interruptions.</li><li><strong>RDS Multi-AZ:</strong> Improves availability but increases cost.</li><li><strong>Elastic Load Balancing:</strong> Balances traffic but requires pre-provisioned servers that add cost during idle periods.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Configure serverless architecture leveraging AWS Lambda functions",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Migrate the web servers onto Amazon EC2 Spot Instances",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Configure RDS Multi-AZ for performance optimization",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Configure AWS Elastic Load Balancing between the web server and database cluster",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 30,
+    "query": "<p>A business analyst wants to modernize the way reports are shared with high-level executives. Instead of writing complex database queries and building static spreadsheets, they\u2019re looking for a solution that allows them to create interactive dashboards and visually appealing reports that can be easily shared and updated in near real-time.</p><p><strong>Which AWS service is best suited to meet this need?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Amazon QuickSight</p><p><strong>Explanation:</strong></p><p>Amazon QuickSight is a serverless BI service that enables interactive dashboards, real-time reporting, and rich visualizations across AWS data sources. It\u2019s ideal for business users looking for self-service analytics without managing infrastructure.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>CloudWatch Dashboards:</strong> Intended for operational metrics, not business reporting.</li><li><strong>Redshift BI:</strong> Requires integration with third-party BI tools\u2014QuickSight is a complete BI solution.</li><li><strong>Athena + Glue:</strong> Useful for querying and ETL, but not for dashboards without a reporting layer like QuickSight.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon CloudWatch dashboards",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Business intelligence on Amazon Redshift",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Athena integrated with AWS Glue",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon QuickSight",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 31,
+    "query": "<p>A global engineering firm needs to upload large files to an Amazon S3 bucket from international offices. They\u2019re looking for a feature that allows these uploads to be fast, secure, and optimized over long distances, minimizing latency and improving throughput between the client and AWS.</p><p><strong>Which AWS feature is designed for this use case?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Amazon S3 Transfer Acceleration</p><p><strong>Explanation:</strong></p><p>S3 Transfer Acceleration uses AWS's global edge network to speed up file transfers to S3 buckets. It's designed to reduce latency and increase throughput for data uploaded from remote locations.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Global Accelerator:</strong> Optimizes application endpoint routing, not S3 transfers.</li><li><strong>CloudFront:</strong> Delivers content, not uploads.</li><li><strong>Multi-Region Replication:</strong> Replicates data across regions but doesn\u2019t speed up uploads.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Global Accelerator",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon CloudFront",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 Transfer Acceleration",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 Multi-Region Replication",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 32,
+    "query": "<p>An IT security team wants to perform penetration testing on Amazon EC2 instances to evaluate the security posture of their deployed applications. They need to ensure their actions comply with the AWS Acceptable Use Policy.</p><p><strong>Which of the following accurately reflects how penetration testing can be conducted on AWS?</strong></p>",
+    "answer": "<p><strong>Correct Answer:</strong> Can be performed by the customer, provided they work with the list of services mentioned by AWS</p><p><strong>Explanation:</strong></p><p>AWS allows penetration testing on customer-owned infrastructure, such as EC2, provided it is done in accordance with AWS\u2019s guidelines and is limited to permitted services. Customers must ensure their tests do not impact other AWS users or the broader infrastructure.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Performed by AWS:</strong> AWS doesn\u2019t conduct pen testing for customer apps or data.</li><li><strong>Prohibited under all circumstances:</strong> Incorrect\u2014penetration testing is allowed with constraints.</li><li><strong>Only from EC2 instances:</strong> Testing doesn\u2019t have to originate from EC2, as long as it\u2019s against approved AWS services and infrastructure owned by the customer.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "May be performed by AWS, and is periodically performed by AWS",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Are expressly prohibited under all circumstances",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "May be performed by the customer on their own instances, only if performed from EC2 instances",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Can be performed by the customer, provided they work with the list of services mentioned by AWS",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "query": "<p><strong>A cloud operations team wants to use AWS Trusted Advisor to regularly review their AWS environment for best practices. They are trying to understand which core categories Trusted Advisor evaluates when providing recommendations.</strong></p>\n<p>Which of the following accurately represents the categories in which AWS Trusted Advisor offers insights?</p>",
+    "options": [
+      "Security, fault isolation, service availability, data integrity, and resource quotas",
+      "Cost tracking, access management, performance tuning, networking, and service quotas",
+      "Performance, cost optimization, security, fault tolerance, and service limits",
+      "Cost analysis, system durability, encryption management, resilience, and support coverage"
+    ],
+    "answer": "Performance, cost optimization, security, fault tolerance, and service limits",
+    "explanations": "<p><strong>Explanation:</strong></p>\n<p>AWS Trusted Advisor provides checks and recommendations in five categories:</p>\n<ul>\n<li><strong>Performance</strong> \u2013 Ensures resources are configured for optimal operation.</li>\n<li><strong>Cost Optimization</strong> \u2013 Identifies underutilized or idle resources.</li>\n<li><strong>Security</strong> \u2013 Highlights gaps like open ports or disabled MFA.</li>\n<li><strong>Fault Tolerance</strong> \u2013 Recommends backup and redundancy measures.</li>\n<li><strong>Service Limits</strong> \u2013 Monitors approaching AWS resource limits.</li>\n</ul>\n<p><strong>Why the other options are incorrect:</strong></p>\n<p>Other choices mix in unrelated or non-specific concepts not used by Trusted Advisor.</p>"
+  },
+  {
+    "query": "<p><strong>An organization is building a large-scale analytics platform that requires a fully managed data warehouse to run complex queries on structured data. They want a service that can handle petabyte-scale datasets and support SQL-based analytics.</strong></p>\n<p>Which AWS service is best suited for this use case?</p>",
+    "options": [
+      "Amazon Timestream",
+      "Amazon QuickSight",
+      "Amazon Redshift",
+      "Amazon Athena"
+    ],
+    "answer": "Amazon Redshift",
+    "explanations": "<p><strong>Explanation:</strong></p>\n<p>Amazon Redshift is AWS's fully managed data warehouse designed for complex SQL-based analytics on large structured datasets. It supports high performance through columnar storage and parallel query execution.</p>\n<p><strong>Why the other options are incorrect:</strong></p>\n<ul>\n<li><strong>Amazon Athena</strong> is good for ad hoc queries, but not a full warehouse solution.</li>\n<li><strong>Amazon QuickSight</strong> is a visualization tool, not for large-scale querying.</li>\n<li><strong>Amazon Timestream</strong> is for time-series data, not general-purpose analytics.</li>\n</ul>"
+  },
+  {
+    "query": "<p><strong>A security engineer is configuring AWS Identity and Access Management (IAM) roles and wants to follow best practices for securing access to AWS resources.</strong></p>\n<p>What best describes the Principle of Least Privilege?</p>",
+    "options": [
+      "Users should be granted permission to access only resources they need to do their assigned job",
+      "Users should receive standard access policies that cover most common tasks across departments",
+      "Users should submit formal access requests for resource changes to ensure accountability",
+      "Users should be given slightly elevated permissions to reduce the number of access requests"
+    ],
+    "answer": "Users should be granted permission to access only resources they need to do their assigned job",
+    "explanations": "<p><strong>Explanation:</strong></p>\n<p>The Principle of Least Privilege is the idea that users and systems should only have the permissions required to perform their tasks\u2014nothing more. This minimizes the risk of accidental or intentional misuse.</p>\n<p><strong>Why the other options are incorrect:</strong></p>\n<ul>\n<li>Standard or elevated permissions increase risk.</li>\n<li>Formal requests help governance but don\u2019t define the principle.</li>\n</ul>"
+  },
+  {
+    "query": "<p><strong>A developer is tasked with automating the deployment and update of a set of applications running across both Amazon EC2 instances and on-premises servers. They need a solution that handles installations, updates, and rollbacks in a reliable and repeatable way.</strong></p>\n<p>Which AWS service is the most appropriate for this task?</p>",
+    "options": [
+      "AWS CodeBuild",
+      "AWS CodeCommit",
+      "AWS CloudFormation",
+      "AWS CodeDeploy"
+    ],
+    "answer": "AWS CodeDeploy",
+    "explanations": "<p><strong>Explanation:</strong></p>\n<p>AWS CodeDeploy automates deployment of applications to EC2, Lambda, and on-premises servers. It supports rolling updates, rollbacks, and lifecycle hooks.</p>\n<p><strong>Why the other options are incorrect:</strong></p>\n<ul>\n<li><strong>CodeBuild</strong> builds code but doesn\u2019t deploy it.</li>\n<li><strong>CodeCommit</strong> is deprecated and was a Git service.</li>\n<li><strong>CloudFormation</strong> is for infrastructure provisioning, not app deployments.</li>\n</ul>"
+  },
+  {
+    "query": "<p><strong>As part of understanding AWS\u2019s global infrastructure, a cloud architect needs to identify the component within an AWS Region that offers redundant connectivity and low latency, helping to ensure high availability and fault tolerance for applications.</strong></p>\n<p>Which of the following components best fits this description?</p>",
+    "options": [
+      "Local Zones",
+      "Data Centers",
+      "Edge Location",
+      "Availability Zones"
+    ],
+    "answer": "Availability Zones",
+    "explanations": "<p><strong>Explanation:</strong></p>\n<p>Availability Zones are distinct locations within a Region, each with independent infrastructure. They provide low-latency links between each other and are essential for building high availability into AWS workloads.</p>\n<p><strong>Why the other options are incorrect:</strong></p>\n<ul>\n<li><strong>Local Zones</strong> extend services closer to users but aren\u2019t part of the core redundant regional structure.</li>\n<li><strong>Data Centers</strong> are internal to AWS and not directly used for deployment decisions.</li>\n<li><strong>Edge Locations</strong> are for content delivery, not application deployment or fault isolation.</li>\n</ul>"
+  },
+  {
+    "query": "<p><strong>An organization has deployed a static website on Amazon S3 in multiple AWS Regions to serve a global audience. The goal is to route users to the S3 bucket that offers the lowest latency, ensuring optimal performance regardless of the user's location.</strong></p>\n<p>Which Amazon Route 53 routing policy is best suited for this requirement?</p>",
+    "options": [
+      "Use Route 53 Geolocation routing policy",
+      "Use Route 53 weighted routing policy",
+      "Use Route 53 latency routing policy",
+      "Use Route 53 Geoproximity routing policy"
+    ],
+    "answer": "Use Route 53 latency routing policy",
+    "explanations": "<p><strong>Explanation:</strong></p>\n<p>Latency routing in Route 53 directs users to the region with the best network latency, improving load time for global users.</p>\n<p><strong>Why the other options are incorrect:</strong></p>\n<ul>\n<li><strong>Geolocation</strong> routes by location, not network performance.</li>\n<li><strong>Weighted</strong> allows custom traffic percentages, not based on latency.</li>\n<li><strong>Geoproximity</strong> uses geographic distance and traffic biasing, not dynamic latency.</li>\n</ul>"
+  },
+  {
+    "id": 9,
+    "query": "<p>A company stores large files in an Amazon S3 bucket located in the <strong>us-west-1</strong> region. Users across different continents need to upload files to this bucket regularly. To improve upload speed and reduce latency for users in remote locations, the company wants a solution that enhances performance over long distances.</p><p><strong>Which of the following AWS options best addresses this need?</strong></p>",
+    "answer": "<p><strong>Answer:</strong><br>Enable S3 Transfer Acceleration on the S3 bucket</p><p><strong>Explanation:</strong><br>S3 Transfer Acceleration is the most suitable solution. It leverages Amazon CloudFront edge locations to receive uploads and then transfers the data over the high-speed AWS global network to the destination S3 bucket. This minimizes latency and significantly improves upload performance for users far from the bucket\u2019s AWS Region.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>Cross-region replication</strong> automatically copies objects between S3 buckets in different regions for durability or compliance, but it does not improve upload performance.</li><li><strong>Amazon DataSync</strong> is a managed service for scheduled bulk transfers, not individual uploads from global users.</li><li><strong>Multipart upload</strong> helps with reliability when uploading large files by breaking them into parts but doesn\u2019t optimize network paths or reduce latency.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Enable cross-region replication on the S3 bucket",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Use Amazon DataSync to upload files",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Use Multipart upload for S3",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Enable S3 Transfer Acceleration on the S3 bucket",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 10,
+    "query": "<p>A cloud governance team is reviewing the AWS Shared Responsibility Model to categorize which operational areas are considered <strong>shared controls</strong>\u2014where both AWS and the customer play a role, depending on context.</p><p><strong>Which TWO of the following are not considered shared controls in the AWS Shared Responsibility Model?</strong></p>",
+    "answer": "<p><strong>Answer:</strong><br>Identity and access management for internal users<br>Security awareness training and staff compliance behavior</p><p><strong>Explanation:</strong><br>Shared controls refer to responsibilities where both AWS and the customer play a role. Examples include configuration hardening, encryption, and patching at different levels of the stack. However:</p><ul><li><strong>Identity and access management for internal users</strong> is the customer\u2019s responsibility.</li><li><strong>Security awareness training and staff compliance behavior</strong> is also a customer-only responsibility.</li></ul><p>The other options involve areas where AWS and customers each manage different portions of the control.</p>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Configuration hardening and system baseline alignment",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Identity and access management for internal users",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Service-level encryption and network traffic protection",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Operating system patching",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Security awareness training and staff compliance behavior",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 11,
+    "query": "<p>An enterprise operations team needs to automate application deployments across a large fleet of Amazon EC2 instances and on-premises servers. They want to ensure deployments are consistent, scalable, and support rollback if needed.</p><p><strong>Which AWS service is best suited for this purpose?</strong></p>",
+    "answer": "<p><strong>Answer:</strong><br>AWS CodeDeploy</p><p><strong>Explanation:</strong><br>AWS CodeDeploy is a deployment automation service that supports rolling out application updates across Amazon EC2 instances, on-premises servers, AWS Lambda functions, and more. It supports blue/green and in-place deployments, integrates with CI/CD pipelines, and helps reduce downtime during updates.</p><p><strong>Why the other options are incorrect:</strong></p><ul><li><strong>AWS CodePipeline</strong> orchestrates CI/CD workflows but does not perform deployments directly.</li><li><strong>AWS CloudFormation</strong> provisions AWS infrastructure using templates but does not orchestrate deployments on existing servers.</li><li><strong>AWS Config</strong> tracks configuration changes and compliance but is not used for application deployment.</li></ul>",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS CodePipeline",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS CloudFormation",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS CodeDeploy",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Config",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
   }
 ]

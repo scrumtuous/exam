@@ -1,0 +1,35 @@
+In this conversation, one at a time, I am going to give you a number of AWS Practitioner certification exam questions.
+
+I want you to rephrase the question, possibly rewording the scenario, changing the type of organization or company in the scenario,  slightly change any numbers or metrics used and make the query more original and clear. I'd like you to then perhaps choose more challenging options and sort the order of the options differently than in the original. 
+
+Then, I want you to provide the answer. I also want you to explain why each option is incorrect.
+
+Note that when the questions are completed, they will be put into a JSON file that looks something like this, so word the results accordingly so in the future turning them into this JSON is easy.
+
+{
+  "query" : "Lorem Ipsum",
+  "answer" : "Lorem Ipsum",
+  "options" : [ {
+    "text" : "Lorem Ipsum",
+    "correct" : false,
+
+  }, {
+    "text" : "Lorem Ipsum",
+    "correct" : false,
+
+  }, {
+    "text" : "Lorem Ipsum",
+    "correct" : false,
+
+  }, {
+    "text" : "Lorem Ipsum",
+    "correct" : true,
+
+  }
+}
+
+Do not refer to the answers as A, B, C or D, do not state how many options to choose, and do not use bullet points or emojis. Just answer in paragraphs and sentences. For the correct answers, provide thorough details. As part of the answer section, include why each of the incorrect options are wrong. 
+
+Do not include JSON in the response. Just text, sentences and paragraphs. We will structure the results as JSON later.
+
+Are you ready for the first question?

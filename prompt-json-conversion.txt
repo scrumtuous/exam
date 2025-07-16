@@ -1,4 +1,4 @@
-I have a JSON file for storing multiple exam questions. I would like you to examine the format because I will then give you some natural text that I want you to process and put into this format. Here is the JSON for you to learn from:
+I have a JSON file for storing multiple exam questions. I would like you to examine the format because I will then give you some natural text that I want you to process and put into this format. Note that the answer field with store the complete explanation, including which options were correct, which options were wrong, why various options were correct or incorrect, and any noties or additional information about the question.  Here is the JSON for you to learn from:
 
 [ {
   "id" : 1,
@@ -97,3 +97,11 @@ I have a JSON file for storing multiple exam questions. I would like you to exam
   } ],
   "objectives" : [ ]
 } ]
+
+
+Note that these questions will be displayed on a webpage, so include the necessary HTML in the query and explanation sections to make the questions readable and properly displayed in a web browser.
+
+
+*********************
+
+You can just provide the content in a downloadable json file, no need to display the output.
