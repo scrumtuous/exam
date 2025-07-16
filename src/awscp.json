@@ -2880,71 +2880,185 @@
     ],
     "objectives": []
   },
-  {
-    "query": "<p><strong>A cloud operations team wants to use AWS Trusted Advisor to regularly review their AWS environment for best practices. They are trying to understand which core categories Trusted Advisor evaluates when providing recommendations.</strong></p>\n<p>Which of the following accurately represents the categories in which AWS Trusted Advisor offers insights?</p>",
-    "options": [
-      "Security, fault isolation, service availability, data integrity, and resource quotas",
-      "Cost tracking, access management, performance tuning, networking, and service quotas",
-      "Performance, cost optimization, security, fault tolerance, and service limits",
-      "Cost analysis, system durability, encryption management, resilience, and support coverage"
-    ],
+    {
+    "id": 1,
+    "query": "A cloud operations team wants to use AWS Trusted Advisor to regularly review their AWS environment for best practices. They are trying to understand which core categories Trusted Advisor evaluates when providing recommendations.<br><br><strong>Which of the following accurately represents the categories in which AWS Trusted Advisor offers insights?</strong>",
     "answer": "Performance, cost optimization, security, fault tolerance, and service limits",
-    "explanations": "<p><strong>Explanation:</strong></p>\n<p>AWS Trusted Advisor provides checks and recommendations in five categories:</p>\n<ul>\n<li><strong>Performance</strong> \u2013 Ensures resources are configured for optimal operation.</li>\n<li><strong>Cost Optimization</strong> \u2013 Identifies underutilized or idle resources.</li>\n<li><strong>Security</strong> \u2013 Highlights gaps like open ports or disabled MFA.</li>\n<li><strong>Fault Tolerance</strong> \u2013 Recommends backup and redundancy measures.</li>\n<li><strong>Service Limits</strong> \u2013 Monitors approaching AWS resource limits.</li>\n</ul>\n<p><strong>Why the other options are incorrect:</strong></p>\n<p>Other choices mix in unrelated or non-specific concepts not used by Trusted Advisor.</p>"
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Security, fault isolation, service availability, data integrity, and resource quotas",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Cost tracking, access management, performance tuning, networking, and service quotas",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Performance, cost optimization, security, fault tolerance, and service limits",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Cost analysis, system durability, encryption management, resilience, and support coverage",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
   },
   {
-    "query": "<p><strong>An organization is building a large-scale analytics platform that requires a fully managed data warehouse to run complex queries on structured data. They want a service that can handle petabyte-scale datasets and support SQL-based analytics.</strong></p>\n<p>Which AWS service is best suited for this use case?</p>",
-    "options": [
-      "Amazon Timestream",
-      "Amazon QuickSight",
-      "Amazon Redshift",
-      "Amazon Athena"
-    ],
+    "id": 2,
+    "query": "An organization is building a large-scale analytics platform that requires a fully managed data warehouse to run complex queries on structured data. They want a service that can handle petabyte-scale datasets and support SQL-based analytics.<br><br><strong>Which AWS service is best suited for this use case?</strong>",
     "answer": "Amazon Redshift",
-    "explanations": "<p><strong>Explanation:</strong></p>\n<p>Amazon Redshift is AWS's fully managed data warehouse designed for complex SQL-based analytics on large structured datasets. It supports high performance through columnar storage and parallel query execution.</p>\n<p><strong>Why the other options are incorrect:</strong></p>\n<ul>\n<li><strong>Amazon Athena</strong> is good for ad hoc queries, but not a full warehouse solution.</li>\n<li><strong>Amazon QuickSight</strong> is a visualization tool, not for large-scale querying.</li>\n<li><strong>Amazon Timestream</strong> is for time-series data, not general-purpose analytics.</li>\n</ul>"
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon Timestream",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon QuickSight",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Redshift",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon Athena",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
   },
   {
-    "query": "<p><strong>A security engineer is configuring AWS Identity and Access Management (IAM) roles and wants to follow best practices for securing access to AWS resources.</strong></p>\n<p>What best describes the Principle of Least Privilege?</p>",
+    "query": "A security engineer is configuring AWS Identity and Access Management (IAM) roles and wants to follow best practices for securing access to AWS resources.<br><br>What best describes the Principle of Least Privilege?",
+    "answer": "Users should be granted permission to access only resources they need to do their assigned job<br><br><strong>Explanation:</strong><br><br>The Principle of Least Privilege is a fundamental security best practice that states users, systems, and services should be given only the minimum permissions necessary to perform their tasks\u2014no more and no less. This reduces the risk of accidental or malicious actions that could compromise systems, expose sensitive data, or incur unexpected costs.<br><br><strong>Why the other options are incorrect:</strong><br><br><ul><li><em>Users should receive standard access policies that cover most common tasks across departments</em> may sound efficient but contradicts the Principle of Least Privilege. Blanket permissions increase the attack surface and risk of unauthorized access.</li><li><em>Users should submit formal access requests for resource changes to ensure accountability</em> reflects good access control procedures, but it doesn\u2019t define the Principle of Least Privilege itself.</li><li><em>Users should be given slightly elevated permissions to reduce the number of access requests</em> is explicitly contrary to the principle. Over-provisioning access for convenience defeats the purpose of fine-grained security.</li></ul>",
     "options": [
-      "Users should be granted permission to access only resources they need to do their assigned job",
-      "Users should receive standard access policies that cover most common tasks across departments",
-      "Users should submit formal access requests for resource changes to ensure accountability",
-      "Users should be given slightly elevated permissions to reduce the number of access requests"
+      {
+        "text": "Users should be granted permission to access only resources they need to do their assigned job",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Users should receive standard access policies that cover most common tasks across departments",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Users should submit formal access requests for resource changes to ensure accountability",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Users should be given slightly elevated permissions to reduce the number of access requests",
+        "correct": false,
+        "selected": false
+      }
     ],
-    "answer": "Users should be granted permission to access only resources they need to do their assigned job",
-    "explanations": "<p><strong>Explanation:</strong></p>\n<p>The Principle of Least Privilege is the idea that users and systems should only have the permissions required to perform their tasks\u2014nothing more. This minimizes the risk of accidental or intentional misuse.</p>\n<p><strong>Why the other options are incorrect:</strong></p>\n<ul>\n<li>Standard or elevated permissions increase risk.</li>\n<li>Formal requests help governance but don\u2019t define the principle.</li>\n</ul>"
+    "id": 1,
+    "marked": 0,
+    "timespent": 0,
+    "objectives": []
   },
   {
-    "query": "<p><strong>A developer is tasked with automating the deployment and update of a set of applications running across both Amazon EC2 instances and on-premises servers. They need a solution that handles installations, updates, and rollbacks in a reliable and repeatable way.</strong></p>\n<p>Which AWS service is the most appropriate for this task?</p>",
+    "query": "A developer is tasked with automating the deployment and update of a set of applications running across both Amazon EC2 instances and on-premises servers. They need a solution that handles installations, updates, and rollbacks in a reliable and repeatable way.<br><br>Which AWS service is the most appropriate for this task?",
+    "answer": "AWS CodeDeploy<br><br><strong>Explanation:</strong><br><br>AWS CodeDeploy is the correct choice because it is designed to automate application deployments to a variety of compute environments, including Amazon EC2 instances, AWS Lambda, and even on-premises servers. It supports rolling updates, can trigger lifecycle hooks, and integrates with other CI/CD tools.<br><br><strong>Why the other options are incorrect:</strong><br><br><ul><li><em>AWS CodeBuild</em> compiles source code and runs tests, but does not manage deployments.</li><li><em>AWS CodeCommit</em> is a Git-based source control system. It is being deprecated and does not handle deployment.</li><li><em>AWS CloudFormation</em> provisions infrastructure but is not designed for rolling application deployments.</li></ul>",
     "options": [
-      "AWS CodeBuild",
-      "AWS CodeCommit",
-      "AWS CloudFormation",
-      "AWS CodeDeploy"
+      {
+        "text": "AWS CodeBuild",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS CodeCommit",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS CloudFormation",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS CodeDeploy",
+        "correct": true,
+        "selected": false
+      }
     ],
-    "answer": "AWS CodeDeploy",
-    "explanations": "<p><strong>Explanation:</strong></p>\n<p>AWS CodeDeploy automates deployment of applications to EC2, Lambda, and on-premises servers. It supports rolling updates, rollbacks, and lifecycle hooks.</p>\n<p><strong>Why the other options are incorrect:</strong></p>\n<ul>\n<li><strong>CodeBuild</strong> builds code but doesn\u2019t deploy it.</li>\n<li><strong>CodeCommit</strong> is deprecated and was a Git service.</li>\n<li><strong>CloudFormation</strong> is for infrastructure provisioning, not app deployments.</li>\n</ul>"
+    "id": 2,
+    "marked": 0,
+    "timespent": 0,
+    "objectives": []
   },
   {
-    "query": "<p><strong>As part of understanding AWS\u2019s global infrastructure, a cloud architect needs to identify the component within an AWS Region that offers redundant connectivity and low latency, helping to ensure high availability and fault tolerance for applications.</strong></p>\n<p>Which of the following components best fits this description?</p>",
+    "query": "As part of understanding AWS\u2019s global infrastructure, a cloud architect needs to identify the component within an AWS Region that offers redundant connectivity and low latency, helping to ensure high availability and fault tolerance for applications.<br><br>Which of the following components best fits this description?",
+    "answer": "Availability Zones<br><br><strong>Explanation:</strong><br><br>Availability Zones (AZs) are multiple, isolated locations within an AWS Region. They are interconnected with high-bandwidth, low-latency networking, and are critical for designing resilient and fault-tolerant applications.<br><br><strong>Why the other options are incorrect:</strong><br><br><ul><li><em>Local Zones</em> are for ultra-low latency applications near population centers, not fault isolation in a Region.</li><li><em>Data Centers</em> are building blocks of AZs and are not exposed directly to customers.</li><li><em>Edge Locations</em> are used for content delivery, not redundant compute infrastructure.</li></ul>",
     "options": [
-      "Local Zones",
-      "Data Centers",
-      "Edge Location",
-      "Availability Zones"
+      {
+        "text": "Local Zones",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Data Centers",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Edge Location",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Availability Zones",
+        "correct": true,
+        "selected": false
+      }
     ],
-    "answer": "Availability Zones",
-    "explanations": "<p><strong>Explanation:</strong></p>\n<p>Availability Zones are distinct locations within a Region, each with independent infrastructure. They provide low-latency links between each other and are essential for building high availability into AWS workloads.</p>\n<p><strong>Why the other options are incorrect:</strong></p>\n<ul>\n<li><strong>Local Zones</strong> extend services closer to users but aren\u2019t part of the core redundant regional structure.</li>\n<li><strong>Data Centers</strong> are internal to AWS and not directly used for deployment decisions.</li>\n<li><strong>Edge Locations</strong> are for content delivery, not application deployment or fault isolation.</li>\n</ul>"
+    "id": 3,
+    "marked": 0,
+    "timespent": 0,
+    "objectives": []
   },
   {
-    "query": "<p><strong>An organization has deployed a static website on Amazon S3 in multiple AWS Regions to serve a global audience. The goal is to route users to the S3 bucket that offers the lowest latency, ensuring optimal performance regardless of the user's location.</strong></p>\n<p>Which Amazon Route 53 routing policy is best suited for this requirement?</p>",
+    "query": "An organization has deployed a static website on Amazon S3 in multiple AWS Regions to serve a global audience. The goal is to route users to the S3 bucket that offers the lowest latency, ensuring optimal performance regardless of the user's location.<br><br>Which Amazon Route 53 routing policy is best suited for this requirement?",
+    "answer": "Use Route 53 latency routing policy<br><br><strong>Explanation:</strong><br><br>Latency routing sends users to the AWS Region with the lowest latency based on real-time measurements. It improves user experience by reducing page load time.<br><br><strong>Why the other options are incorrect:</strong><br><br><ul><li><em>Geolocation routing</em> is used for location-based delivery but doesn\u2019t optimize for latency.</li><li><em>Weighted routing</em> distributes traffic based on weights, not performance.</li><li><em>Geoproximity routing</em> considers physical distance and bias, not measured latency.</li></ul>",
     "options": [
-      "Use Route 53 Geolocation routing policy",
-      "Use Route 53 weighted routing policy",
-      "Use Route 53 latency routing policy",
-      "Use Route 53 Geoproximity routing policy"
+      {
+        "text": "Use Route 53 Geolocation routing policy",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Use Route 53 weighted routing policy",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Use Route 53 latency routing policy",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Use Route 53 Geoproximity routing policy",
+        "correct": false,
+        "selected": false
+      }
     ],
-    "answer": "Use Route 53 latency routing policy",
-    "explanations": "<p><strong>Explanation:</strong></p>\n<p>Latency routing in Route 53 directs users to the region with the best network latency, improving load time for global users.</p>\n<p><strong>Why the other options are incorrect:</strong></p>\n<ul>\n<li><strong>Geolocation</strong> routes by location, not network performance.</li>\n<li><strong>Weighted</strong> allows custom traffic percentages, not based on latency.</li>\n<li><strong>Geoproximity</strong> uses geographic distance and traffic biasing, not dynamic latency.</li>\n</ul>"
+    "id": 4,
+    "marked": 0,
+    "timespent": 0,
+    "objectives": []
   },
   {
     "id": 9,
