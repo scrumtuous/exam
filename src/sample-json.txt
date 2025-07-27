@@ -1,0 +1,32 @@
+{
+	"qid": "001",
+	"marked": false,
+    "answer": "<p>Theh ECS under the hood.<\/p>",
+    "query": "<p>Your development team is exploring<\/p>",
+    "original_oid": "6793da7d61969b416038a21b",
+    "options": [
+        {
+            "correct": true,
+            "text": "Leverage a Dockerrun.aws.json",
+            "selected": false
+        },
+        {
+            "correct": false,
+            "text": "Create two separate Dockerfiles",
+            "selected": false
+        },
+        {
+            "correct": false,
+            "text": "Utilize Dockerrun.aws.json version ",
+            "selected": false
+        },
+        {
+            "correct": false,
+            "text": "Define the multi-container ",
+            "selected": false
+        }
+    ],
+    "source": "https://www.example.com",
+    "originalQuery": "Your R&D team is doiic Beanstalk?",
+    "originalOptions": "[\"A. Use two dockerfiles for the multidocker environment. This file describes the containers to deploy to each container instance.\",\"C. .\"]"
+}

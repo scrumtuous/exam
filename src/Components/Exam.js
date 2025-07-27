@@ -38,22 +38,27 @@ class Exam extends React.Component {
 //		  console.log(data);
  //       })
  //       .catch(console.log)
-    }
+	}
 
 	
   constructor(props) {
 	  console.log("Hello World");
 
-    super(props);
-    
+	super(props);
+	
 
-    this.saveQuestionState = this.saveQuestionState.bind(this);
+	this.saveQuestionState = this.saveQuestionState.bind(this);
 	this.gradeTheExam = this.gradeTheExam.bind(this);
 	this.setCurrentQuestion = this.setCurrentQuestion.bind(this);
 	this.showGrade = false;
 	this.elapsedTime=0;
 	this.toggleCheat = this.toggleCheat.bind(this);
 	const d = new Date();
+
+	console.log('This is the name prop: ' + this.props.name);
+	console.log('This is the abc prop: ' + this.props.abc);
+	console.log('This is the abc xys: ' + this.props.xyz);
+	//console.log('This is the data-name prop: ' + this.props.data-abc);
 	
 	let currentExam = JSON.parse(localStorage.getItem(this.props.name));
 	
@@ -108,50 +113,43 @@ class Exam extends React.Component {
   }
   
   async getExamQuestions() {
-    console.log("in getExamQuestions()");
-    if (LOCAL_QUESTIONS) {
-      console.log(this.props.name)
-	  console.log('../' + this.props.name + '.json')
-      import('../' + this.props.name + '.json')
-        .then((module) => {
-          const localQuestions = module.default || module;
-          //this.setState({ questions: localQuestions.slice(0, 3) });
+	console.log("in getExamQuestions() (RESTful API mode)");
+	const name = this.props.name; // Example: 'aws-architect~1,2,3,4,5,6,7,8,9,10'
+
+	// Split the string on the '~' character
+	const [resource, ids] = name.split('~');
+
+	// Log the parts to verify
+	console.log("The resource is:", resource);
+	console.log("The ids are:", ids);
+
+	// Construct the API URL
+	const apiUrl = `https://api.certificationexams.guru/${resource}?ids=${ids}`;
+	console.log("The apiUrl is:", apiUrl);
+	try {
+	  const response = await fetch(apiUrl);
+	  if (!response.ok) {
+		console.log(`Failed to fetch questions from ${apiUrl}: ${response.statusText}`);
+		throw new Error(`Failed to fetch questions from ${apiUrl}: ${response.statusText}`);
+	  }
+	  const questions = await response.json();
+	  this.setState({ questions });
+	  this.setCurrentQuestion(0);
+	} catch (error) {
+	  console.error("Failed to fetch from RESTful API, loading local questions.json instead.", error);
+	  import('../questions.json')
+		.then((module) => {
+		  const localQuestions = module.default || module;
 		  this.setState({ questions: localQuestions });
-          this.setCurrentQuestion(0);
-        })
-        .catch((err) => {
-          console.error("Failed to load local questions.json", err);
-        });
-      return;
-    }
-    try {
-      const user = await app.logIn(Realm.Credentials.anonymous());
-      const mongodb = app.currentUser.mongoClient("mongodb-atlas");
-      const questions = mongodb.db("ceasars-club").collection("practitioner");
-      console.log("Hello");
-      console.log(questions);
-      console.log("About to find questions in: " + this.props.message);
-      let message = this.props.message;
-      const question = await questions.find(JSON.parse(message));
-      console.log(question);
-      this.setState({ questions: question });
-      this.setCurrentQuestion(0);
-    } catch (error) {
-      console.error("Failed to fetch from MongoDB, loading local questions.json instead.", error);
-      import('../questions.json')
-        .then((module) => {
-          const localQuestions = module.default || module;
-          //this.setState({ questions: localQuestions.slice(0, 3) });
-		  this.setState({ questions: localQuestions });
-          this.setCurrentQuestion(0);
-        })
-        .catch((err) => {
-          console.error("Failed to load local questions.json", err);
-        });
-    }
+		  this.setCurrentQuestion(0);
+		})
+		.catch((err) => {
+		  console.error("Failed to load local questions.json", err);
+		});
+	}
   }
 
-    setCurrentQuestion(position) {
+	setCurrentQuestion(position) {
 		this.setState({currentQuestionNumber: position});
 		this.state.questions[position].viewed=true;
 		this.saveQuestionState(this.state.questions[position]);
@@ -168,13 +166,13 @@ class Exam extends React.Component {
    saveQuestionState(question){
 	  var updatedExamQuestions = this.state.questions;
 	  updatedExamQuestions[this.currentQuestionNumber] = question;  
-      this.setState({questions: updatedExamQuestions});
+	  this.setState({questions: updatedExamQuestions});
    }
 	
 	isQuestionAnsweredCorrectly(question) {
-        let i = 0;
+		let i = 0;
 		for (i = 0; i < question.options.length; i++) {
-           if ( (question.options[i].correct) != (question.options[i].selected) ) {
+		   if ( (question.options[i].correct) != (question.options[i].selected) ) {
 			 return false;
 		   }
 		}
@@ -185,7 +183,7 @@ class Exam extends React.Component {
 		let correctCount = 0;
 		let i = 0;
 		for (i = 0; i < this.state.questions.length; i++) {
-           if ( this.isQuestionAnsweredCorrectly(this.state.questions[i]) ) {
+		   if ( this.isQuestionAnsweredCorrectly(this.state.questions[i]) ) {
 			 correctCount++;
 		   }
 		}
@@ -202,7 +200,7 @@ class Exam extends React.Component {
 		
 		this.setState({graded: true}, () =>{});
 		
-	    this.showGrade = true;
+		this.showGrade = true;
 		this.setState({cheating: true}, () =>{});
 		this.setState({finish: d.getTime()}, () => {
 					examHistory.exams.push(this.state); 
@@ -214,21 +212,21 @@ class Exam extends React.Component {
 	}
 	
 	getExamHistory() {
-      try{
-         let object = localStorage.getItem('examHistory');
-         let examHistory = "";
-         if (object == null) {
-            examHistory = {name:"Exam History"};
-            let exams = [];
-            examHistory.exams = exams;
-            localStorage.setItem('examHistory', JSON.stringify(examHistory));
-         } else {
-            examHistory = JSON.parse(object);
-         }
-         return examHistory;
-      }catch(e){
-         console.log(e);
-      }
+	  try{
+		 let object = localStorage.getItem('examHistory');
+		 let examHistory = "";
+		 if (object == null) {
+			examHistory = {name:"Exam History"};
+			let exams = [];
+			examHistory.exams = exams;
+			localStorage.setItem('examHistory', JSON.stringify(examHistory));
+		 } else {
+			examHistory = JSON.parse(object);
+		 }
+		 return examHistory;
+	  }catch(e){
+		 console.log(e);
+	  }
 		
 	}
 
@@ -246,20 +244,20 @@ class Exam extends React.Component {
 	
 	
 	
-    save() {
+	save() {
 	 console.log('In save');
 	 //console.log('${this.state.query}');
 	 console.log("Posting with the following JSON: " + JSON.stringify(this.state));
 
 	console.log('COMPONENT DID MOUNT!');
-    console.log('About to fetch');
-    fetch('http://localhost:8080/exam', {
-      method: 'POST',
-      body: JSON.stringify(this.state),
+	console.log('About to fetch');
+	fetch('http://localhost:8080/exam', {
+	  method: 'POST',
+	  body: JSON.stringify(this.state),
 
-    })
-      .then((res) => res.json())
-      .then((data) => {
+	})
+	  .then((res) => res.json())
+	  .then((data) => {
 			this.setState( data );
 			JSON.stringify(data._id);
 		  console.log((data.toString()));
@@ -270,8 +268,8 @@ class Exam extends React.Component {
 		  console.log("OID is: " + ((data._id.$oid)));
 		  console.log("The current state is now: " + JSON.stringify(this.state));
 		  //this.setState(this, data);
-      })
-      .catch(console.log);
+	  })
+	  .catch(console.log);
   }
 
   
@@ -339,7 +337,7 @@ class Exam extends React.Component {
   } 
   
   
-    return (
+	return (
 	
 
 
@@ -385,7 +383,7 @@ class Exam extends React.Component {
 
 			</div>
 
-    );
+	);
   }
 }
  

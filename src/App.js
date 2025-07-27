@@ -8,8 +8,6 @@ const REALM_APP_ID = "exam-app-vzpmu"; // e.g. myapp-abcde
 const app = new Realm.App({ id: REALM_APP_ID });
 
 
-
-
 class App extends React.Component {
 
 
@@ -17,11 +15,6 @@ class App extends React.Component {
 	console.log("In App Constructor.");
 
     super(props);
-	this.setState({message: el.getAttribute('data-param')});
-	console.log(el.getAttribute('data-param'));
-	//console.log(this.state.message);
-    //console.log("attempts at message: " + this.state.message);
-	
 
   }
 

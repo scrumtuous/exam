@@ -1,0 +1,54 @@
+I am going to give you an AWS Solution Architect multiple-choice exam question.
+
+I want you to rephrase the question to make the query more original and clear, reword the scenario, changing the type of organization or industry in the scenario. Some industries to use include startups, SaaS providers, Banks, Credit Unions, FinTech Startups, Hospitals or Clinics, Pharma, Biotech Firms, Online Retailers, Aerospace, Utilities, Automotive, telcos, Airlines, Farms, Biotech, Charities, Defense, Intelligence Agencies, Local Governments and Ride Sharing or Uber-easts type companies.
+
+Also change any numbers that deal with metrics such as file size, bandwitdh, days or months. For example, if the question says 60 days, change it to 30 or 90. If it says a billion, change it to five billion. If it says 100 files, change it to 200 files. If it says 10TB, change it to 25TB. Change the numbers around without changing the intent of the question.
+
+Rephrase the options in the multiple choice question, and randomize the order of the options to be different than the original question and randomize the location of the true options in the options array so that the correct answer is not always first. Slightly reword the correct option, but change and rephrase the wording of the incorrect options to make them more challenging and somewhat different from the original. For the least challenging incorrect option, completely replace it with an different incorrect option that is more relevant to the question. In the options do not use fake or non-existent AWS products. Make sure all options are actual, real products that exist.
+
+Then provide an answer that includes a thorough explanation of why the answer is correct. Also explain why each incorrect option is not right. Then provide additional insights on why the question is important and also any tricks on answering this type of question and a note about why this question is challenging or hints on how to answer these types of questions. Hints and tips are really important.
+
+In the answer, do not refer to the options or answers as A, B, C or D,  or "Option A" or "Option 1" as the order may change when displayed. Do not state how many options to choose, and do not use bullet points or emojis. Just answer in paragraphs and sentences. For the correct answers, provide thorough details. As part of the answer section, include why each of the incorrect options are wrong. 
+
+All of this information about the answer, including tips and tricks and why certain options are incorrect will be stored in a field named answer in a JSON file you will create.
+
+The JSON file you create will follow this format with the JSON name-value pair fields in the this exact order. Also, randomize the location of the "correct" : true options so it is/they are not always first. 
+
+{
+  "original_oid": "6793d561f501ee1c8ade9750"
+  "query" : "What do you call a fish without an eye?",
+  "options" : [ {
+    "text" : "Fishy McFishface",
+    "correct" : false,
+	"selected" : false
+  }, {
+    "text" : "Blinky",
+    "correct" : false,
+	"selected" : false
+  }, {
+    "text" : "No eye fish.",
+    "correct" : false,
+	"selected" : false
+  }, {
+    "text" : "fsh",
+    "correct" : true,
+	"selected" : false
+  } ],
+  "answer": "<p>When you remove the 'i' it spells fsh!</p>",
+  "source": "http://docs.example.com/stuff",
+  "originalQuery": "abc",
+  "originalOptions": "abc",
+  "marked" : false
+}
+
+The originalQuery and originalOptions are just a copy of the fields from the input. The original_oid field is just the $oid from the input.
+
+Note that the answer field will include all the information on why the answer is correct, why the other options are wrong, and the insights and tips as well. 
+
+In the query and answer sections of the JSON, include HTML tags to allow the response to render properly in a webpage.
+
+Remember to change the wording and similarly paraphrase and reword the options to make the question unique and read differently than the original without actually losing the meaning of the question.
+
+In the answer, when you quote any incorrect options, italicize the text with HTML tags. When you mention the correct option, bold it with HTML tags. Do not use markdown.
+
+Here is the question:

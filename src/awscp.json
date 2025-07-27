@@ -1,889 +1,5 @@
 [
-  {
-    "id": 1,
-    "query": "An online training organization wants an AWS service that can analyze its cloud environment and provide real-time recommendations to improve infrastructure security, reduce costs, and enhance performance.",
-    "answer": "<b>Correct Answer: AWS Trusted Advisor</b><br><br>AWS Trusted Advisor is specifically designed to help organizations optimize their AWS environments by analyzing their configurations and usage patterns. It provides real-time recommendations across five categories:<br><br><ul><li><b>Security</b>: Flags security risks like overly permissive IAM roles, exposed ports, or lack of MFA.</li><li><b>Cost Optimization</b>: Identifies underutilized resources that could be downsized or terminated.</li><li><b>Performance</b>: Offers recommendations to improve latency and throughput.</li><li><b>Fault Tolerance</b>: Suggests improvements like enabling backups or using multiple Availability Zones.</li><li><b>Service Limits</b>: Warns when you're nearing AWS service limits.</li></ul>This aligns perfectly with the organization\u2019s goals of improving infrastructure security, reducing costs, and enhancing performance.<br><br><b>Incorrect Options:</b><br><b>AWS Config</b> is incorrect because it only tracks configuration changes and compliance, without offering recommendations for improving security, cost, or performance.<br><b>Amazon CloudWatch</b> is incorrect because it focuses on monitoring metrics, logs, and alarms rather than providing optimization insights or best practice guidance.<br><b>Amazon Inspector</b> is incorrect because it specializes in identifying security vulnerabilities but does not evaluate or improve infrastructure cost or performance.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "AWS Config",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Trusted Advisor",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Amazon CloudWatch",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon Inspector",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 2,
-    "query": "You're building a movie sharing service and you've decided to build it with S3. Movie requests have proven to be completely random, although very popular movies get downloaded almost every day, while others get almost zero requests. What is the most cost effective Amazon S3 storage class to use?",
-    "answer": "<b>Correct Answer: Amazon S3 Intelligent-Tiering</b><br><br>This storage class is specifically designed for scenarios where access patterns are unpredictable and vary over time. It automatically moves objects between different access tiers based on usage, ensuring frequently accessed data remains performance-optimized while infrequently accessed data is moved to lower-cost tiers.<br><br><b>Incorrect Options:</b><br><b>Amazon S3 Standard</b> is not cost-effective for infrequent access since it's priced for frequent usage.<br><b>Amazon S3 Glacier</b> (or Glacier Deep Archive) is meant for rarely accessed archival data, and has long retrieval delays.<br><b>Amazon S3 One Zone-Infrequently Accessed</b> is risky and doesn\u2019t adapt to changing usage patterns, unlike Intelligent-Tiering.<br><b>Amazon S3 Standard-IA</b> can incur high retrieval fees if objects are accessed unpredictably, unlike Intelligent-Tiering which optimizes based on behavior.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Amazon S3 Standard",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon S3 Intelligent-Tiering",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Amazon S3 One Zone-Infrequently Accessed",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon S3 Glacier",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 3,
-    "query": "A financial analytics platform stores real-time data in Amazon DynamoDB. During peak trading hours, users report slower response times when retrieving data. The development team wants to boost read performance with minimal code changes and without altering the underlying database. Which AWS service should be added to the architecture?",
-    "answer": "<b>Correct Answer: Amazon DynamoDB Accelerator (DAX)</b><br><br>\nDAX is purpose-built to improve read performance from DynamoDB tables by providing an in-memory cache layer. \nIt supports read-intensive workloads by reducing the need to access the DynamoDB service directly, \ndelivering microsecond latency and helping absorb heavy read traffic.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon ElastiCache</b> could be used to cache frequent queries, but it's a generic caching service that requires manual integration and cache management. \nIt\u2019s better suited to custom caching strategies for relational or other data sources and not the ideal tool when working specifically with DynamoDB.<br>\n<b>Amazon CloudFront</b> is intended for distributing static and dynamic web content through a content delivery network. \nIt does not accelerate database queries, making it ineffective for this scenario.<br>\n<b>Amazon RDS Proxy</b> is a connection pooler for relational databases like MySQL and PostgreSQL, \nbut it is unrelated to DynamoDB, which is a NoSQL service.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Amazon ElastiCache",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon CloudFront",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon DynamoDB Accelerator (DAX)",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Amazon RDS Proxy",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 4,
-    "query": "A health-tech company is running a distributed application composed of numerous microservices deployed across multiple AWS services. Recently, users have been encountering intermittent errors and increased latency. The development team needs deeper visibility into request paths and dependencies between services to identify the root cause of these issues. Which AWS service is best suited to trace and diagnose the application's behavior?",
-    "answer": "<b>Correct Answer: AWS X-Ray</b><br><br>\nX-Ray is specifically designed for analyzing and debugging distributed applications and microservices. \nIt enables developers to trace the journey of requests through various services, \nidentify performance bottlenecks, and pinpoint exactly where errors are occurring in complex workflows.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon CloudWatch</b> is helpful for logs and metrics but does not provide end-to-end tracing or dependency maps.<br>\n<b>AWS CloudTrail</b> logs API activity for auditing and security, not for debugging runtime behavior.<br>\n<b>AWS Config</b> tracks resource configurations and compliance, but does not trace application-level events.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Amazon CloudWatch",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS X-Ray",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "AWS CloudTrail",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Config",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 5,
-    "query": "In the world of cloud based software development, what does the term <b>elasticity</b> refer to?",
-    "answer": "<b>Correct Answer:</b> It allows a system to automatically scale its resources up or down based on real-time demand.<br><br>\nThis is the definition of elasticity in cloud computing. It means the system can expand or contract its capacity dynamically as workload demands change\u2014helping maintain performance and manage costs efficiently.<br><br>\n<b>Incorrect Options:</b><br>\nThe second option describes <b>scalability</b>, which refers to long-term growth, not real-time adjustment.<br>\nThe third option defines <b>durability</b>, or data protection across multiple facilities.<br>\nThe fourth option describes <b>failover</b>, where traffic is redirected to backup systems during outages.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "It allows a system to automatically scale its resources up or down based on real-time demand.",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "It enables a system to grow over time by adding more storage and compute capacity as needed.",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "It ensures that data is redundantly stored across multiple facilities to prevent loss.",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "It allows traffic to be redirected to healthy resources during a system failure.",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 6,
-    "query": "A small business wants to estimate future AWS costs based on past usage trends. Which AWS tool should they use to visualize spending patterns and forecast future expenses?",
-    "answer": "<b>Correct Answer: AWS Cost Explorer</b><br><br>\nAWS Cost Explorer helps users visualize historical AWS spending, analyze trends, and forecast future costs based on previous usage. \nIt offers interactive charts and filtering options, making it a primary service for understanding and projecting AWS expenses.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS Organizations</b> consolidates multiple AWS accounts under one billing structure but doesn\u2019t offer forecasting or visualization tools.<br>\n<b>AWS Trusted Advisor</b> offers cost-efficiency recommendations but does not forecast or visualize trends.<br>\n<b>AWS Budgets</b> allows users to set cost thresholds and receive alerts, but does not project future expenses like Cost Explorer does.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "AWS Organizations",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Cost Explorer",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "AWS Trusted Advisor",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Budgets",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 7,
-    "query": "Which AWS feature serves as an optional security layer applied at the subnet level within a VPC and is used to control inbound and outbound network traffic?",
-    "answer": "<b>Correct Answer: Network Access Control List (NACL)</b><br><br>\nNACLs are associated with subnets in a VPC and act as stateless firewalls. \nThey evaluate each network packet entering or leaving a subnet against user-defined rules. \nUnlike security groups, they must be configured to allow both inbound and outbound traffic explicitly.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS Identity and Access Management (IAM)</b> controls access to AWS services at the user level and does not manage network traffic.<br>\n<b>Security Groups</b> operate at the instance level and are stateful, not subnet-level like NACLs.<br>\n<b>AWS Shield</b> protects against DDoS attacks but is not used for subnet-level traffic filtering.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "AWS Identity and Access Management (IAM)",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Network Access Control List (NACL)",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Security Group",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Shield",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 8,
-    "query": "A media company is hosting its applications on AWS, using services like Amazon EC2, Amazon RDS, and Amazon S3. According to the AWS Shared Responsibility Model, which of the following is the customer's responsibility?",
-    "answer": "<b>Correct Answer: Configuring firewall rules on Amazon EC2 instances</b><br><br>\nIn the Shared Responsibility Model, customers are responsible for securing their own workloads, including configuring security groups, network ACLs, and firewalls on their EC2 instances.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Maintaining climate control systems</b> in data centers is AWS\u2019s responsibility.<br>\n<b>Securing physical hardware</b> is handled by AWS for services like RDS.<br>\n<b>Patching the virtualization layer</b> is also managed by AWS; customers do not access or control the underlying infrastructure.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Configuring firewall rules on Amazon EC2 instances",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Maintaining climate control systems in AWS data centers",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Securing the physical hardware that runs Amazon RDS",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Patching the virtualization layer on EC2 host servers",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 9,
-    "query": "A media production company regularly uploads large video files from its regional offices around the world to an Amazon S3 bucket located in the US. They\u2019re experiencing slow upload speeds and want a solution that speeds up transfers over long distances without changing their storage setup. Which AWS feature is designed specifically for this use case?",
-    "answer": "<b>Correct Answer: Amazon S3 Transfer Acceleration</b><br><br>\nAmazon S3 Transfer Acceleration speeds up file uploads by routing them through AWS\u2019s global edge network. \nData is sent to the nearest edge location and then forwarded to the S3 bucket via AWS's high-speed backbone network.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon S3 Global Upload</b> is not a real AWS service.<br>\n<b>AWS Direct Upload</b> is not an official AWS product name and doesn\u2019t accelerate uploads.<br>\n<b>Amazon CloudFront File Sync</b> confuses CloudFront with upload tools\u2014CloudFront is for content delivery, not file ingestion.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Amazon S3 Global Upload",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon S3 Transfer Acceleration",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "AWS Direct Upload",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon CloudFront File Sync",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 10,
-    "query": "A web application needs to store images, PDFs, and other media files that users can download directly using a public or pre-signed URL. Which AWS storage service is best suited for this requirement?",
-    "answer": "<b>Correct Answer: Amazon S3</b><br><br>\nAmazon S3 (Simple Storage Service) is object storage built for the cloud, and it natively supports accessing stored objects through URLs. \nYou can make files publicly accessible or use pre-signed URLs for controlled, time-limited access. \nIt\u2019s ideal for static content delivery directly to end users.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon EFS</b> provides scalable file storage for EC2 instances, but requires mounting and doesn\u2019t support URL-based access.<br>\n<b>AWS Storage Gateway</b> acts as a hybrid bridge and is not intended for direct object storage or URL access.<br>\n<b>Amazon EBS</b> is block storage for EC2 and doesn\u2019t provide internet-facing access to stored files.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Amazon Elastic File System (EFS)",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon S3",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "AWS Storage Gateway",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon Elastic Block Store (EBS)",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 11,
-    "query": "A company plans to run a database server 24/7 for the next 12 months to support a critical business application. The workload is steady and predictable, and the team wants to minimize total costs over the year. Which Amazon EC2 pricing model should they choose to achieve the lowest possible cost?",
-    "answer": "<b>Correct Answer: Reserved Instances with Full Upfront Payment</b><br><br>\nThis pricing model offers the maximum discount compared to On-Demand pricing and is ideal for long-term, steady workloads. \nBy committing to a one-year term and paying the full amount upfront, the company gets the lowest hourly rate AWS offers.<br><br>\n<b>Incorrect Options:</b><br>\n<b>On-Demand Instances</b> are flexible but the most expensive over a year.<br>\n<b>Spot Instances</b> are unreliable for critical workloads due to the possibility of interruption.<br>\n<b>Reserved Instances with No Upfront Payment</b> offer discounts but not as deep as Full Upfront.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "On-Demand Instances",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Spot Instances",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Reserved Instances with No Upfront Payment",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Reserved Instances with Full Upfront Payment",
-        "correct": true,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 12,
-    "query": "An organization is undergoing an external compliance audit, and the auditor has asked for official documentation such as AWS\u2019s SOC reports, ISO certifications, and data privacy agreements. The cloud administrator needs to retrieve this material directly from AWS. Which service should they use?",
-    "answer": "<b>Correct Answer: AWS Artifact</b><br><br>\nAWS Artifact is the go-to service for accessing AWS\u2019s security and compliance documentation, including audit reports and agreements. \nIt provides downloadable, audit-ready materials for compliance reviews.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS License Manager</b> manages software licenses but doesn\u2019t provide compliance documentation.<br>\n<b>AWS Security Hub</b> helps monitor security posture but doesn\u2019t distribute formal audit materials.<br>\n<b>AWS Service Catalog</b> governs available AWS products, not compliance or legal documentation.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "AWS Artifact",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "AWS License Manager",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Security Hub",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Service Catalog",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 13,
-    "query": "A group of newly hired developers is joining a cloud-based project team within an organization. Each developer will be working on different components of the application, with varying access needs to services such as Amazon EC2, Amazon RDS, and AWS CodeCommit. What is the best-practice approach for granting access to these users?",
-    "answer": "<b>Correct Answer: Provide each user with permissions tailored to their role</b><br><br>\nGrant only the minimum level of access required to perform their job. \nThis follows the principle of least privilege, reducing risks of unauthorized access and unintended changes.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Assigning all users a baseline set of permissions</b> may expose unnecessary resources and increase security risk.<br>\n<b>Granting no access at all</b> creates unnecessary friction and slows productivity.<br>\n<b>Giving everyone broad access initially</b> is risky and not a proactive security approach.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Assign all users a baseline set of permissions, and allow them to request elevated access when necessary.",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Begin by granting no permissions at all and only provide temporary access when specific tasks are requested.",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Provide each user with permissions tailored to their role, granting only the minimum level of access required to perform their job.",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Grant all users access to the most commonly used services in the organization, then refine access later as issues arise.",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 14,
-    "query": "During a compliance audit, an external IT auditor asks for detailed logs that show which IAM users or roles performed specific actions\u2014such as creating, modifying, or deleting resources\u2014within the company's AWS environment. Which AWS service provides this level of visibility into API activity across the account?",
-    "answer": "<b>Correct Answer: AWS CloudTrail</b><br><br>\nCloudTrail records who did what, when, and from where in your AWS account by capturing API activity across AWS services. \nIt logs requests from the console, CLI, SDKs, and more, including IAM user or role identity\u2014perfect for audits.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon CloudWatch Logs</b> stores and monitors logs but does not natively capture API calls by IAM users.<br>\n<b>AWS Config</b> shows what changed, but not who made the change.<br>\n<b>Amazon GuardDuty</b> detects threats using CloudTrail data but isn\u2019t used for human-readable API audit trails.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "AWS CloudTrail",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Amazon CloudWatch Logs",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Config",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon GuardDuty",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 15,
-    "query": "A DevOps engineer is preparing to update a production environment using an AWS CloudFormation template. Before applying the changes, they want to preview exactly what resources will be modified, created, or deleted. Which CloudFormation feature should they use to safely review the proposed changes?",
-    "answer": "<b>Correct Answer: AWS CloudFormation Change Sets</b><br><br>\nChange Sets let you preview the changes CloudFormation will apply before executing them\u2014helping catch errors or unintended deletions before they happen.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Stack Policies</b> control update permissions but don\u2019t preview changes.<br>\n<b>Stack Sets</b> deploy templates across multiple accounts and regions, unrelated to change previews.<br>\n<b>Drift Detection</b> finds differences after deployment, not before.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "AWS CloudFormation Change Sets",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "AWS CloudFormation Stack Policies",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS CloudFormation Stack Sets",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS CloudFormation Drift Detection",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 16,
-    "query": "A company is hosting production workloads on EC2 instances backed by Amazon EBS volumes. To meet internal backup policies, the operations team needs to ensure that data on these volumes is safely preserved and can be recovered if needed. What is the proper way to fulfill this responsibility?",
-    "answer": "<b>Correct Answer: Create EBS snapshots to preserve volume data</b><br><br>\nCreating snapshots is the standard way to back up EBS volumes. \nStored in S3, they\u2019re incremental, durable, and support restoration to new volumes.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Pushing to AWS CodeCommit</b> is impractical\u2014CodeCommit is for source code, not binary backups.<br>\n<b>Copying to ECR</b> is invalid\u2014ECR is for Docker images, not storage volumes.<br>\n<b>Provisioning new volumes</b> does not preserve current data\u2014it just creates new empty disks.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Create EBS snapshots to preserve volume data",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Push EBS volume contents to AWS CodeCommit as a backup",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Copy EBS volumes to Amazon Elastic Container Registry (ECR)",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Provision additional EBS volumes in a different Availability Zone",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 17,
-    "query": "An AWS solutions architect is evaluating different ways to adjust compute capacity as application demand changes. What is the primary difference between vertical scaling (scaling up) and horizontal scaling (scaling out)?",
-    "answer": "<b>Correct Answer:</b> Vertical scaling increases the amount of resources on a single server, while horizontal scaling adds more servers to share the workload.<br><br>\nVertical scaling means upgrading CPU, RAM, or storage on a single instance.<br>\nHorizontal scaling means adding instances to distribute load and increase fault tolerance.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Horizontal scaling is always more expensive</b> \u2014 not true; it can be more cost-efficient.<br>\n<b>Vertical scaling improves availability</b> \u2014 incorrect; horizontal scaling improves fault tolerance.<br>\n<b>Auto Scaling Groups use vertical scaling</b> \u2014 incorrect; they are a key tool for horizontal scaling.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Vertical scaling increases the amount of resources on a single server, while horizontal scaling adds more servers to share the workload.",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Horizontal scaling is always more expensive than vertical scaling and is used only in large enterprises.",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Vertical scaling improves availability, whereas horizontal scaling is mainly used for data archival.",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Auto Scaling Groups use vertical scaling, while Elastic Load Balancers are used for horizontal scaling only.",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 18,
-    "query": "A retail analytics startup is planning to shut down its aging data center and migrate its workloads to AWS. As part of the transition, the CTO asks you to explain the cost advantages of using Amazon EC2 compared to managing physical servers. Which of the following provides the most accurate financial benefit of EC2?",
-    "answer": "<b>Correct Answer:</b> You pay only for the compute capacity you use, without long-term hardware investment.<br><br>\nThis reflects AWS\u2019s pay-as-you-go model. Instead of buying hardware upfront, businesses pay for compute time, reducing capital expenses and aligning costs with actual usage.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Tagging EC2 instances</b> helps with cost allocation but doesn\u2019t reduce billing.<br>\n<b>Low-cost AMIs</b> may help with licensing but don\u2019t change EC2 usage pricing.<br>\n<b>Automated backups</b> are useful but add storage costs and don\u2019t eliminate operational effort.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "You pay only for the compute capacity you use, without long-term hardware investment.",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "You can tag EC2 instances to automatically reduce your billing charges.",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "You get access to low-cost AMIs that optimize instance launch times.",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "You benefit from built-in automated backups that eliminate operational costs.",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 19,
-    "query": "An AWS solutions architect is building a fault-tolerant system that must continue to operate smoothly even when parts of the infrastructure fail. In line with the principle of designing for failure, which three AWS services or features best support this design strategy? ",
-    "answer": "<b>Correct Answers:</b> Deployment to AWS Availability Zones, The use of multiple AWS Regions, and Elastic Load Balancing of EC2 instances.<br><br>\n<b>Availability Zones</b> offer in-region redundancy.<br>\n<b>Multiple Regions</b> ensure geographic fault tolerance.<br>\n<b>Elastic Load Balancing</b> distributes traffic and handles instance failures automatically.<br><br>\n<b>Incorrect Option:</b><br>\n<b>Auto Scaling based on cost thresholds</b> is not a valid AWS scaling trigger and does not ensure high availability during failures.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Deployment to AWS Availability Zones",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "The use of multiple AWS Regions",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Elastic Load Balancing of EC2 instances",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Auto Scaling based on cost thresholds",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 20,
-    "query": "Your architecture team is designing a cloud-native application to run on AWS. One of the stated non-functional requirements is to reduce interdependencies between components so that a failure in one part of the system does not cascade to others. Based on AWS Well-Architected Framework principles, which architectural concept best aligns with this requirement?",
-    "answer": "<b>Correct Answer:</b> Loose coupling.<br><br>\nLoose coupling encourages components to interact through APIs or messaging queues. This minimizes dependency and risk of cascading failures.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Workload isolation</b> separates systems at a macro level but doesn\u2019t address inter-component dependencies.<br>\n<b>Service aggregation</b> increases dependency rather than reduces it.<br>\n<b>High cohesion</b> refers to component internal consistency, not decoupling.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Loose coupling",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Workload isolation",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Service aggregation",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "High cohesion",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 21,
-    "query": "A healthcare company is preparing for a compliance audit after migrating its infrastructure to AWS. The cloud security team is reviewing which security controls are handled by AWS and which remain their responsibility. According to the AWS Shared Responsibility Model, which three of the following are managed by AWS? ",
-    "answer": "<b>Correct Answers:</b> Patching and maintenance of physical server hardware, Secure decommissioning of storage media (e.g., disk disposal), and Management of physical access controls in AWS data centers.<br><br>\nThese responsibilities fall under AWS\u2019s side of the shared responsibility model, which governs infrastructure security.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Password rotation policies</b>, <b>user role configuration</b>, and <b>MFA setup</b> are responsibilities of the customer.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Enforcement of password rotation policies for IAM users",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Configuration of user access roles and permissions",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Patching and maintenance of physical server hardware",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Secure decommissioning of storage media (e.g., disk disposal)",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Management of physical access controls in AWS data centers",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Setting up multi-factor authentication (MFA) for console users",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 22,
-    "query": "You are deploying a video-streaming application on AWS that must deliver high-quality content to users around the world with minimal buffering and low latency. Which AWS service is best suited to distribute this content efficiently to a global audience?",
-    "answer": "<b>Correct Answer:</b> Amazon CloudFront<br><br>\nCloudFront is AWS\u2019s CDN that caches content at edge locations worldwide to minimize latency and deliver fast, reliable streaming.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon S3</b> stores content but doesn't optimize delivery on its own.<br>\n<b>Amazon SQS</b> is a queuing service, not for media distribution.<br>\n<b>Amazon CloudTrail</b> is for auditing API activity, not streaming.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Amazon CloudFront",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Amazon S3",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon SQS",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon CloudTrail",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 23,
-    "query": "Your operations team is investigating a recent outage that was caused by unexpected changes to an AWS resource\u2019s configuration. They need to identify what changed, when it changed, and who made the change. Which AWS service is best suited to retrieve this information?",
-    "answer": "<b>Correct Answer:</b> AWS Config<br><br>\nAWS Config records the configuration history of AWS resources and tracks changes over time, helping you troubleshoot operational issues and verify compliance.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS Trusted Advisor</b> provides recommendations but no change history.<br>\n<b>AWS CloudFormation</b> manages infrastructure as code but doesn\u2019t track manual changes.<br>\n<b>Amazon Inspector</b> checks for vulnerabilities, not config changes.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "AWS Config",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "AWS Trusted Advisor",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS CloudFormation",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon Inspector",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 24,
-    "query": "You need to update the security group rules for an EC2 instance. Which of the following is true about changing security groups on a running instance?",
-    "answer": "<b>Correct Answer:</b> You can change the security group of an instance at any time, whether it\u2019s running or stopped.<br><br>\nEC2 supports dynamic security group changes without requiring downtime.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Only changing when stopped</b> is incorrect\u2014this is not a limitation.<br>\n<b>Only modifying the default group</b> is false\u2014custom groups are supported.<br>\n<b>You can\u2019t change if attached</b> is incorrect\u2014attached groups can be edited or replaced.<br>\n<b>None of the above</b> is wrong because the first option is true.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "You can change the security group of an instance at any time, whether it\u2019s running or stopped.",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "You can only change the security group after stopping the instance.",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "You can only modify the default security group.",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "You can\u2019t change a security group if it\u2019s currently attached to an instance.",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "None of the above.",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 25,
-    "query": "Your company wants to subscribe to an AWS Support plan. The team requires 24/7 access to Cloud Support Engineers via phone, chat, and email, and expects a response time of under 15 minutes for critical production system failures. Which AWS Support plan meets these requirements?",
-    "answer": "<b>Correct Answer:</b> AWS Enterprise Support<br><br>\nEnterprise Support offers 15-minute response time for business-critical issues and 24/7 access to AWS engineers across all communication channels.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS Basic Support</b> is free and includes only documentation and forums.<br>\n<b>AWS Developer Support</b> offers business-hour email support only.<br>\n<b>AWS Business Support</b> is 24/7 but provides under-1-hour response for critical issues, not 15 minutes.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "AWS Basic Support",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Developer Support",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Business Support",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Enterprise Support",
-        "correct": true,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 26,
-    "query": "Your company is planning to migrate its on-premises Oracle database to AWS. The goal is to minimize downtime and ensure data is reliably transferred to the cloud. Which AWS service is best suited to assist with this type of database migration?",
-    "answer": "<b>Correct Answer:</b> AWS Database Migration Service (AWS DMS)<br><br>\nAWS DMS is built for database migrations, offering minimal-downtime replication for both homogeneous and heterogeneous database moves.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS MGN</b> migrates servers, not databases.<br>\n<b>AWS Trusted Advisor</b> gives advice, not migration capabilities.<br>\n<b>Amazon Inspector</b> is a security tool, not a migration service.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "AWS Database Migration Service (AWS DMS)",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "AWS Application Migration Service (AWS MGN)",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Trusted Advisor",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon Inspector",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 27,
-    "query": "Your company is planning to migrate its on-premises Oracle database to AWS. The migration must be secure, reliable, and involve minimal downtime. Which AWS service is best suited to assist with this type of database migration?",
-    "answer": "<b>Correct Answer:</b> AWS Database Migration Service (AWS DMS)<br><br>\nDMS enables continuous replication and is designed for relational database migrations like Oracle with low downtime.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS MGN</b> migrates whole servers, not databases.<br>\n<b>AWS Migration Hub</b> tracks migration but doesn't perform them.<br>\n<b>AWS Snowball</b> is for bulk offline data transfer, not live database cutovers.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "AWS Database Migration Service (AWS DMS)",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "AWS Application Migration Service (AWS MGN)",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Migration Hub",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Snowball",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 28,
-    "query": "Amazon Inspector includes a feature that checks whether resources are reachable from the internet. On which of the following AWS resources does Amazon Inspector perform network accessibility checks?",
-    "answer": "<b>Correct Answer:</b> Amazon EC2 instances<br><br>\nInspector evaluates EC2 instances for public accessibility based on their security groups, routing, and firewall settings.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS Lambda</b> runs in managed containers with no persistent network interface.<br>\n<b>Elastic Load Balancers</b> aren\u2019t directly analyzed by Inspector.<br>\n<b>Amazon VPCs</b> define networks but aren\u2019t checked directly for reachability.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Amazon EC2 instances",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "AWS Lambda functions",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon Elastic Load Balancers",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon VPCs",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
-  {
-    "id": 29,
-    "query": "Which AWS service is specifically designed to provide computing elasticity by automatically adjusting the number of compute resources based on traffic or workload demand?",
-    "answer": "<b>Correct Answer:</b> Amazon EC2 Auto Scaling Group<br><br>\nAuto Scaling Groups dynamically scale EC2 instances to match demand, ensuring performance and cost-efficiency.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon S3</b> is storage, not compute.<br>\n<b>RDS Multi-AZ</b> improves availability, not elasticity.<br>\n<b>AWS Lambda</b> is also elastic but applies at a function level, not general-purpose EC2 scaling.",
-    "marked": 0,
-    "timespent": 0,
-    "options": [
-      {
-        "text": "Amazon EC2 Auto Scaling Group",
-        "correct": true,
-        "selected": false
-      },
-      {
-        "text": "Amazon S3",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "Amazon RDS Multi-AZ",
-        "correct": false,
-        "selected": false
-      },
-      {
-        "text": "AWS Lambda",
-        "correct": false,
-        "selected": false
-      }
-    ],
-    "objectives": []
-  },
+  
   {
     "id": 30,
     "query": "A financial analytics company is building a real-time stock trading dashboard using Amazon DynamoDB to store and display the latest trade prices and volumes. Users must always see the most current data immediately after a trade is written to the database, to ensure accurate and timely decision-making. Which data consistency option is the most appropriate to use?",
@@ -2514,6 +1630,891 @@
       },
       {
         "text": "Workloads that need to run continuously for long periods without interruption",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 1,
+    "query": "An online training organization wants an AWS service that can analyze its cloud environment and provide real-time recommendations to improve infrastructure security, reduce costs, and enhance performance.",
+    "answer": "<b>Correct Answer: AWS Trusted Advisor</b><br><br>AWS Trusted Advisor is specifically designed to help organizations optimize their AWS environments by analyzing their configurations and usage patterns. It provides real-time recommendations across five categories:<br><br><ul><li><b>Security</b>: Flags security risks like overly permissive IAM roles, exposed ports, or lack of MFA.</li><li><b>Cost Optimization</b>: Identifies underutilized resources that could be downsized or terminated.</li><li><b>Performance</b>: Offers recommendations to improve latency and throughput.</li><li><b>Fault Tolerance</b>: Suggests improvements like enabling backups or using multiple Availability Zones.</li><li><b>Service Limits</b>: Warns when you're nearing AWS service limits.</li></ul>This aligns perfectly with the organization\u2019s goals of improving infrastructure security, reducing costs, and enhancing performance.<br><br><b>Incorrect Options:</b><br><b>AWS Config</b> is incorrect because it only tracks configuration changes and compliance, without offering recommendations for improving security, cost, or performance.<br><b>Amazon CloudWatch</b> is incorrect because it focuses on monitoring metrics, logs, and alarms rather than providing optimization insights or best practice guidance.<br><b>Amazon Inspector</b> is incorrect because it specializes in identifying security vulnerabilities but does not evaluate or improve infrastructure cost or performance.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Config",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Trusted Advisor",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon CloudWatch",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Inspector",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 2,
+    "query": "You're building a movie sharing service and you've decided to build it with S3. Movie requests have proven to be completely random, although very popular movies get downloaded almost every day, while others get almost zero requests. What is the most cost effective Amazon S3 storage class to use?",
+    "answer": "<b>Correct Answer: Amazon S3 Intelligent-Tiering</b><br><br>This storage class is specifically designed for scenarios where access patterns are unpredictable and vary over time. It automatically moves objects between different access tiers based on usage, ensuring frequently accessed data remains performance-optimized while infrequently accessed data is moved to lower-cost tiers.<br><br><b>Incorrect Options:</b><br><b>Amazon S3 Standard</b> is not cost-effective for infrequent access since it's priced for frequent usage.<br><b>Amazon S3 Glacier</b> (or Glacier Deep Archive) is meant for rarely accessed archival data, and has long retrieval delays.<br><b>Amazon S3 One Zone-Infrequently Accessed</b> is risky and doesn\u2019t adapt to changing usage patterns, unlike Intelligent-Tiering.<br><b>Amazon S3 Standard-IA</b> can incur high retrieval fees if objects are accessed unpredictably, unlike Intelligent-Tiering which optimizes based on behavior.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon S3 Standard",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 Intelligent-Tiering",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 One Zone-Infrequently Accessed",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 Glacier",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 3,
+    "query": "A financial analytics platform stores real-time data in Amazon DynamoDB. During peak trading hours, users report slower response times when retrieving data. The development team wants to boost read performance with minimal code changes and without altering the underlying database. Which AWS service should be added to the architecture?",
+    "answer": "<b>Correct Answer: Amazon DynamoDB Accelerator (DAX)</b><br><br>\nDAX is purpose-built to improve read performance from DynamoDB tables by providing an in-memory cache layer. \nIt supports read-intensive workloads by reducing the need to access the DynamoDB service directly, \ndelivering microsecond latency and helping absorb heavy read traffic.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon ElastiCache</b> could be used to cache frequent queries, but it's a generic caching service that requires manual integration and cache management. \nIt\u2019s better suited to custom caching strategies for relational or other data sources and not the ideal tool when working specifically with DynamoDB.<br>\n<b>Amazon CloudFront</b> is intended for distributing static and dynamic web content through a content delivery network. \nIt does not accelerate database queries, making it ineffective for this scenario.<br>\n<b>Amazon RDS Proxy</b> is a connection pooler for relational databases like MySQL and PostgreSQL, \nbut it is unrelated to DynamoDB, which is a NoSQL service.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon ElastiCache",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon CloudFront",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon DynamoDB Accelerator (DAX)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon RDS Proxy",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 4,
+    "query": "A health-tech company is running a distributed application composed of numerous microservices deployed across multiple AWS services. Recently, users have been encountering intermittent errors and increased latency. The development team needs deeper visibility into request paths and dependencies between services to identify the root cause of these issues. Which AWS service is best suited to trace and diagnose the application's behavior?",
+    "answer": "<b>Correct Answer: AWS X-Ray</b><br><br>\nX-Ray is specifically designed for analyzing and debugging distributed applications and microservices. \nIt enables developers to trace the journey of requests through various services, \nidentify performance bottlenecks, and pinpoint exactly where errors are occurring in complex workflows.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon CloudWatch</b> is helpful for logs and metrics but does not provide end-to-end tracing or dependency maps.<br>\n<b>AWS CloudTrail</b> logs API activity for auditing and security, not for debugging runtime behavior.<br>\n<b>AWS Config</b> tracks resource configurations and compliance, but does not trace application-level events.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon CloudWatch",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS X-Ray",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS CloudTrail",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Config",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 5,
+    "query": "In the world of cloud based software development, what does the term <b>elasticity</b> refer to?",
+    "answer": "<b>Correct Answer:</b> It allows a system to automatically scale its resources up or down based on real-time demand.<br><br>\nThis is the definition of elasticity in cloud computing. It means the system can expand or contract its capacity dynamically as workload demands change\u2014helping maintain performance and manage costs efficiently.<br><br>\n<b>Incorrect Options:</b><br>\nThe second option describes <b>scalability</b>, which refers to long-term growth, not real-time adjustment.<br>\nThe third option defines <b>durability</b>, or data protection across multiple facilities.<br>\nThe fourth option describes <b>failover</b>, where traffic is redirected to backup systems during outages.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "It allows a system to automatically scale its resources up or down based on real-time demand.",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "It enables a system to grow over time by adding more storage and compute capacity as needed.",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "It ensures that data is redundantly stored across multiple facilities to prevent loss.",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "It allows traffic to be redirected to healthy resources during a system failure.",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 6,
+    "query": "A small business wants to estimate future AWS costs based on past usage trends. Which AWS tool should they use to visualize spending patterns and forecast future expenses?",
+    "answer": "<b>Correct Answer: AWS Cost Explorer</b><br><br>\nAWS Cost Explorer helps users visualize historical AWS spending, analyze trends, and forecast future costs based on previous usage. \nIt offers interactive charts and filtering options, making it a primary service for understanding and projecting AWS expenses.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS Organizations</b> consolidates multiple AWS accounts under one billing structure but doesn\u2019t offer forecasting or visualization tools.<br>\n<b>AWS Trusted Advisor</b> offers cost-efficiency recommendations but does not forecast or visualize trends.<br>\n<b>AWS Budgets</b> allows users to set cost thresholds and receive alerts, but does not project future expenses like Cost Explorer does.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Organizations",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Cost Explorer",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Trusted Advisor",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Budgets",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 7,
+    "query": "Which AWS feature serves as an optional security layer applied at the subnet level within a VPC and is used to control inbound and outbound network traffic?",
+    "answer": "<b>Correct Answer: Network Access Control List (NACL)</b><br><br>\nNACLs are associated with subnets in a VPC and act as stateless firewalls. \nThey evaluate each network packet entering or leaving a subnet against user-defined rules. \nUnlike security groups, they must be configured to allow both inbound and outbound traffic explicitly.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS Identity and Access Management (IAM)</b> controls access to AWS services at the user level and does not manage network traffic.<br>\n<b>Security Groups</b> operate at the instance level and are stateful, not subnet-level like NACLs.<br>\n<b>AWS Shield</b> protects against DDoS attacks but is not used for subnet-level traffic filtering.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Identity and Access Management (IAM)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Network Access Control List (NACL)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Security Group",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Shield",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 8,
+    "query": "A media company is hosting its applications on AWS, using services like Amazon EC2, Amazon RDS, and Amazon S3. According to the AWS Shared Responsibility Model, which of the following is the customer's responsibility?",
+    "answer": "<b>Correct Answer: Configuring firewall rules on Amazon EC2 instances</b><br><br>\nIn the Shared Responsibility Model, customers are responsible for securing their own workloads, including configuring security groups, network ACLs, and firewalls on their EC2 instances.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Maintaining climate control systems</b> in data centers is AWS\u2019s responsibility.<br>\n<b>Securing physical hardware</b> is handled by AWS for services like RDS.<br>\n<b>Patching the virtualization layer</b> is also managed by AWS; customers do not access or control the underlying infrastructure.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Configuring firewall rules on Amazon EC2 instances",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Maintaining climate control systems in AWS data centers",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Securing the physical hardware that runs Amazon RDS",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Patching the virtualization layer on EC2 host servers",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 9,
+    "query": "A media production company regularly uploads large video files from its regional offices around the world to an Amazon S3 bucket located in the US. They\u2019re experiencing slow upload speeds and want a solution that speeds up transfers over long distances without changing their storage setup. Which AWS feature is designed specifically for this use case?",
+    "answer": "<b>Correct Answer: Amazon S3 Transfer Acceleration</b><br><br>\nAmazon S3 Transfer Acceleration speeds up file uploads by routing them through AWS\u2019s global edge network. \nData is sent to the nearest edge location and then forwarded to the S3 bucket via AWS's high-speed backbone network.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon S3 Global Upload</b> is not a real AWS service.<br>\n<b>AWS Direct Upload</b> is not an official AWS product name and doesn\u2019t accelerate uploads.<br>\n<b>Amazon CloudFront File Sync</b> confuses CloudFront with upload tools\u2014CloudFront is for content delivery, not file ingestion.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon S3 Global Upload",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3 Transfer Acceleration",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Direct Upload",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon CloudFront File Sync",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 10,
+    "query": "A web application needs to store images, PDFs, and other media files that users can download directly using a public or pre-signed URL. Which AWS storage service is best suited for this requirement?",
+    "answer": "<b>Correct Answer: Amazon S3</b><br><br>\nAmazon S3 (Simple Storage Service) is object storage built for the cloud, and it natively supports accessing stored objects through URLs. \nYou can make files publicly accessible or use pre-signed URLs for controlled, time-limited access. \nIt\u2019s ideal for static content delivery directly to end users.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon EFS</b> provides scalable file storage for EC2 instances, but requires mounting and doesn\u2019t support URL-based access.<br>\n<b>AWS Storage Gateway</b> acts as a hybrid bridge and is not intended for direct object storage or URL access.<br>\n<b>Amazon EBS</b> is block storage for EC2 and doesn\u2019t provide internet-facing access to stored files.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon Elastic File System (EFS)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Storage Gateway",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Elastic Block Store (EBS)",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 11,
+    "query": "A company plans to run a database server 24/7 for the next 12 months to support a critical business application. The workload is steady and predictable, and the team wants to minimize total costs over the year. Which Amazon EC2 pricing model should they choose to achieve the lowest possible cost?",
+    "answer": "<b>Correct Answer: Reserved Instances with Full Upfront Payment</b><br><br>\nThis pricing model offers the maximum discount compared to On-Demand pricing and is ideal for long-term, steady workloads. \nBy committing to a one-year term and paying the full amount upfront, the company gets the lowest hourly rate AWS offers.<br><br>\n<b>Incorrect Options:</b><br>\n<b>On-Demand Instances</b> are flexible but the most expensive over a year.<br>\n<b>Spot Instances</b> are unreliable for critical workloads due to the possibility of interruption.<br>\n<b>Reserved Instances with No Upfront Payment</b> offer discounts but not as deep as Full Upfront.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "On-Demand Instances",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Spot Instances",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Reserved Instances with No Upfront Payment",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Reserved Instances with Full Upfront Payment",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 12,
+    "query": "An organization is undergoing an external compliance audit, and the auditor has asked for official documentation such as AWS\u2019s SOC reports, ISO certifications, and data privacy agreements. The cloud administrator needs to retrieve this material directly from AWS. Which service should they use?",
+    "answer": "<b>Correct Answer: AWS Artifact</b><br><br>\nAWS Artifact is the go-to service for accessing AWS\u2019s security and compliance documentation, including audit reports and agreements. \nIt provides downloadable, audit-ready materials for compliance reviews.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS License Manager</b> manages software licenses but doesn\u2019t provide compliance documentation.<br>\n<b>AWS Security Hub</b> helps monitor security posture but doesn\u2019t distribute formal audit materials.<br>\n<b>AWS Service Catalog</b> governs available AWS products, not compliance or legal documentation.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Artifact",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS License Manager",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Security Hub",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Service Catalog",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 13,
+    "query": "A group of newly hired developers is joining a cloud-based project team within an organization. Each developer will be working on different components of the application, with varying access needs to services such as Amazon EC2, Amazon RDS, and AWS CodeCommit. What is the best-practice approach for granting access to these users?",
+    "answer": "<b>Correct Answer: Provide each user with permissions tailored to their role</b><br><br>\nGrant only the minimum level of access required to perform their job. \nThis follows the principle of least privilege, reducing risks of unauthorized access and unintended changes.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Assigning all users a baseline set of permissions</b> may expose unnecessary resources and increase security risk.<br>\n<b>Granting no access at all</b> creates unnecessary friction and slows productivity.<br>\n<b>Giving everyone broad access initially</b> is risky and not a proactive security approach.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Assign all users a baseline set of permissions, and allow them to request elevated access when necessary.",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Begin by granting no permissions at all and only provide temporary access when specific tasks are requested.",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Provide each user with permissions tailored to their role, granting only the minimum level of access required to perform their job.",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Grant all users access to the most commonly used services in the organization, then refine access later as issues arise.",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 14,
+    "query": "During a compliance audit, an external IT auditor asks for detailed logs that show which IAM users or roles performed specific actions\u2014such as creating, modifying, or deleting resources\u2014within the company's AWS environment. Which AWS service provides this level of visibility into API activity across the account?",
+    "answer": "<b>Correct Answer: AWS CloudTrail</b><br><br>\nCloudTrail records who did what, when, and from where in your AWS account by capturing API activity across AWS services. \nIt logs requests from the console, CLI, SDKs, and more, including IAM user or role identity\u2014perfect for audits.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon CloudWatch Logs</b> stores and monitors logs but does not natively capture API calls by IAM users.<br>\n<b>AWS Config</b> shows what changed, but not who made the change.<br>\n<b>Amazon GuardDuty</b> detects threats using CloudTrail data but isn\u2019t used for human-readable API audit trails.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS CloudTrail",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon CloudWatch Logs",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Config",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon GuardDuty",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 15,
+    "query": "A DevOps engineer is preparing to update a production environment using an AWS CloudFormation template. Before applying the changes, they want to preview exactly what resources will be modified, created, or deleted. Which CloudFormation feature should they use to safely review the proposed changes?",
+    "answer": "<b>Correct Answer: AWS CloudFormation Change Sets</b><br><br>\nChange Sets let you preview the changes CloudFormation will apply before executing them\u2014helping catch errors or unintended deletions before they happen.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Stack Policies</b> control update permissions but don\u2019t preview changes.<br>\n<b>Stack Sets</b> deploy templates across multiple accounts and regions, unrelated to change previews.<br>\n<b>Drift Detection</b> finds differences after deployment, not before.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS CloudFormation Change Sets",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS CloudFormation Stack Policies",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS CloudFormation Stack Sets",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS CloudFormation Drift Detection",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 16,
+    "query": "A company is hosting production workloads on EC2 instances backed by Amazon EBS volumes. To meet internal backup policies, the operations team needs to ensure that data on these volumes is safely preserved and can be recovered if needed. What is the proper way to fulfill this responsibility?",
+    "answer": "<b>Correct Answer: Create EBS snapshots to preserve volume data</b><br><br>\nCreating snapshots is the standard way to back up EBS volumes. \nStored in S3, they\u2019re incremental, durable, and support restoration to new volumes.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Pushing to AWS CodeCommit</b> is impractical\u2014CodeCommit is for source code, not binary backups.<br>\n<b>Copying to ECR</b> is invalid\u2014ECR is for Docker images, not storage volumes.<br>\n<b>Provisioning new volumes</b> does not preserve current data\u2014it just creates new empty disks.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Create EBS snapshots to preserve volume data",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Push EBS volume contents to AWS CodeCommit as a backup",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Copy EBS volumes to Amazon Elastic Container Registry (ECR)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Provision additional EBS volumes in a different Availability Zone",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 17,
+    "query": "An AWS solutions architect is evaluating different ways to adjust compute capacity as application demand changes. What is the primary difference between vertical scaling (scaling up) and horizontal scaling (scaling out)?",
+    "answer": "<b>Correct Answer:</b> Vertical scaling increases the amount of resources on a single server, while horizontal scaling adds more servers to share the workload.<br><br>\nVertical scaling means upgrading CPU, RAM, or storage on a single instance.<br>\nHorizontal scaling means adding instances to distribute load and increase fault tolerance.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Horizontal scaling is always more expensive</b> \u2014 not true; it can be more cost-efficient.<br>\n<b>Vertical scaling improves availability</b> \u2014 incorrect; horizontal scaling improves fault tolerance.<br>\n<b>Auto Scaling Groups use vertical scaling</b> \u2014 incorrect; they are a key tool for horizontal scaling.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Vertical scaling increases the amount of resources on a single server, while horizontal scaling adds more servers to share the workload.",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Horizontal scaling is always more expensive than vertical scaling and is used only in large enterprises.",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Vertical scaling improves availability, whereas horizontal scaling is mainly used for data archival.",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Auto Scaling Groups use vertical scaling, while Elastic Load Balancers are used for horizontal scaling only.",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 18,
+    "query": "A retail analytics startup is planning to shut down its aging data center and migrate its workloads to AWS. As part of the transition, the CTO asks you to explain the cost advantages of using Amazon EC2 compared to managing physical servers. Which of the following provides the most accurate financial benefit of EC2?",
+    "answer": "<b>Correct Answer:</b> You pay only for the compute capacity you use, without long-term hardware investment.<br><br>\nThis reflects AWS\u2019s pay-as-you-go model. Instead of buying hardware upfront, businesses pay for compute time, reducing capital expenses and aligning costs with actual usage.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Tagging EC2 instances</b> helps with cost allocation but doesn\u2019t reduce billing.<br>\n<b>Low-cost AMIs</b> may help with licensing but don\u2019t change EC2 usage pricing.<br>\n<b>Automated backups</b> are useful but add storage costs and don\u2019t eliminate operational effort.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "You pay only for the compute capacity you use, without long-term hardware investment.",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "You can tag EC2 instances to automatically reduce your billing charges.",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "You get access to low-cost AMIs that optimize instance launch times.",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "You benefit from built-in automated backups that eliminate operational costs.",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 19,
+    "query": "An AWS solutions architect is building a fault-tolerant system that must continue to operate smoothly even when parts of the infrastructure fail. In line with the principle of designing for failure, which three AWS services or features best support this design strategy? ",
+    "answer": "<b>Correct Answers:</b> Deployment to AWS Availability Zones, The use of multiple AWS Regions, and Elastic Load Balancing of EC2 instances.<br><br>\n<b>Availability Zones</b> offer in-region redundancy.<br>\n<b>Multiple Regions</b> ensure geographic fault tolerance.<br>\n<b>Elastic Load Balancing</b> distributes traffic and handles instance failures automatically.<br><br>\n<b>Incorrect Option:</b><br>\n<b>Auto Scaling based on cost thresholds</b> is not a valid AWS scaling trigger and does not ensure high availability during failures.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Deployment to AWS Availability Zones",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "The use of multiple AWS Regions",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Elastic Load Balancing of EC2 instances",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Auto Scaling based on cost thresholds",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 20,
+    "query": "Your architecture team is designing a cloud-native application to run on AWS. One of the stated non-functional requirements is to reduce interdependencies between components so that a failure in one part of the system does not cascade to others. Based on AWS Well-Architected Framework principles, which architectural concept best aligns with this requirement?",
+    "answer": "<b>Correct Answer:</b> Loose coupling.<br><br>\nLoose coupling encourages components to interact through APIs or messaging queues. This minimizes dependency and risk of cascading failures.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Workload isolation</b> separates systems at a macro level but doesn\u2019t address inter-component dependencies.<br>\n<b>Service aggregation</b> increases dependency rather than reduces it.<br>\n<b>High cohesion</b> refers to component internal consistency, not decoupling.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Loose coupling",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Workload isolation",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Service aggregation",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "High cohesion",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 21,
+    "query": "A healthcare company is preparing for a compliance audit after migrating its infrastructure to AWS. The cloud security team is reviewing which security controls are handled by AWS and which remain their responsibility. According to the AWS Shared Responsibility Model, which three of the following are managed by AWS? ",
+    "answer": "<b>Correct Answers:</b> Patching and maintenance of physical server hardware, Secure decommissioning of storage media (e.g., disk disposal), and Management of physical access controls in AWS data centers.<br><br>\nThese responsibilities fall under AWS\u2019s side of the shared responsibility model, which governs infrastructure security.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Password rotation policies</b>, <b>user role configuration</b>, and <b>MFA setup</b> are responsibilities of the customer.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Enforcement of password rotation policies for IAM users",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Configuration of user access roles and permissions",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Patching and maintenance of physical server hardware",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Secure decommissioning of storage media (e.g., disk disposal)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Management of physical access controls in AWS data centers",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Setting up multi-factor authentication (MFA) for console users",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 22,
+    "query": "You are deploying a video-streaming application on AWS that must deliver high-quality content to users around the world with minimal buffering and low latency. Which AWS service is best suited to distribute this content efficiently to a global audience?",
+    "answer": "<b>Correct Answer:</b> Amazon CloudFront<br><br>\nCloudFront is AWS\u2019s CDN that caches content at edge locations worldwide to minimize latency and deliver fast, reliable streaming.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon S3</b> stores content but doesn't optimize delivery on its own.<br>\n<b>Amazon SQS</b> is a queuing service, not for media distribution.<br>\n<b>Amazon CloudTrail</b> is for auditing API activity, not streaming.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon CloudFront",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon SQS",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon CloudTrail",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 23,
+    "query": "Your operations team is investigating a recent outage that was caused by unexpected changes to an AWS resource\u2019s configuration. They need to identify what changed, when it changed, and who made the change. Which AWS service is best suited to retrieve this information?",
+    "answer": "<b>Correct Answer:</b> AWS Config<br><br>\nAWS Config records the configuration history of AWS resources and tracks changes over time, helping you troubleshoot operational issues and verify compliance.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS Trusted Advisor</b> provides recommendations but no change history.<br>\n<b>AWS CloudFormation</b> manages infrastructure as code but doesn\u2019t track manual changes.<br>\n<b>Amazon Inspector</b> checks for vulnerabilities, not config changes.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Config",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Trusted Advisor",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS CloudFormation",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Inspector",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 24,
+    "query": "You need to update the security group rules for an EC2 instance. Which of the following is true about changing security groups on a running instance?",
+    "answer": "<b>Correct Answer:</b> You can change the security group of an instance at any time, whether it\u2019s running or stopped.<br><br>\nEC2 supports dynamic security group changes without requiring downtime.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Only changing when stopped</b> is incorrect\u2014this is not a limitation.<br>\n<b>Only modifying the default group</b> is false\u2014custom groups are supported.<br>\n<b>You can\u2019t change if attached</b> is incorrect\u2014attached groups can be edited or replaced.<br>\n<b>None of the above</b> is wrong because the first option is true.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "You can change the security group of an instance at any time, whether it\u2019s running or stopped.",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "You can only change the security group after stopping the instance.",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "You can only modify the default security group.",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "You can\u2019t change a security group if it\u2019s currently attached to an instance.",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "None of the above.",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 25,
+    "query": "Your company wants to subscribe to an AWS Support plan. The team requires 24/7 access to Cloud Support Engineers via phone, chat, and email, and expects a response time of under 15 minutes for critical production system failures. Which AWS Support plan meets these requirements?",
+    "answer": "<b>Correct Answer:</b> AWS Enterprise Support<br><br>\nEnterprise Support offers 15-minute response time for business-critical issues and 24/7 access to AWS engineers across all communication channels.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS Basic Support</b> is free and includes only documentation and forums.<br>\n<b>AWS Developer Support</b> offers business-hour email support only.<br>\n<b>AWS Business Support</b> is 24/7 but provides under-1-hour response for critical issues, not 15 minutes.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Basic Support",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Developer Support",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Business Support",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Enterprise Support",
+        "correct": true,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 26,
+    "query": "Your company is planning to migrate its on-premises Oracle database to AWS. The goal is to minimize downtime and ensure data is reliably transferred to the cloud. Which AWS service is best suited to assist with this type of database migration?",
+    "answer": "<b>Correct Answer:</b> AWS Database Migration Service (AWS DMS)<br><br>\nAWS DMS is built for database migrations, offering minimal-downtime replication for both homogeneous and heterogeneous database moves.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS MGN</b> migrates servers, not databases.<br>\n<b>AWS Trusted Advisor</b> gives advice, not migration capabilities.<br>\n<b>Amazon Inspector</b> is a security tool, not a migration service.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Database Migration Service (AWS DMS)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Application Migration Service (AWS MGN)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Trusted Advisor",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Inspector",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 27,
+    "query": "Your company is planning to migrate its on-premises Oracle database to AWS. The migration must be secure, reliable, and involve minimal downtime. Which AWS service is best suited to assist with this type of database migration?",
+    "answer": "<b>Correct Answer:</b> AWS Database Migration Service (AWS DMS)<br><br>\nDMS enables continuous replication and is designed for relational database migrations like Oracle with low downtime.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS MGN</b> migrates whole servers, not databases.<br>\n<b>AWS Migration Hub</b> tracks migration but doesn't perform them.<br>\n<b>AWS Snowball</b> is for bulk offline data transfer, not live database cutovers.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "AWS Database Migration Service (AWS DMS)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Application Migration Service (AWS MGN)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Migration Hub",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Snowball",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 28,
+    "query": "Amazon Inspector includes a feature that checks whether resources are reachable from the internet. On which of the following AWS resources does Amazon Inspector perform network accessibility checks?",
+    "answer": "<b>Correct Answer:</b> Amazon EC2 instances<br><br>\nInspector evaluates EC2 instances for public accessibility based on their security groups, routing, and firewall settings.<br><br>\n<b>Incorrect Options:</b><br>\n<b>AWS Lambda</b> runs in managed containers with no persistent network interface.<br>\n<b>Elastic Load Balancers</b> aren\u2019t directly analyzed by Inspector.<br>\n<b>Amazon VPCs</b> define networks but aren\u2019t checked directly for reachability.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon EC2 instances",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "AWS Lambda functions",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon Elastic Load Balancers",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon VPCs",
+        "correct": false,
+        "selected": false
+      }
+    ],
+    "objectives": []
+  },
+  {
+    "id": 29,
+    "query": "Which AWS service is specifically designed to provide computing elasticity by automatically adjusting the number of compute resources based on traffic or workload demand?",
+    "answer": "<b>Correct Answer:</b> Amazon EC2 Auto Scaling Group<br><br>\nAuto Scaling Groups dynamically scale EC2 instances to match demand, ensuring performance and cost-efficiency.<br><br>\n<b>Incorrect Options:</b><br>\n<b>Amazon S3</b> is storage, not compute.<br>\n<b>RDS Multi-AZ</b> improves availability, not elasticity.<br>\n<b>AWS Lambda</b> is also elastic but applies at a function level, not general-purpose EC2 scaling.",
+    "marked": 0,
+    "timespent": 0,
+    "options": [
+      {
+        "text": "Amazon EC2 Auto Scaling Group",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "text": "Amazon S3",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "Amazon RDS Multi-AZ",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "text": "AWS Lambda",
         "correct": false,
         "selected": false
       }

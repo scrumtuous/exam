@@ -1,35 +1,50 @@
-In this conversation, one at a time, I am going to give you a number of AWS Practitioner certification exam questions.
+I am going to give you an AWS Solution Architect multiple-choice exam question.
 
-I want you to rephrase the question, possibly rewording the scenario, changing the type of organization or company in the scenario,  slightly change any numbers or metrics used and make the query more original and clear. I'd like you to then perhaps choose more challenging options and sort the order of the options differently than in the original. 
+I want you to rephrase the question to make the query more original and clear, reword the scenario, changing the type of organization or industry in the scenario, change any numbers that deal with metrics such as file size, bandwitdh, days or months.
 
-Then, I want you to provide the answer. I also want you to explain why each option is incorrect.
+Rephrase the options in the multiple choice question, and randomize the order of the options to be different than the original question. Slightly reword the correct option, but change and rephrase the wording of the incorrect options to make them more challenging and somewhat different from the original. For the least challenging incorrect option, completely replace it with an different incorrect option that is more relevant to the question.
 
-Note that when the questions are completed, they will be put into a JSON file that looks something like this, so word the results accordingly so in the future turning them into this JSON is easy.
+Then provide an answer that includes a thorough explanation of why the answer is correct. Also explain why each incorrect option is not right. Then provide additional insights on why the question is important and also any tricks on answering this type of question and a note about why this question is challenging or hints on how to answer these types of questions. 
+
+In the answer, do not refer to the options or answers as A, B, C or D,  or "Option A" or "Option 1" as the order may change when displayed. Do not state how many options to choose, and do not use bullet points or emojis. Just answer in paragraphs and sentences. For the correct answers, provide thorough details. As part of the answer section, include why each of the incorrect options are wrong. 
+
+All of this information about the answer, including tips and tricks and why certain options are incorrect will be stored in a field named answer in a JSON file you will create.
+
+The JSON file you create will follow this format with the fields in this exact order:
 
 {
-  "query" : "Lorem Ipsum",
-  "answer" : "Lorem Ipsum",
+  "id" : 1,
+  "original_oid": "6793d561f501ee1c8ade9750"
+  "query" : "What do you call a fish without an eye?",
   "options" : [ {
-    "text" : "Lorem Ipsum",
-    "correct" : false,
-
+    "text" : "Fishy McFishface",
+    "correct" : false
   }, {
-    "text" : "Lorem Ipsum",
-    "correct" : false,
-
+    "text" : "Blinky",
+    "correct" : false
   }, {
-    "text" : "Lorem Ipsum",
-    "correct" : false,
-
+    "text" : "No eye fish.",
+    "correct" : false
   }, {
-    "text" : "Lorem Ipsum",
-    "correct" : true,
-
-  }
+    "text" : "fsh",
+    "correct" : true
+  } ],
+  "answer": "<p>When you remove the 'i' it spells fsh!</p>,
+  "originalQuery": "abc",
+  "originalOptions": "abc",
+  "source": "https://www.example.com/amazon/question3"
 }
 
-Do not refer to the answers as A, B, C or D, do not state how many options to choose, and do not use bullet points or emojis. Just answer in paragraphs and sentences. For the correct answers, provide thorough details. As part of the answer section, include why each of the incorrect options are wrong. 
+The originalQuery and originalOptions are just a copy of the fields from the input. The original_oid field is just the $oid from the input.
 
-Do not include JSON in the response. Just text, sentences and paragraphs. We will structure the results as JSON later.
+Note that the answer field will include the information on why the answer is correct, why the other options are wrong, and the insights and tips as well. 
+
+In the query and answer sections of the JSON, include HTML tags to allow the response to render properly in a webpage.
+
+Remember to change the wording and similarly paraphrase and reword the options to make the question unique and read differently than the original without actually losing the meaning of the question.
+
+In the answer, when you quote any incorrect options, italicize the text. When you mention the correct option, bold it.
+
+Start the numbering of the id field at 001.
 
 Are you ready for the first question?

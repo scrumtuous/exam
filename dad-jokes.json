@@ -1,0 +1,74 @@
+[
+  {
+    "questionId": "Q1",
+    "query": "What do you call a fish with no eye?",
+    "options": [
+      {
+        "text": "no-eye fish",
+        "correct": false
+      },
+      {
+        "text": "blinky",
+        "correct": false
+      },
+      {
+        "text": "fsh",
+        "correct": true
+      },
+      {
+        "text": "sue",
+        "correct": false
+      }
+    ],
+    "answer": "<p>When you remove the 'i' it spells fsh!</p>",
+    "topic": "fish"
+  },
+  {
+    "questionId": "Q2",
+    "query": "What do you call a deer with no eyes?",
+    "options": [
+      {
+        "text": "Bambi",
+        "correct": false
+      },
+      {
+        "text": "Pinky",
+        "correct": false
+      },
+      {
+        "text": "No eye deer",
+        "correct": true
+      },
+      {
+        "text": "Doe",
+        "correct": false
+      }
+    ],
+    "answer": "<p>It's a pun — 'No idea' sounds like 'No eye deer'!</p>",
+    "topic": "deer"
+  },
+  {
+    "questionId": "Q3",
+    "query": "How do you stop bad fish from smelling?",
+    "options": [
+      {
+        "text": "Put the fish in a sealed bag",
+        "correct": false
+      },
+      {
+        "text": "Put salt on the fish",
+        "correct": false
+      },
+      {
+        "text": "Cook the fish",
+        "correct": false
+      },
+      {
+        "text": "Cut off their noses",
+        "correct": true
+      }
+    ],
+    "answer": "<p>Because if they have no noses, they can't smell!</p>",
+    "topic": "fish"
+  }
+]
