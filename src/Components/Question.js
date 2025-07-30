@@ -109,7 +109,8 @@ class Question extends Component {
                 onContextMenu={(e) => this.handleRightClick(e, index)}
                 data-disabled="false"
               >
-                {this.props.question.options[index].text}
+			  __html: `${this.props.question.options[index].text}`
+                
               </label>
             </div>
           )

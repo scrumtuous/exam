@@ -112,42 +112,83 @@ class Exam extends React.Component {
 
   }
   
-  async getExamQuestions() {
-	console.log("in getExamQuestions() (RESTful API mode)");
-	const name = this.props.name; // Example: 'aws-architect~1,2,3,4,5,6,7,8,9,10'
+async getExamQuestions() {
+  console.log("Entering getExamQuestions() [RESTful API mode]");
+  const name = this.props.name; // Example: 'aws-architect~1,2,3,4,5,6,7,8,9,10'
 
-	// Split the string on the '~' character
-	const [resource, ids] = name.split('~');
-
-	// Log the parts to verify
-	console.log("The resource is:", resource);
-	console.log("The ids are:", ids);
-
-	// Construct the API URL
-	const apiUrl = `https://api.certificationexams.guru/${resource}?ids=${ids}`;
-	console.log("The apiUrl is:", apiUrl);
-	try {
-	  const response = await fetch(apiUrl);
-	  if (!response.ok) {
-		console.log(`Failed to fetch questions from ${apiUrl}: ${response.statusText}`);
-		throw new Error(`Failed to fetch questions from ${apiUrl}: ${response.statusText}`);
-	  }
-	  const questions = await response.json();
-	  this.setState({ questions });
-	  this.setCurrentQuestion(0);
-	} catch (error) {
-	  console.error("Failed to fetch from RESTful API, loading local questions.json instead.", error);
-	  import('../questions.json')
-		.then((module) => {
-		  const localQuestions = module.default || module;
-		  this.setState({ questions: localQuestions });
-		  this.setCurrentQuestion(0);
-		})
-		.catch((err) => {
-		  console.error("Failed to load local questions.json", err);
-		});
-	}
+  if (!name || !name.includes('~')) {
+    console.error("Invalid 'name' prop format:", name);
+    return;
   }
+
+  const [resource, ids] = name.split('~');
+  console.log("Resource:", resource);
+  console.log("IDs:", ids);
+
+  const apiUrl = `https://api.certificationexams.guru/${resource}?ids=${ids}`;
+  console.log("API URL:", apiUrl);
+
+  const idToken = window.currentUser?.id_token;
+
+  if (idToken) {
+    console.log("id_token found. Attempting POST request with Authorization header.");
+    try {
+      const postResponse = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${idToken}`
+        },
+        body: JSON.stringify({ ids: ids.split(',') })
+      });
+
+      if (postResponse.ok) {
+        const questions = await postResponse.json();
+        console.log(`Successfully fetched ${questions.length} questions via POST`);
+        this.setState({ questions }, () => this.setCurrentQuestion(0));
+        return;
+      } else {
+        console.warn(`POST failed: ${postResponse.status} ${postResponse.statusText}`);
+      }
+    } catch (postError) {
+      console.error("POST request failed:", postError);
+    }
+  } else {
+    console.warn("No id_token found. Skipping POST. Proceeding to GET request.");
+  }
+
+  try {
+    console.log("Attempting GET request (unauthenticated).");
+    const getResponse = await fetch(apiUrl);
+    if (getResponse.ok) {
+      const questions = await getResponse.json();
+      console.log(`Successfully fetched ${questions.length} questions via GET`);
+      this.setState({ questions }, () => this.setCurrentQuestion(0));
+      return;
+    } else {
+      console.warn(`GET failed: ${getResponse.status} ${getResponse.statusText}`);
+    }
+  } catch (getError) {
+    console.error("GET request failed:", getError);
+  }
+
+  // Final fallback: load from local questions.json
+  try {
+    console.log("Attempting to load fallback questions from local questions.json");
+    const module = await import('../questions.json');
+    const localQuestions = module.default || module;
+    if (!Array.isArray(localQuestions) || localQuestions.length === 0) {
+      throw new Error("Local questions.json is empty or malformed");
+    }
+
+    console.log(`Loaded ${localQuestions.length} local questions`);
+    this.setState({ questions: localQuestions }, () => this.setCurrentQuestion(0));
+  } catch (localError) {
+    console.error("Failed to load local questions.json", localError);
+  }
+}
+
+
 
 	setCurrentQuestion(position) {
 		this.setState({currentQuestionNumber: position});
