@@ -108,9 +108,10 @@ class Question extends Component {
                 id={"labelOption" + index}
                 onContextMenu={(e) => this.handleRightClick(e, index)}
                 data-disabled="false"
-              >
-			  __html: `${this.props.question.options[index].text}`
-                
+              
+			  dangerouslySetInnerHTML={{
+				__html: `${this.props.question.options[index].text}`
+              }}> 
               </label>
             </div>
           )
