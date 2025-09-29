@@ -27,7 +27,10 @@ class App extends React.Component {
 
 
   render() {
-    return <div className="App"  message={el.getAttribute('data-param')} name={el.getAttribute('data-name')}><Exam page={el.getAttribute('data-page')} message={el.getAttribute('data-param')} name={el.getAttribute('data-name')}/>{this.props.message}</div>
+    return <div className="App"  message={el.getAttribute('data-param')} name={el.getAttribute('data-name')} publicBlurAt={el.getAttribute('data-public-blur-at')} protectedBlurAt={el.getAttribute('data-protected-blur-at')}>
+	<Exam page={el.getAttribute('data-page')} message={el.getAttribute('data-param')} 
+	name={el.getAttribute('data-name')}   publicBlurAt={el.getAttribute('data-public-blur-at')} protectedBlurAt={el.getAttribute('data-protected-blur-at')}
+	/>{this.props.message}</div>
   }
 }
 

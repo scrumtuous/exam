@@ -69,6 +69,10 @@ componentDidMount() {
 async getExamQuestions() {
   console.log("Entering getExamQuestions() [RESTful API mode]");
   const name = this.props.name;
+  const publicBlurAt = this.props.publicBlurAt;
+  const protectedBlurAt = this.props.protectedBlurAt;
+  
+  console.log("blurs: " + this.props.publicBlurAt + " : " + this.props.protectedBlurAt);
   console.log("Exam name prop:", name);
 
   if (!name || !name.includes('~')) {
@@ -92,8 +96,10 @@ async getExamQuestions() {
   };
 
   const [resource, ids] = name.split('~');
-  let apiUrl = `https://api.certificationexams.guru/${resource}?ids=${ids}&exam=${resource}&stripeId=cus_SpwJW3NTk298Kf&productId=prod_Smt6NcuqQnfMjF&hardcoded=true`;
-  console.log("Constructed API URL:", apiUrl);
+let publicUrl = `https://api.certificationexams.guru/public/questions?exam=${resource}&ids=${ids}&exam=${resource}&stripeId=cus_SpwJW3NTk298Kf&productId=prod_Smt6NcuqQnfMjF&hardcoded=true&blurAt=${this.props.publicBlurAt}`;
+let protectedUrl =`https://api.certificationexams.guru/protected/questions?exam=${resource}&ids=${ids}&exam=${resource}&stripeId=cus_SpwJW3NTk298Kf&productId=prod_Smt6NcuqQnfMjF&hardcoded=true&blurAt=${this.props.protectedBlurAt}`;
+  console.log("Constructed public URL:", publicUrl);
+  console.log("Constructed protected URL:", protectedUrl);
   console.log("Parsed resource:", resource);
   console.log("Parsed IDs:", ids);
 
@@ -109,13 +115,10 @@ async getExamQuestions() {
     console.log("Token found. Attempting POST request with Authorization header.");
 	let questions = null;
     try {
-      //const body = JSON.stringify({ ids: ids.split(',') });
-      //console.log("POST request body:", body);
-	  
-	  //apiUrl = apiUrl + "&stripeId=cus_SpwJW3NTk298Kf&productId=prod_Smt6NcuqQnfMjF&hardcoded=true";
-	  console.log("POST request apiURL:", apiUrl);
-      const postResponse = await fetch(apiUrl, {
-        method: "POST",
+
+	  console.log("GET protected URL:", protectedUrl);
+      const postResponse = await fetch(protectedUrl, {
+        method: "GET",
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${bearerToken}`,
@@ -127,11 +130,11 @@ async getExamQuestions() {
 	  
       if (postResponse.ok) {
         questions = await postResponse.json();
-        console.log(`\n\n\nSuccessfully fetched ${questions.length} questions via POST.\n\n`);
+        console.log(`\n\n\nSuccessfully fetched ${questions.length} questions via protected URL.\n\n`);
         this.setState({ questions }, () => this.setCurrentQuestion(0));
         return;
       } else {
-        console.warn("POST request did not succeed:", await postResponse.text());
+        console.warn("Protected request did not succeed:", await postResponse.text());
 		console.log("Here are the questions:", questions); // logs as array in console
 		console.log("Here are the questions: " + JSON.stringify(questions, null, 2));
       }
@@ -144,8 +147,8 @@ async getExamQuestions() {
   }
 
   try {
-    console.log("Attempting GET request to:", apiUrl);
-    const getResponse = await fetch(apiUrl);
+    console.log("Attempting GET request to:", publicUrl);
+    const getResponse = await fetch(publicUrl);
     console.log("GET response status:", getResponse.status, getResponse.statusText);
     if (getResponse.ok) {
       let questions = await getResponse.json();
