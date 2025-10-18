@@ -210,6 +210,12 @@ let protectedUrl =`https://api.certificationexams.guru/protected/questions?exam=
 
     this.setState({ graded: true, cheating: true, finish: d.getTime() }, () => {
       examHistory.exams.push(this.state);
+      
+      // Keep only the 10 most recent exams
+      if (examHistory.exams.length > 10) {
+        examHistory.exams = examHistory.exams.slice(-10);
+      }
+      
       localStorage.setItem('examHistory', JSON.stringify(examHistory));
     });
 
@@ -248,12 +254,12 @@ let protectedUrl =`https://api.certificationexams.guru/protected/questions?exam=
             Your grade is {this.getCorrectCount()} out of {this.state.questions.length}.
           </div>
           <div id="resultsbody" className="card-body">
-            <p className="card-text">Learn more about every question asked.</p>
+            <p className="card-text">Learn more about every exam question asked!</p>
             <ul>
-              <li>Short explanations of each question are below.</li>
-              <li>Full explanations are linked in the answer.</li>
-              <li>Each question has a Twitter link for discussion.</li>
-              <li>Videos and tutorials covering these topics are available through the site.</li>
+              <li>You can purchase the full exam on <a href="https://www.udemy.com/user/c-mckenzie-4?referralCode=811BF94F3AF44FCDB9E3">Udemy.</a></li>
+              <li>Or watch me go over the questions on my <a href="https://www.youtube.com/@cameronmcnz?sub_confirmation=1">YouTube channel.</a></li>
+              <li>We regularly give away free Udemy courses in our <a href="https://discord.gg/243nJbfk">Discord channel,</a> so join!.</li>
+              <li>And you can purchase our <a href="https://amzn.to/3Jg6Q46">certification books on Amazon!</a></li>
             </ul>
           </div>
         </div>
@@ -290,16 +296,6 @@ let protectedUrl =`https://api.certificationexams.guru/protected/questions?exam=
           graded={graded}
         />
 
-        {this.props.page !== 'answer' && (
-          <ExamHistoryPanel
-            setCurrentQuestion={this.setCurrentQuestion}
-            toggleMarked={this.toggleMarked}
-            currentQuestionNumber={currentQuestionNumber}
-            questions={questions}
-            cheating={cheating}
-            graded={graded}
-          />
-        )}
       </div>
     );
   }
